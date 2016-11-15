@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>previousSibling</title>
+</head>
+<body>
+    <div id="wrap">
+<div id="child"></div>
+    </div>
+    <script>
+        var child = document.getElementById('child');
+        console.log(child);
+        console.log(child.previousSibling); //文本节点\n
+        console.log(child.previousSibling.data === '\n'); //true
+
+        console.log(child.previousElementSibling); //null
+
+        console.log(child.previousSibling = 'you'); //you
+        console.log(child.previousSibling); //previousSibling是只读的
+
+    </script>
+</body>
+</html>
