@@ -6,19 +6,22 @@
 </head>
 <body>
     <div id="wrap">
-<div id="child"></div>
+<div id="child1"></div>
+<div id="child2"></div>
     </div>
     <script>
-        var child = document.getElementById('child');
-        console.log(child);
-        console.log(child.previousSibling); //文本节点\n
-        console.log(child.previousSibling.data === '\n'); //true
+        var wrap = document.getElementById('wrap');
+        var child1 = document.getElementById('child1');
+        var child2 = document.getElementById('child2');
 
-        console.log(child.previousElementSibling); //null
+        console.log(child2.previousSibling); // 获得child2的前一个兄弟节点：\n
+        console.log(child2.previousSibling.data === '\n'); // true
 
-        console.log(child.previousSibling = 'you'); //you
-        console.log(child.previousSibling); //previousSibling是只读的
+        console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1
+        console.log(child2.previousElementSibling === child1);// true
 
+        console.log(child2.previousSibling = 'you'); // you
+        console.log(child2.previousSibling); // previousSibling是只读的
     </script>
 </body>
 </html>
