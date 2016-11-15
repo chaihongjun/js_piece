@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="wrap">
-<div id="child1"></div>
+<!--注释 comment--><div id="child1"></div>
 <div id="child2"></div>
     </div>
     <script>
@@ -15,13 +15,20 @@
         var child2 = document.getElementById('child2');
 
         console.log(child2.previousSibling); // 获得child2的前一个兄弟节点：\n
-        console.log(child2.previousSibling.data === '\n'); // true
+        console.log(child2.previousSibling.nodeValue === '\n'); // true
+        console.log(child2.previousSibling.nodeType); // 3
 
         console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1
         console.log(child2.previousElementSibling === child1);// true
+        console.log(child2.previousElementSibling.nodeType); // 1
 
-        console.log(child2.previousSibling = 'you'); // you
-        console.log(child2.previousSibling); // previousSibling是只读的
+        child2.previousSibling = 'you';
+        console.log(child2.previousSibling); // 结果不变，previousSibling是只读的
+
+        console.log(child1.previousSibling); // '<!--注释 comment-->'
+        console.log(child1.previousSibling.nodeValue === '注释 comment'); // true
+        console.log(child1.previousSibling.nodeType); // 8
+        console.log(child1.previousSibling.previousSibling); // '\n'
     </script>
 </body>
 </html>

@@ -6,8 +6,12 @@
 >  The node immediately preceding this node. If there is no such node, this returns null.
 
 ## 定义和用法
-节点（Node）的previousSibling属性用于获得前一个兄弟节点（可以是元素节点，文本节点，注释节点），如果没有则返回null。如果你只想获得前一个兄弟元素节点可以用previousElementSibling属性。
-```
+节点（Node）的previousSibling属性用于获取前一个兄弟节点（可以是元素节点，文本节点，注释节点），如果没有则返回null。如果只想获取前一个兄弟元素节点可以用previousElementSibling属性。
+
+> 语法：Node.previousSibling
+
+> 返回值：节点对象（A Node Object） 或 null
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
 </head>
 <body>
     <div id="wrap">
-<div id="child1"></div>
+<!--注释 comment--><div id="child1"></div>
 <div id="child2"></div>
     </div>
     <script>
@@ -25,13 +29,20 @@
         var child2 = document.getElementById('child2');
 
         console.log(child2.previousSibling); // 获得child2的前一个兄弟节点：\n
-        console.log(child2.previousSibling.data === '\n'); // true
+        console.log(child2.previousSibling.nodeValue === '\n'); // true
+        console.log(child2.previousSibling.nodeType); // 3
 
         console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1
         console.log(child2.previousElementSibling === child1);// true
+        console.log(child2.previousElementSibling.nodeType); // 1
 
-        console.log(child2.previousSibling = 'you'); // you
-        console.log(child2.previousSibling); // previousSibling是只读的
+        child2.previousSibling = 'you';
+        console.log(child2.previousSibling); // 结果不变，previousSibling是只读的
+
+        console.log(child1.previousSibling); // '<!--注释 comment-->'
+        console.log(child1.previousSibling.nodeValue === '注释 comment'); // true
+        console.log(child1.previousSibling.nodeType); // 8
+        console.log(child1.previousSibling.previousSibling); // '\n'
     </script>
 </body>
 </html>
