@@ -11,6 +11,7 @@
 > 语法：Node.previousSibling
 
 > 返回值：节点对象（A Node Object） 或 null
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
