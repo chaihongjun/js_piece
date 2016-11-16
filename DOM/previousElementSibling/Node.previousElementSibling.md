@@ -1,4 +1,4 @@
-# previousSibling
+# previousElementSibling
 
 ## w3c标准
 >  Accessing this attribute of an element must return a reference to the sibling node of that element which most immediately precedes that element in document order, and which is of nodeType 1, as an Element object. If the element on which this attribute is accessed does not have any preceding sibling nodes, or if none of those preceding sibling nodes are element nodes, then this attribute must return null.
