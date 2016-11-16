@@ -49,7 +49,7 @@
 </html>
 ```
 ## 注意事项
-1. previousSibling属性是只读的，赋值无效
+1. previousSibling属性是**只读**（readonly）的，赋值无效
 2. previousSibling属性的值可以是元素节点（1），文本节点（3）或注释节点（8）
 
 ## 参考资料

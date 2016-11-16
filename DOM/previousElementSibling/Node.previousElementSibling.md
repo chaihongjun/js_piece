@@ -38,7 +38,7 @@
 </html>
 ```
 ## 注意事项
-1. previousElementSibling属性是只读（readonly）的，赋值无效
+1. previousElementSibling属性是**只读**（readonly）的，赋值无效
 2. previousElementSibling属性的值只能是元素节点或null，忽略文本节点和注释节点
 
 ## 兼容性和polyfill
