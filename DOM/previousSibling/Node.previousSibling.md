@@ -33,7 +33,7 @@
         console.log(child2.previousSibling.nodeValue === '\n'); // true
         console.log(child2.previousSibling.nodeType); // 3
 
-        console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1
+        console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1（忽略了注释节点和文本节点）
         console.log(child2.previousElementSibling === child1);// true
         console.log(child2.previousElementSibling.nodeType); // 1
 

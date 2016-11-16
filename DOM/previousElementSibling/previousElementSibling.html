@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>previousElementSibling</title>
+</head>
+<body>
+    <div id="wrap">
+<!--注释 comment--><div id="child1"></div>
+<div id="child2"></div>
+    </div>
+    <script>
+        var wrap = document.getElementById('wrap');
+        var child1 = document.getElementById('child1');
+        var child2 = document.getElementById('child2');
+
+        console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1（忽略了注释节点和文本节点）
+        console.log(child2.previousElementSibling === child1);// true
+        console.log(child2.previousElementSibling.nodeType); // 1
+
+        child2.previousElementSibling = 'you';
+        console.log(child2.previousElementSibling); // 结果不变，previousElementSibling是只读的
+    </script>
+</body>
+</html>
