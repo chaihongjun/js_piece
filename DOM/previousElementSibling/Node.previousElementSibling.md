@@ -30,6 +30,8 @@
         console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1（忽略了注释节点和文本节点）
         console.log(child2.previousElementSibling === child1);// true
         console.log(child2.previousElementSibling.nodeType); // 1
+        
+        console.log('1.================================================');
 
         child2.previousElementSibling = 'you';
         console.log(child2.previousElementSibling); // 结果不变，previousElementSibling是只读的

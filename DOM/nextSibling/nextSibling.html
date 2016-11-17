@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nextSibling</title>
+</head>
+<body>
+    <div id="wrap">
+<div id="child1"></div>
+<div id="child2"></div><!--注释 comment-->
+    </div>
+    <script>
+        var wrap = document.getElementById('wrap');
+        var child1 = document.getElementById('child1');
+        var child2 = document.getElementById('child2');
+
+        console.log(child1.nextSibling); // 获得child1的后一个兄弟节点：\n（换行符）
+        console.log(child1.nextSibling.nodeValue === '\n'); // true
+        console.log(child1.nextSibling.nodeType); // 3
+        console.log(child1.nextSibling.nodeName); //#text
+
+        console.log('1.================================================');
+
+        console.log(child1.nextElementSibling); // 获得child1的后一个兄弟元素节点：child2
+        console.log(child1.nextElementSibling === child2);// true
+        console.log(child1.nextElementSibling.nodeType); // 1
+        console.log(child1.nextElementSibling.nodeName); // DIV
+
+        console.log('2.================================================');
+
+        child1.nextSibling = 'you';
+        console.log(child1.nextSibling); // 结果不变，nextSibling是只读的
+
+        console.log('3.================================================');
+
+        console.log(child2.nextSibling); // '<!--注释 comment-->'
+        console.log(child2.nextSibling.nodeValue === '注释 comment'); // true
+        console.log(child2.nextSibling.nodeType); // 8
+        console.log(child2.nextSibling.nodeName); // #comment
+        console.log(child2.nextSibling.nextSibling); // '\n'
+        console.log(child2.nextSibling.nextSibling.nodeName); // #text
+    </script>
+</body>
+</html>
