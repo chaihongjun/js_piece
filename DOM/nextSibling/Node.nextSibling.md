@@ -1,4 +1,4 @@
-# previousSibling
+# Node.nextSibling
 
 ## w3c标准
 > **nextSibling of type Node, readonly**

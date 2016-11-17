@@ -1,4 +1,4 @@
-# previousElementSibling
+# Node.previousElementSibling
 
 ## w3c标准
 >  Accessing this attribute of an element must return a reference to the sibling node of that element which most immediately precedes that element in document order, and which is of nodeType 1, as an Element object. If the element on which this attribute is accessed does not have any preceding sibling nodes, or if none of those preceding sibling nodes are element nodes, then this attribute must return null.
@@ -66,7 +66,7 @@ var previousElementSibling = function (el) {
 
 ## 参考资料
 1. https://msdn.microsoft.com/en-us/library/ff974797(v=vs.85).aspx
-2. https://developer.mozilla.org/zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling
+2. https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling
 3. http://www.w3schools.com/jsref/prop_element_previouselementsibling.asp
 4. http://help.dottoro.com/ljfaxuox.php
 5. [parentNode or previousElementSibling not working in IE8](http://stackoverflow.com/questions/5197825/parentnode-or-previouselementsibling-not-working-in-ie8)
