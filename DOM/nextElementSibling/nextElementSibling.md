@@ -2,6 +2,7 @@
 
 ## w3c标准
 >Accessing this attribute of an element must return a reference to the sibling node of that element which most immediately follows that element in document order, and which is of nodeType 1, as an Element object. If the element on which this attribute is accessed does not have any following sibling nodes, or if none of those following sibling nodes are element nodes, then this attribute must return null.
+
 ## 定义和用法
 节点（Node）的nextElementSibling属性用于获取后一个兄弟元素节点（忽略文本节点和注释节点），如果没有则返回null。
 

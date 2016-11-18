@@ -1,7 +1,8 @@
 # js_piece
 研究javascript的小知识块
 ## DOM（Document Object Model）
-1. [previousSibling-获取前一个兄弟节点](./DOM/previousSibling/Node.previousSibling.md)
-2. [previousElementSibling-获取前一个兄弟元素节点](./DOM/previousElementSibling/Node.previousElementSibling.md)
-3. [nextSibling-获取后一个兄弟节点](./DOM/nextSibling/Node.nextSibling.md)
-3. [nextElementSibling-获取后一个兄弟节点](./DOM/nextElementSibling/Node.nextElementSibling.md)
+1. [previousSibling-获取前一个兄弟节点](./DOM/Node/previousSibling/previousSibling.md)
+2. [previousElementSibling-获取前一个兄弟元素节点](./DOM/previousElementSibling/previousElementSibling.md)
+3. [nextSibling-获取后一个兄弟节点](./DOM/Node/nextSibling/nextSibling.md)
+3. [nextElementSibling-获取后一个兄弟元素节点](./DOM/nextElementSibling/nextElementSibling.md)
+4. [baseURI-获取文档的基URL](./DOM/Node/baseURI/baseURI.md)

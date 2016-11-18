@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baseURI</title>
+</head>
+<body>
+    <div id="div">wrap</div>
+<a href="/" id="link">github</a>
+    <script>
+        var div = document.querySelector('#div');
+        var nextSibling = div.nextSibling; // 文本节点：'\n'
+        var link = document.querySelector('#link');
+
+        console.log(window.location.href);
+        // 下面三个打印的结果一样，都是打印出window.loaction.href
+        console.log(div.baseURI);
+        console.log(nextSibling.baseURI);
+        console.log(link.baseURI);
+        console.log('1.============================================');
+
+        // <base href="https://github.com" target="_blank">
+        // 把上面这行代码插入head标签中，点击a标签，就跳转到github网站
+        var baseElement = document.createElement('base');
+        baseElement.setAttribute('href','https://github.com'); // 若未设置href，还是打印出window.loaction.href
+        baseElement.setAttribute('target','_blank');
+        document.head.appendChild(baseElement);
+
+        console.log(window.location.href);
+
+        // 下面三个打印的结果一样，都会打印出：https://github.com
+        console.log(div.baseURI);
+        console.log(nextSibling.baseURI);
+        console.log(link.baseURI);
+    </script>
+</body>
+</html>
