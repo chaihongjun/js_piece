@@ -28,6 +28,7 @@
         var link = document.querySelector('#link');
 
         console.log(window.location.href);
+        
         // 下面三个打印的结果一样，都是打印出window.loaction.href
         console.log(div.baseURI);
         console.log(nextSibling.baseURI);
@@ -43,7 +44,7 @@
         document.head.appendChild(baseElement);
         
         console.log(window.location.href);
-
+        
         // 下面三个打印的结果一样，都会打印出：https://github.com
         console.log(div.baseURI);
         console.log(nextSibling.baseURI);
