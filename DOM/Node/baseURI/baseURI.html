@@ -5,7 +5,7 @@
     <title>baseURI</title>
 </head>
 <body>
-    <div id="div">wrap</div>
+    <div id="div">block</div>
 <a href="/" id="link">github</a>
     <script>
         var div = document.querySelector('#div');
@@ -17,6 +17,7 @@
         console.log(div.baseURI);
         console.log(nextSibling.baseURI);
         console.log(link.baseURI);
+
         console.log('1.============================================');
 
         // <base href="https://github.com" target="_blank">
@@ -32,6 +33,11 @@
         console.log(div.baseURI);
         console.log(nextSibling.baseURI);
         console.log(link.baseURI);
+
+        console.log('2.============================================');
+
+        link.baseURI = 'https://stackoverflow.com';
+        console.log(link.baseURI); // 还是打印出：https://github.com
     </script>
 </body>
 </html>
