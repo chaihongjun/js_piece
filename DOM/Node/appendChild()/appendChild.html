@@ -6,7 +6,7 @@
     <style>
         .parent{
             min-height: 200px;
-            background: #f5f5f5;
+            background: #ccc;
         }
         .other{
             background: #2bb8aa;
@@ -19,7 +19,6 @@
 <body>
     <button class="js_append_new">插入新节点</button>
     <button class="js_append_other">插入other</button>
-    <button class="js_append_error">插入报错</button>
     <div class="parent">parent</div>
     <div class="other">other</div>
 <script>
@@ -27,27 +26,24 @@
     var other = document.querySelector('.other');
     var appendNewBtn = document.querySelector('.js_append_new');
     var appendOtherBtn = document.querySelector('.js_append_other');
-    var appendErrorBtn = document.querySelector('.js_append_error');
-
-    var newChild = document.createElement('div');
-    newChild.setAttribute('class','child');
-    newChild.innerHTML = 'newChild';
 
     function appendNew() {
+        //创建一个元素节点
+        var newChild = document.createElement('div');
+        newChild.setAttribute('class','child');
+        newChild.innerHTML = 'newChild';
+        //把newChild插入parent内容的末尾
         parent.appendChild(newChild);
     }
+    //给appendNewBtn绑定点击事件
     appendNewBtn.addEventListener('click',appendNew,false);
 
     function appendOther() {
+        //把other剪切再插入parent内容的末尾
         parent.appendChild(other);
     }
+    //给appendOtherBtn绑定点击事件
     appendOtherBtn.addEventListener('click',appendOther,false);
-
-    function appendError() {
-        parent.appendChild(parent);
-    }
-    appendErrorBtn.addEventListener('click',appendError,false);
-
 </script>
 </body>
 </html>
