@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>childNodes</title>
+</head>
+<body>
+<div class="parent1">
+<div class="child1"></div><!--注释 comment-->
+<div class="child2"></div>
+</div>
+<div class="parent2"></div>
+<script>
+    var parent1 = document.querySelector('.parent1');
+    var parent2 = document.querySelector('.parent2');
+    var childNodes = parent1.childNodes;
+    var children = parent1.children;
+
+    console.log(childNodes); // 打印出：包含六个子节点的NodeList对象
+    console.log(parent2.childNodes); // 打印出：一个空NodeList对象
+    console.log(children); // 打印出：只包含两个div元素节点的HTMLCollection对象
+
+    var child = document.createElement('div');
+    child.textContent = 'newdiv';
+    parent1.appendChild(child);
+
+    console.log(childNodes); //打印出：包含七个子节点的NodeList对象，说明childNodes的结果是动态的
+    console.log(children); // 打印出：只包含三个div元素节点的HTMLCollection对象，说明children的结果也是动态的
+</script>
+</body>
+</html>
