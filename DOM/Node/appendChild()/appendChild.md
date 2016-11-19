@@ -84,7 +84,7 @@ appendChild modified in DOM Level 3
     appendNewBtn.addEventListener('click',appendNew,false);
 
     function appendOther() {
-    //把other剪切再插入parent内容的末尾
+        //把other剪切再插入parent内容的末尾
         parent.appendChild(other);
     }
     //给appendOtherBtn绑定点击事件
