@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appendChild</title>
+    <style>
+        .parent{
+            min-height: 200px;
+            background: #f5f5f5;
+        }
+        .other{
+            background: #2bb8aa;
+        }
+        .child{
+            background: #ff8e3f;
+        }
+    </style>
+</head>
+<body>
+    <button class="js_append_new">插入新节点</button>
+    <button class="js_append_other">插入other</button>
+    <button class="js_append_error">插入报错</button>
+    <div class="parent">parent</div>
+    <div class="other">other</div>
+<script>
+    var parent = document.querySelector('.parent');
+    var other = document.querySelector('.other');
+    var appendNewBtn = document.querySelector('.js_append_new');
+    var appendOtherBtn = document.querySelector('.js_append_other');
+    var appendErrorBtn = document.querySelector('.js_append_error');
+
+    var newChild = document.createElement('div');
+    newChild.setAttribute('class','child');
+    newChild.innerHTML = 'newChild';
+
+    function appendNew() {
+        parent.appendChild(newChild);
+    }
+    appendNewBtn.addEventListener('click',appendNew,false);
+
+    function appendOther() {
+        parent.appendChild(other);
+    }
+    appendOtherBtn.addEventListener('click',appendOther,false);
+
+    function appendError() {
+        parent.appendChild(parent);
+    }
+    appendErrorBtn.addEventListener('click',appendError,false);
+
+</script>
+</body>
+</html>
