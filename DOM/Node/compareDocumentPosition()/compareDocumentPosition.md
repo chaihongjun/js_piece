@@ -13,6 +13,7 @@
 
 返回值 | 对应常量 | 意义
 --- | --- | ---
+0 | 无 | 同一节点
 1 | Node.DOCUMENT_POSITION_DISCONNECTED | 没有位置关系，一般表示两个节点不在同一个文档中
 2 | Node.DOCUMENT_POSITION_PRECEDING |  n2在n1的前面
 4 | Node.DOCUMENT_POSITION_FOLLOWING | n2在n1的后面
@@ -70,3 +71,4 @@
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
 2. http://www.w3schools.com/jsref/met_node_comparedocumentposition.asp
 3. http://help.dottoro.com/ljgoeost.php
+4. https://segmentfault.com/a/1190000004177042#articleHeader2
