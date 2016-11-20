@@ -1,7 +1,8 @@
 # Node.previousElementSibling
 
-## w3c标准
+## W3C 标准
 [Element Traversal Specification: previousElementSibling](https://www.w3.org/TR/2008/REC-ElementTraversal-20081222/#attribute-previousElementSibling)
+
 ## 定义和用法
 节点（Node）的previousElementSibling属性用于获取前一个兄弟元素节点（忽略文本节点和注释节点），如果没有则返回null。
 
@@ -69,3 +70,6 @@ var previousElementSibling = function (el) {
 3. http://www.w3schools.com/jsref/prop_element_previouselementsibling.asp
 4. http://help.dottoro.com/ljfaxuox.php
 5. [parentNode or previousElementSibling not working in IE8](http://stackoverflow.com/questions/5197825/parentnode-or-previouselementsibling-not-working-in-ie8)
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

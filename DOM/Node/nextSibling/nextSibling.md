@@ -1,6 +1,6 @@
 # Node.nextSibling
 
-## w3c标准
+## W3C 标准
 [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## 定义和用法
@@ -66,3 +66,6 @@
 3. https://msdn.microsoft.com/en-us/library/ms534189(v=vs.85).aspx
 4. http://stackoverflow.com/questions/26945438/this-nextsibling-not-working
 5. http://stackoverflow.com/questions/24226571/what-is-the-difference-between-node-nextsibling-and-childnode-nextelementsibling
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

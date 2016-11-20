@@ -1,6 +1,6 @@
 # Node.previousSibling
 
-## w3c标准
+## W3C 标准
 [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
 
 ## 定义和用法
@@ -62,3 +62,6 @@
 3. https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM
 4. http://stackoverflow.com/questions/10924086/how-to-get-the-previous-sibling-name
 5. http://stackoverflow.com/questions/20768925/parentnode-and-previoussibling-in-javascript
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

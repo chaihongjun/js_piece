@@ -65,3 +65,6 @@
 2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 3. http://www.w3schools.com/jsref/prop_doc_baseuri.asp
 4. https://www.quora.com/What-are-the-differences-between-document-baseURI-document-documentURI-and-document-URL
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

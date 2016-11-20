@@ -72,3 +72,6 @@
 2. http://www.w3schools.com/jsref/met_node_comparedocumentposition.asp
 3. http://help.dottoro.com/ljgoeost.php
 4. https://segmentfault.com/a/1190000004177042#articleHeader2
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

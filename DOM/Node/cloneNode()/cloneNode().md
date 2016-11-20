@@ -87,3 +87,6 @@
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode
 2. http://www.w3schools.com/jsref/met_node_clonenode.asp
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

@@ -69,3 +69,6 @@
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 2. http://www.w3schools.com/jsref/met_node_appendchild.asp
 3. [element.innerHTML和appendChild有什么区别](https://segmentfault.com/q/1010000004693112)
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

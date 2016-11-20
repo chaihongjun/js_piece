@@ -1,12 +1,13 @@
 # Node.nextElementSibling
 
-## w3c标准
+## W3C 标准
 [Element Traversal Specification: nextElementSibling](https://www.w3.org/TR/ElementTraversal/#attribute-nextElementSibling)
+
 ## 定义和用法
 节点（Node）的nextElementSibling属性用于获取后一个兄弟元素节点（忽略文本节点和注释节点），如果没有则返回null。
 
 > 语法：Node.nextElementSibling
-
+>
 > 返回值：元素节点对象（A Element Node Object） 或 null
 
 ```html
@@ -70,3 +71,6 @@ var nextElementSibling = function (el) {
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling
 2. http://www.w3schools.com/jsref/prop_element_nextelementsibling.asp
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看

@@ -54,3 +54,6 @@
 2. http://www.w3schools.com/jsref/prop_node_childnodes.asp
 3. [stackoverflow:What is the difference between children and childNodes in JavaScript?](http://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript)
 4. [stackoverflow:best way to get child nodes](http://stackoverflow.com/questions/10381296/best-way-to-get-child-nodes)
+
+## 更多
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看
