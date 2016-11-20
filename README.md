@@ -1,5 +1,5 @@
 # js_piece
-研究javascript的小知识块
+研究javascript的小知识块，精进自己，分享他人。
 ## DOM（Document Object Model）
 1. [previousSibling--获取前一个兄弟节点](./DOM/Node/previousSibling/previousSibling.md)
 2. [previousElementSibling--获取前一个兄弟元素节点](./DOM/previousElementSibling/previousElementSibling.md)
