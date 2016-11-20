@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>compareDocumentPosition()</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1" data-github="jserz"></div>
+        <div class="child2" id="jszhou"></div>
+    </div>
+    <script>
+        var parent = document.querySelector('.parent');
+        var child1 = parent.querySelector('.child1');
+        var child2 = parent.querySelector('.child2');
+        var dataAttr = child1.getAttributeNode('data-github');
+        var classAttr = child2.getAttributeNode('class');
+        var idAttr = child2.getAttributeNode('id');
+
+        //表示child1在child2的前面
+        console.log(child2.compareDocumentPosition(child1)); // 2
+        console.log(child2.compareDocumentPosition(child1) === Node.DOCUMENT_POSITION_PRECEDING); // true
+
+        //飙升child2在child1的后面
+        console.log(child1.compareDocumentPosition(child2)); // 4
+        console.log(child1.compareDocumentPosition(child2) === Node.DOCUMENT_POSITION_FOLLOWING); // true
+
+        //表示parent包含child1（8）同时parent在child1前面（2），8+2
+        console.log(child1.compareDocumentPosition(parent)); // 10
+
+        //表示child1包含于parent（16）同时child1在parent后面（4），16+4
+        console.log(parent.compareDocumentPosition(child1)); // 20
+
+        //表示classAttr和idAttr是同一个元素的属性（32）同时idAttr在classAttr后面（4），32+4
+        console.log(classAttr.compareDocumentPosition(idAttr)); // 36
+
+        console.log(child2.compareDocumentPosition(child2)); // 0
+    </script>
+</body>
+</html>

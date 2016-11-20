@@ -8,7 +8,7 @@
 
 > 语法：Node.cloneNode( deep )
 >
-> 参数：deep:boolean,true表示复制后代节点，false不复制后代节点，默认为false
+> 参数：deep:boolean，true表示复制后代节点，false不复制后代节点，默认为false
 >
 > 返回值：复制的节点对象
 
@@ -41,12 +41,12 @@
     </style>
 </head>
 <body>
-<div class="parent" onclick="getRed()">
-<div class="child">
-<div class="grandson"></div>
-</div><!--注释 comment -->
-</div>
-<div id="id"></div>
+    <div class="parent" onclick="getRed()">
+        <div class="child">
+            <div class="grandson"></div>
+        </div>
+    </div>
+    <div id="id"></div>
 <script>
     var parent = document.querySelector('.parent');
     var child = parent.querySelector('.child');

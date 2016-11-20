@@ -9,3 +9,4 @@
 6. [appendChild(newChildNode)--把newChildNode插入指定节点内容的末尾](./DOM/Node/appendChild()/appendChild().md)
 7. [childNodes--获取子节点的集合](./DOM/Node/childNodes/childNodes.md)
 8. [cloneNode(deep)--复制节点](./DOM/Node/cloneNode()/cloneNode().md)
+9. [compareDocumentPosition(node)--比较两个节点在文档中的位置](./DOM/Node/compareDocumentPosition()/compareDocumentPosition.md)
