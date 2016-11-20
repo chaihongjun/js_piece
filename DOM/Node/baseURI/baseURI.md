@@ -1,10 +1,7 @@
 # Node.baseURI
 
 ## W3C 标准
-> **baseURI of type DOMString, readonly, introduced in DOM Level 3**
->
-> The absolute base URI of this node or null if the implementation wasn't able to obtain an absolute URI. This value is computed as described in Base URIs. However, when the Document supports the feature "HTML" [DOM Level 2 HTML], the base URI is computed using first the value of the href attribute of the HTML BASE element if any, and the value of the documentURI attribute from the Document interface otherwise.
-
+[DOM Level 3 Core: baseURI](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI)
 ## 定义和用法
 节点（Node）的baseURI属性用于获取文档的**基URL**（就是文档中相对地址的参考地址），默认值为window.location.href。在HTML文档中，如果包含base标签，则Node.baseURI的值为base标签href属性的值。作用是利于img，a等标签中的相对地址获得基URL。
 

@@ -1,9 +1,6 @@
 # Node.childNodes
 
 ## W3C 标准
-> childNodes of type NodeList, readonly
->
->  A NodeList that contains all children of this node. If there are no children, this is a NodeList containing no nodes.
 
 [W3C DOM 3 Core: childNodes](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
 

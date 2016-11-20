@@ -1,8 +1,7 @@
 # Node.previousElementSibling
 
 ## w3c标准
->  Accessing this attribute of an element must return a reference to the sibling node of that element which most immediately precedes that element in document order, and which is of nodeType 1, as an Element object. If the element on which this attribute is accessed does not have any preceding sibling nodes, or if none of those preceding sibling nodes are element nodes, then this attribute must return null.
-
+[Element Traversal Specification: previousElementSibling](https://www.w3.org/TR/2008/REC-ElementTraversal-20081222/#attribute-previousElementSibling)
 ## 定义和用法
 节点（Node）的previousElementSibling属性用于获取前一个兄弟元素节点（忽略文本节点和注释节点），如果没有则返回null。
 

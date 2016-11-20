@@ -1,9 +1,7 @@
 # Node.nextSibling
 
 ## w3c标准
-> **nextSibling of type Node, readonly**
->
-> The node immediately following this node. If there is no such node, this returns null.
+[DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## 定义和用法
 节点（Node）的nextSibling属性用于获取后一个兄弟节点（可以是元素节点，文本节点，注释节点），如果没有则返回null。如果只想获取后一个兄弟元素节点可以用nextElementSibling属性。
@@ -63,7 +61,7 @@
 2. nextSibling属性的值可以是元素节点（1），文本节点（3）或注释节点（8）
 
 ## 参考资料
-1. https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nextSibling
+1. https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling
 2. http://www.w3schools.com/jsref/prop_node_nextsibling.asp
 3. https://msdn.microsoft.com/en-us/library/ms534189(v=vs.85).aspx
 4. http://stackoverflow.com/questions/26945438/this-nextsibling-not-working
