@@ -36,7 +36,6 @@
         var parent = document.querySelector('.parent');
         var child1 = parent.querySelector('.child1');
         var child2 = parent.querySelector('.child2');
-        var dataAttr = child1.getAttributeNode('data-github');
         var classAttr = child2.getAttributeNode('class');
         var idAttr = child2.getAttributeNode('id');
 
@@ -66,6 +65,7 @@
 ## 注意事项
 1. 返回值可能会组合以上几种情况并返回它们的和。比如n2是n1的父元素，包括两种情况：n2包含n1（8）和n2在n1的前面（2），结果返回10
 2. 如果n2和n1是同一节点，则返回0
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
 2. http://www.w3schools.com/jsref/met_node_comparedocumentposition.asp
