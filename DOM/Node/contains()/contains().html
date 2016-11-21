@@ -23,11 +23,14 @@
         console.log(parent.contains(undefined)); // false
         console.log(child.contains(parent)); // false
 
+        console.log(child.nextSibling); // 文本节点
+        console.log(parent.contains(child.nextSibling)); // true
+
         console.log(grandchild.nextSibling); // 注释节点
         console.log(parent.contains(grandchild.nextSibling)); // true
 
-        console.log(child.getAttributeNode('class'));
-        console.log(parent.contains(child.getAttributeNode('class'))); // true
+        console.log(child.getAttributeNode('class')); // 属性节点
+        console.log(parent.contains(child.getAttributeNode('class'))); // false
     </script>
 </body>
 </html>

@@ -19,6 +19,7 @@
 4. other如果是属性节点都返回false
 
 [示例代码](./contains().html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 2. http://www.w3schools.com/jsref/met_node_contains.asp
