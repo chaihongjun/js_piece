@@ -10,3 +10,4 @@
 7. [childNodes--获取子节点的集合](./DOM/Node/childNodes/childNodes.md)
 8. [cloneNode(deep)--复制节点](./DOM/Node/cloneNode()/cloneNode().md)
 9. [compareDocumentPosition(node)--比较两个节点在文档中的位置](./DOM/Node/compareDocumentPosition()/compareDocumentPosition.md)
+10. [contains(other)--判断other是否是指定节点的后代节点](./DOM/Node/contains()/contain().md)
