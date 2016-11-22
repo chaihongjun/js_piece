@@ -5,7 +5,7 @@
 [W3C DOM 3 Core: childNodes](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1451460987)
 
 ## 定义和用法
-节点(Node)的childNodes属性用于获取子节点的集合，该属性是只读的。获得的子节点集合是动态的，会随子节点的改变而改变。子节点集合中包括元素节点，文本节点和注释节点。如果只想获得元素节点集合可以用Element.children属性。
+节点(Node)的childNodes属性用于获取子节点的集合，该属性是只读的。获得的子节点集合是动态的，会随子节点的改变而改变。子节点集合中包括元素节点，文本节点和注释节点。如果只想获得元素节点集合可以用ParentNode.children属性。
 > 用法：Node.childNodes
 > 
 > 返回值：NodeList（类数值对象）
