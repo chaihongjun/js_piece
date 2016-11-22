@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>firstElementChild</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <script>
+        var parent = document.querySelector('.parent');
+        var child = document.querySelector('.child');
+
+        // firstElementChild获取第一个子元素节点
+        console.log(parent.firstElementChild === child); // true
+
+        // 也可以用children[0]获取第一个子元素节点
+        console.log(parent.children[0] === child); // true
+    </script>
+</body>
+</html>
