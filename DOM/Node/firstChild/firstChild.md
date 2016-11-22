@@ -8,7 +8,7 @@
 
 > 语法：node.firstChild
 >
-> 返回值：节点对象
+> 返回值：节点对象 或 null
 
 ## 注意事项
 1. firstChild属性是只读的
