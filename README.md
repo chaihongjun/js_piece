@@ -13,3 +13,4 @@
 10. [contains(other)--判断other是否是指定节点的后代节点](./DOM/Node/contains()/contains().md)
 11. [firstChild--获取第一个子节点](./DOM/Node/firstChild/firstChild.md)
 12. [firstElementChild--获取第一个子元素节点](./DOM/Node/ParentNode/firstElementChild/firstElementChild.md)
+13. [getRootNode(optional)--获得根节点](./DOM/Node/getRootNode()/getRootNode().md)
