@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getRootNode()</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="shadowHost"></div>
+    <script>
+        // 以下代码只在chrome 54 下面有效
+        var parent = document.querySelector('.parent');
+        var child = document.querySelector('.child');
+        var shadowHost = document.querySelector('.shadowHost');
+
+        // 下面两个都会打印出#document，
+        // 说明平常元素的getRootNode方法返回document对象（即整个文档的根节点对象）
+        console.log(parent.getRootNode().nodeName); // #document
+        console.log(child.getRootNode().nodeName); // #document
+
+        //  创建一个Shadow DOM
+        var shadowRoot = shadowHost.createShadowRoot();
+        // 下面一行代码和上面效果一样
+        // var shadowRoot = shadowHost.attachShadow({mode:'open'});
+        shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+                + '<div class="shadowChild">content</div>';
+
+        var shadowChild = shadowRoot.querySelector('.shadowChild');
+
+        // Shadow DOM 中元素的getRootNode方法返回ShadowRoot对象（即相应的Shadow DOM的根节点对象）
+        console.log(shadowChild.getRootNode() === shadowRoot); // true
+
+        // getRootNode(optional)有一个可选的对象参数。对象参数里只有composed属性，为布尔值。
+        // true表示不返回ShadowRoot对象，false表示返回ShadowRoot对象，默认为false
+        console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
+        console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
+    </script>
+</body>
+</html>
