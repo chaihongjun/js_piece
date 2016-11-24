@@ -6,7 +6,7 @@
 **以下用法和代码和标准不一致，只表示Chrome 54的实现**
 
 ## 定义和用法
-节点（node）的getRootNode(optional)方法用于获得指定节点的根节点。包括两种情况：
+节点（node）的getRootNode(optional)方法用于获得指定节点所在的根节点。包括两种情况：
 
 1. 如果指定节点不是Shadow DOM中的节点，则返回值为document节点对象
 2. 如果指定节点是Shadow DOM中的节点，分为两种情况：
