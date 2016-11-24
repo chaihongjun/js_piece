@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hasChildNodes()</title>
+</head>
+<body>
+    <div class="parent1"> </div>
+    <div class="parent2"><!--注释 comment--></div>
+    <div class="parent3"><div class="child3"></div></div>
+    <script>
+        var parent1 = document.querySelector('.parent1');
+        var parent2 = document.querySelector('.parent2');
+        var parent3 = document.querySelector('.parent3');
+        var child3 = document.querySelector('.child3');
+
+        // parent1 包括一个空格（文本节点），所以为true
+        console.log(parent1.hasChildNodes()); // true
+        // parent2 包括一个注释节点，所以为true
+        console.log(parent2.hasChildNodes()); // true
+        // parent3 包括child3，所以为true
+        console.log(parent3.hasChildNodes()); // true
+        // child3 不包括子节点，所以为false
+        console.log(child3.hasChildNodes()); // false
+    </script>
+</body>
+</html>
