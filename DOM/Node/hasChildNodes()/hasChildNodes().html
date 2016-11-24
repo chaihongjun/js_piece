@@ -22,6 +22,11 @@
         console.log(parent3.hasChildNodes()); // true
         // child3 不包括子节点，所以为false
         console.log(child3.hasChildNodes()); // false
+
+        //判断是否有子节点的方法总结
+        console.log(parent1.hasChildNodes()); // true
+        console.log(parent1.firstChild !== null); // true
+        console.log(parent1.childNodes.length > 0 ); // true
     </script>
 </body>
 </html>
