@@ -20,6 +20,7 @@
 1. node.firstChild !== null
 2. node.childNodes.length > 0 
 3. node.hasChildNodes()
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes
 2. http://www.w3schools.com/jsref/met_node_haschildnodes.asp
