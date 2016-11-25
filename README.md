@@ -15,3 +15,4 @@
 12. [firstElementChild--获取第一个子元素节点](./DOM/Node/ParentNode/firstElementChild/firstElementChild.md)
 13. [getRootNode(optional)--获得根节点](./DOM/Node/getRootNode()/getRootNode().md)
 14. [hasChildNodes()--判断是否有子节点](./DOM/Node/hasChildNodes()/hasChildNodes().md)
+15. [insertBefore()--在某个子节点之前插入子节点](./DOM/Node/insertBefore()/insertBefore().md)
