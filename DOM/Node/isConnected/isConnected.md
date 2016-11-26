@@ -17,7 +17,7 @@
 [示例代码](./isConnected.html)
 
 ## 兼容性和polyfill
-- Chrome 52+ ，Opera 39+
+- Chrome 52+ ，Opera 39+，Firefox 50+
 - polyfill地址在[这里](http://stackoverflow.com/questions/37588326/reliabilty-of-isconnected-field-in-dom-node)
 
 ```javascript
