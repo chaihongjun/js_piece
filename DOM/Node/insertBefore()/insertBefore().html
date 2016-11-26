@@ -11,6 +11,16 @@
         <div class="child2">child2</div>
     </div>
     <script>
+        // insertAfter的polyfill
+        (function() {
+            if('insertAfter' in window.Node.prototype){
+                return;
+            }
+            window.Node.prototype.insertAfter = function(newNode, referenceNode) {
+                return referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+            }
+        })();
+
         var parent1 = document.querySelector('.parent1');
         var parent2 = document.querySelector('.parent2');
         var child1 = document.querySelector('.child1');
@@ -20,20 +30,23 @@
 
         // 可以打开单个注释看效果
 
-        // 插入parent1的内容末尾，返回newChild
+        // 把newChild插入parent1的内容末尾，返回newChild
         // console.log(parent1.insertBefore(newChild,null));
 
-        // 插入parent2的内容末尾，返回newChild
+        // 把newChild插入parent2的内容末尾，返回newChild
         // parent2.insertBefore(newChild,undefined);
 
-        // 插入child1之前，返回newChild
+        // 把newChild插入child1之前，返回newChild
         // parent2.insertBefore(newChild,child1);
 
-        // 插入child1之后，返回newChild
+        // 把newChild插入child1之后，返回newChild
         // parent2.insertBefore(newChild,child1.nextSibling);
 
-        // 插入child2插入child1之前，先剪切再插入，返回child2
+        // 把child2插入child1之前，先剪切再插入，返回child2
         // console.log(parent2.insertBefore(child2,child1));
+
+        // 把parent1插入child1之后，先剪切再插入，返回parent1
+        // console.log(parent2.insertAfter(parent1,child1));
     </script>
 </body>
 </html>
