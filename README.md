@@ -16,3 +16,4 @@
 13. [getRootNode(optional)--获得根节点](./DOM/Node/getRootNode()/getRootNode().md)
 14. [hasChildNodes()--判断是否有子节点](./DOM/Node/hasChildNodes()/hasChildNodes().md)
 15. [insertBefore()--在某个子节点之前插入子节点](./DOM/Node/insertBefore()/insertBefore().md)
+16. [isConnected--判断节点是否在文档中](./DOM/Node/isConnected/isConnected.md)
