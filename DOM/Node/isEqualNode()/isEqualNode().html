@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isEqualNode()</title>
+</head>
+<body>
+    <div class="first">first</div>
+    <div class="second">second</div>
+    <div class="first">first</div>
+    <script>
+        var firsts = document.querySelectorAll('.first');
+        var second = document.querySelector('.second');
+
+        // isEqualNode()的参数为节点对象，null 或 undefined
+        console.log(firsts[0].isEqualNode(firsts[0])); // true
+        console.log(firsts[0] === (firsts[0])); // true
+
+        console.log(firsts[0].isEqualNode(firsts[1])); // true
+        console.log(firsts[0] === (firsts[1])); // false
+
+        console.log(firsts[0].isEqualNode(second)); // false
+        console.log(firsts[0].isEqualNode(null)); // false
+        console.log(firsts[0].isEqualNode(undefined)); // false
+
+        var cloneNode = second.cloneNode(true);
+        console.log(second.isEqualNode(cloneNode)); // true
+    </script>
+</body>
+</html>
