@@ -9,11 +9,12 @@
 - 语法：node.lastChild
 - 返回值：节点对象 或 null
 
+[示例代码](./lastChild.html)
+
 ## 注意事项
 1. lastChild属性是只读的，赋值无效
 2. 返回的子节点可以是元素节点，文本节点和注释节点
 
-[示例代码](./lastChild.html)
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild
 2. http://www.w3schools.com/jsref/prop_node_lastchild.asp
