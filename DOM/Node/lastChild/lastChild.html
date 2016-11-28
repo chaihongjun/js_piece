@@ -8,7 +8,7 @@
 <div class="parent">
     <div class="child"><!--注释 comment--></div>
 </div>
-<div class="wrap"><div class="wraped"></div></div>
+<div class="wrap"><div class="wraped">wraped</div></div>
 <script>
     var parent = document.querySelector('.parent');
     var child = document.querySelector('.child');
@@ -29,7 +29,7 @@
     // 元素节点
     console.log(wrap.lastChild.nodeType); // 1
     console.log(wrap.lastChild === wraped); // true
-    console.log(wrap.lastChild.lastChild); // null
+    console.log(wrap.lastChild.lastChild.nodeValue); // wraped
 
     // 如果想获得最后一个元素子节点用lastElementChild
     console.log(parent.lastElementChild === child); // true
