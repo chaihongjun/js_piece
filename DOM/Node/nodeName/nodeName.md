@@ -20,6 +20,8 @@
  
 ## 注意事项
 1. nodeName属性是只读的，赋值无效
+
+[示例代码](./nodeName.html)
  
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName
