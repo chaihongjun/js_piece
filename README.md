@@ -20,3 +20,4 @@
 17. [isEqualNode()--判断两个节点是否相等](./DOM/Node/isEqualNode()/isEqualNode().md)
 18. [isSameNode()--判断两个节点是否为同一节点](./DOM/Node/isSameNode()/isSameNode().md)
 19. [lastChild--获取最后一个子节点](./DOM/Node/lastChild/lastChild.md)
+20. [nodeName--获取节点的名称](./DOM/Node/nodeName/nodeName.md)
