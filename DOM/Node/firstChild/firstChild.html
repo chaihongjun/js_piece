@@ -25,6 +25,10 @@
 
     // child 没有子节点，则返回null
     console.log(child.firstChild); // null
+
+    // 一般来说，文档节点的第一个子节点为：文档类型节点
+    console.log(document.firstChild); // 文档类型节点
+    console.log(document.firstChild === document.doctype); // true
 </script>
 </body>
 </html>

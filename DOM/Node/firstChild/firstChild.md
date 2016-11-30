@@ -13,6 +13,7 @@
 ## 注意事项
 1. firstChild属性是只读的
 2. firstChild属性获得的子节点可以是元素节点，文本节点，注释节点
+3. 一般来说，文档节点（document）的第一个子节点为：文档类型节点（documentType）
 
 [示例代码](./firstChild.html)
 
