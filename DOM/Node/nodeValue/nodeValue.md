@@ -19,9 +19,11 @@
 文档节点（document） | null
 文档类型节点（documentType） | null
 文档片段节点（documentFragment） | null
+
 - 设置节点值
     - 语法：node.nodeValue = 你要设置的值
     - 返回值：无
+
 ## 注意事项
 1. nodeValue属性可取值可赋值
 2. 如果nodeValue属性的值默认为null，则赋值无效
