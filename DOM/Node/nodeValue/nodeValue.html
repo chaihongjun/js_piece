@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nodeValue</title>
+</head>
+<body>
+    <div class="wrap"><!--这是注释--></div>这是文本
+    <script>
+        var wrap = document.querySelector('.wrap');
+        var classNode = wrap.getAttributeNode('class');
+        var docFrag = document.createDocumentFragment();
+
+        // 元素节点
+        console.log(wrap.nodeValue);  // null
+        wrap.nodeValue = '123';
+        console.log(wrap.nodeValue);  // null
+
+        // 属性节点
+        console.log(classNode.nodeValue);  // wrap
+        classNode.nodeValue = 'newWrap';
+        console.log(classNode.nodeValue);  // newWrap
+
+        // 文本节点
+        console.log(wrap.nextSibling.nodeValue);  // 这是文本\n（注意这里包括换行符）
+        wrap.nextSibling.nodeValue = '这是新的文本';
+        console.log(wrap.nextSibling.nodeValue);  // 这是新的文本
+
+        // 注释节点
+        console.log(wrap.firstChild.nodeValue);  // 这是注释
+        wrap.firstChild.nodeValue = '这是新注释';
+        console.log(wrap.firstChild.nodeValue);  // 这是新注释
+
+        // 文档节点
+        console.log(document.nodeValue); // null
+        document.nodeValue = 'doc';
+        console.log(document.nodeValue); // null
+
+        // 文档类型节点
+        console.log(document.doctype.nodeValue); // null
+        document.doctype.nodeValue = 'docType';
+        console.log(document.doctype.nodeValue); // null
+
+        // 文档片段节点
+        console.log(docFrag.nodeValue); // null
+        docFrag.nodeValue = 'docFrag';
+        console.log(docFrag.nodeValue); // null
+    </script>
+</body>
+</html>
