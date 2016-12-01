@@ -7,11 +7,12 @@
 节点（node）的nodeType属性用于获取节点类型。
 
 - 语法：node.nodeType
-- 返回值：无符号整型
+- 返回值：无符号整型数值
 
 返回值 | 对应常量 | 描述
 --- | --- | ---
 1 | Node.ELEMENT_NODE | 元素节点
+2 | Node.ATTRIBUTE_NODE | 属性节点
 3 | Node.TEXT_NODE | 文本节点
 8 | Node.COMMENT_NODE | 注释节点
 9 | Node.DOCUMENT_NODE | 文档节点

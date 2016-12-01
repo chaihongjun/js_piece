@@ -8,11 +8,16 @@
     <div class="wrap"><!--注释 comment--></div>
     <script>
         var wrap = document.querySelector('.wrap');
+        var classNode = wrap.getAttributeNode('class');
         var docFrag = document.createDocumentFragment();
 
         // 元素节点的nodeType：1
         console.log(wrap.nodeType); // 1
         console.log(wrap.nodeType === Node.ELEMENT_NODE); // true
+
+        // 属性节点的nodeType：2
+        console.log(classNode.nodeType); // 2
+        console.log(classNode.nodeType === Node.ATTRIBUTE_NODE); // true
 
         // 文本节点的nodeType：3
         console.log(wrap.nextSibling.nodeType); // 3
