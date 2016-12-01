@@ -11,13 +11,14 @@
  
  节点 | 返回值
  --- | ---
- 属性节点 | 属性名（如，class）
  元素节点 | 大写的标签名（如，DIV）
+ 属性节点 | 属性名（如，class）
  文本节点 | #text
  注释节点 | #comment
  文档节点（Document） | #document
- 文档片段节点（DocumentFragment） | #document-fragment
  文档类型节点（DocumentType） | html
+ 文档片段节点（DocumentFragment） | #document-fragment
+
  
 ## 注意事项
 1. nodeName属性是只读的，赋值无效
