@@ -22,3 +22,4 @@
 19. [lastChild--获取最后一个子节点](./DOM/Node/lastChild/lastChild.md)
 20. [nodeName--获取节点名称](./DOM/Node/nodeName/nodeName.md)
 21. [nodeType--获取节点类型](./DOM/Node/nodeType/nodeType.md)
+22. [nodeValue--获取和设置节点值](./DOM/Node/nodeValue/nodeValue.md)
