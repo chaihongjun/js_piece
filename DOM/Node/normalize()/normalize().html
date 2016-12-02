@@ -11,7 +11,7 @@
         var wrap = document.querySelector('.wrap');
         var parent = document.querySelector('.parent');
 
-        // normalize()用于合并后代中的相邻文本节点
+        // normalize()用于删除后代中的空文本节点和合并后代中的相邻文本节点
         console.log(wrap.childNodes.length); // 0
         wrap.appendChild(document.createTextNode('wraped1 '));
         wrap.appendChild(document.createTextNode(''));
@@ -20,14 +20,14 @@
         wrap.normalize();
         console.log(wrap.childNodes.length); // 1
 
-        // normalize()会删除空文本节点
+        // normalize()会删除后代中的空文本节点
         console.log(parent.childNodes.length); // 0
         parent.appendChild(document.createTextNode(''));
         console.log(parent.childNodes.length); // 1
         parent.normalize();
         console.log(parent.childNodes.length); // 0
 
-        // 可以用document.normalize()合并整个文档的后代中的相邻文本节点
+        // 可以用document.normalize()规范化整个文档的后代文本节点
         // document.normalize();
     </script>
 </body>
