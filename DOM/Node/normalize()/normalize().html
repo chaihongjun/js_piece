@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>normalize()</title>
+</head>
+<body>
+    <div class="wrap"></div>
+    <div class="parent"></div>
+    <script>
+        var wrap = document.querySelector('.wrap');
+        var parent = document.querySelector('.parent');
+
+        // normalize()用于合并后代中的相邻文本节点
+        console.log(wrap.childNodes.length); // 0
+        wrap.appendChild(document.createTextNode('wraped1 '));
+        wrap.appendChild(document.createTextNode(''));
+        wrap.appendChild(document.createTextNode('wraped2 '));
+        console.log(wrap.childNodes.length); // 3
+        wrap.normalize();
+        console.log(wrap.childNodes.length); // 1
+
+        // normalize()会删除空文本节点
+        console.log(parent.childNodes.length); // 0
+        parent.appendChild(document.createTextNode(''));
+        console.log(parent.childNodes.length); // 1
+        parent.normalize();
+        console.log(parent.childNodes.length); // 0
+
+        // 可以用document.normalize()合并整个文档的后代中的相邻文本节点
+        // document.normalize();
+    </script>
+</body>
+</html>
