@@ -23,3 +23,4 @@
 20. [nodeName--获取节点名称](./DOM/Node/nodeName/nodeName.md)
 21. [nodeType--获取节点类型](./DOM/Node/nodeType/nodeType.md)
 22. [nodeValue--获取和设置节点值](./DOM/Node/nodeValue/nodeValue.md)
+23. [normalize()--规范化后代文本节点](./DOM/Node/normalize()/normalize().md)
