@@ -13,6 +13,8 @@
 ## 注意事项
 1. 可以用document.normalize()规范化整个文档的后代文本节点
 
+[示例代码](./normalize().html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize
 2. http://www.w3schools.com/jsref/met_node_normalize.asp
