@@ -28,7 +28,7 @@
 1. nodeValue属性可取值可赋值
 2. 如果nodeValue属性的默认值为null，则赋值无效
 
-[示例代码](./nodeType.html)
+[示例代码](./nodeValue.html)
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue
