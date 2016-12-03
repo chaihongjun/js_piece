@@ -12,6 +12,7 @@
 ## 注意事项
 1. parentElement属性是只读的，赋值无效
 2. 属性节点，文档节点，文档类型节点，文档片段节点的parentElement属性值都为null
+3. 未插入文档中的节点的parentElement属性值为null
 
 [示例代码](./parentElement.html)
 

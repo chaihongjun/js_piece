@@ -14,9 +14,9 @@
         var child = document.querySelector('.child');
         var classAttrNode = parent.getAttributeNode('class');
         var docFrag = document.createDocumentFragment();
+        docFrag.appendChild(document.createElement('div'));
 
         // 节点的parentElement属性用于获取父元素节点
-        // 元素节点，文本节点，注释节点
         log(parent.parentElement); // body节点
         log(child.previousSibling.parentElement); // parent节点
         log(child.firstChild.parentElement); // child节点
@@ -26,10 +26,14 @@
         log(document.parentElement); // null
         log(document.doctype.parentElement); // null
         log(docFrag.parentElement); // null
+        log(docFrag.firstChild.parentElement); // null
 
         // 节点的parentElement属性是只读的，赋值无效
         parent.parentElement = 'parent';
         log(parent.parentElement); // body节点
+
+        // 未插入文档中的节点的parentElement属性值为：null
+        log(document.createElement('div').parentElement); // null
     </script>
 </body>
 </html>
