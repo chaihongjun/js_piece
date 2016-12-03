@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ownerDocument</title>
+</head>
+<body>
+    <div class="wrap"><!--注释--></div>
+    <script>
+        var wrap = document.querySelector('.wrap');
+        var classAttrNode = wrap.getAttributeNode('class');
+        var docFrag = document.createDocumentFragment();
+
+        // 元素节点的ownerDocument的值为：document
+        console.log(wrap.ownerDocument === document); // true
+
+        // 属性节点的ownerDocument的值为：document
+        console.log(classAttrNode);
+        console.log(classAttrNode.ownerDocument === document); // true
+
+        // 文本节点的ownerDocument的值为：document
+        console.log(wrap.nextSibling);
+        console.log(wrap.nextSibling.ownerDocument === document); // true
+
+        // 注释节点的ownerDocument的值为：document
+        console.log(wrap.firstChild);
+        console.log(wrap.firstChild.ownerDocument === document); // true
+
+        // 文档节点的ownerDocument的值为：null
+        console.log(document.ownerDocument); // null
+
+        // 文档类型节点的ownerDocument的值为：document
+        console.log(document.doctype);
+        console.log(document.doctype.ownerDocument === document); // true
+
+        // 文档片段节点的ownerDocument的值为：document
+        console.log(docFrag);
+        console.log(docFrag.ownerDocument === document); // true
+
+        // ownerDocument属性是只读的，赋值无效
+        wrap.ownerDocument = 'wrap';
+        console.log(wrap.ownerDocument === 'wrap'); // false
+        docFrag.ownerDocument = 'docFrag';
+        console.log(docFrag.ownerDocument === 'docFrag'); // false
+
+    </script>
+</body>
+</html>
