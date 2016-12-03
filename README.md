@@ -24,3 +24,4 @@
 21. [nodeType--获取节点类型](./DOM/Node/nodeType/nodeType.md)
 22. [nodeValue--获取和设置节点值](./DOM/Node/nodeValue/nodeValue.md)
 23. [normalize()--规范化后代文本节点](./DOM/Node/normalize()/normalize().md)
+24. [ownerDocument--获取最顶层的文档对象](./DOM/Node/ownerDocument/ownerDocument.md)
