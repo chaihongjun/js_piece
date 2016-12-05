@@ -27,3 +27,4 @@
 24. [ownerDocument--获取最顶层的文档对象](./DOM/Node/ownerDocument/ownerDocument.md)
 25. [parentElement--获取父元素节点](./DOM/Node/parentElement/parentElement.md)
 26. [parentNode--获取父节点](./DOM/Node/parentNode/parentNode.md)
+27. [removeChild()--删除子节点](./DOM/Node/removeChild()/removeChild().md)
