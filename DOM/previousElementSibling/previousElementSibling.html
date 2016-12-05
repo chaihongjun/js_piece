@@ -5,23 +5,26 @@
     <title>previousElementSibling</title>
 </head>
 <body>
-    <div id="wrap">
-<!--注释 comment--><div id="child1"></div>
-<div id="child2"></div>
+    <div class="wrap">
+<!--注释 comment--><div class="child1"></div>
+<div class="child2"></div>
     </div>
     <script>
-        var wrap = document.getElementById('wrap');
-        var child1 = document.getElementById('child1');
-        var child2 = document.getElementById('child2');
+        var log = console.log;
+        var $ = document.querySelector.bind(document);
 
-        console.log(child2.previousElementSibling); // 获得child2的前一个兄弟元素节点：child1（忽略了注释节点和文本节点）
-        console.log(child2.previousElementSibling === child1);// true
-        console.log(child2.previousElementSibling.nodeType); // 1
+        var wrap = $('.wrap');
+        var child1 = $('.child1');
+        var child2 = $('.child2');
 
-        console.log('1.================================================');
+        // 获得child2的前一个兄弟元素节点：child1（忽略了注释节点和文本节点）
+        log(child2.previousElementSibling);
+        log(child2.previousElementSibling === child1);// true
+        log(child2.previousElementSibling.nodeType); // 1
 
+        // previousElementSibling是只读的，赋值无效
         child2.previousElementSibling = 'you';
-        console.log(child2.previousElementSibling); // 结果不变，previousElementSibling是只读的
+        log(child2.previousElementSibling);
     </script>
 </body>
 </html>
