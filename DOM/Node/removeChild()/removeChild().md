@@ -1,6 +1,6 @@
 # Node.removeChild()
 
-## B2C 标准
+## W3C 标准
 [DOM Level 3 Core: removeChild()](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
 ## 定义和用法
