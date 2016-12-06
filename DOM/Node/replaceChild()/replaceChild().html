@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>replaceChild()</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">child</div>
+    </div>
+    <script>
+        var log = console.log;
+        var $ = document.querySelector.bind(document);
+
+        var parent = $('.parent');
+        var child = $('.child');
+        var newChild = document.createElement('div');
+        newChild.id = 'newChild';
+        newChild.appendChild(document.createTextNode('newChild'));
+        var comment = document.createComment('comment');
+
+        log(parent.replaceChild(newChild, child));
+
+        // newChild已经在文档中，则先剪切再用于替换
+        // log(document.body.replaceChild(newChild, document.body.firstChild));
+    </script>
+</body>
+</html>
