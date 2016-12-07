@@ -10,19 +10,18 @@
     - 语法：node.nodeValue
     - 返回值：节点值（DOMString） 或 null
     
-节点 | 默认值
---- | ---
-元素节点 | null
-属性节点 | 属性值
-文本节点 | 文本内容
-注释节点 | 注释内容
-文档节点（document） | null
-文档类型节点（documentType） | null
-文档片段节点（documentFragment） | null
+        节点 | 默认值
+        --- | ---
+        元素节点 | null
+        属性节点 | 属性值
+        文本节点 | 文本内容
+        注释节点 | 注释内容
+        文档节点（document） | null
+        文档类型节点（documentType） | null
+        文档片段节点（documentFragment） | null
 
 - 设置节点值
     - 语法：node.nodeValue = 你要设置的值
-    - 返回值：无
 
 ## 注意事项
 1. nodeValue属性可取值可赋值
