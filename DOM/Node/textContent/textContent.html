@@ -5,7 +5,7 @@
     <title>textContent</title>
 </head>
 <body>
-    <div class="parent">parent
+text<div class="parent">parent
         <div class="child">child</div>
     </div><!--comment-->
     <script>
@@ -16,7 +16,8 @@
         var classAttrNode = parent.getAttributeNode('class');
         var docFrag = document.createDocumentFragment();
         docFrag.appendChild(document.createTextNode('docFragChild'));
-        // textContent属性用于获取和设置文本内容，如果内容包含html标签则先合并后代文本节点的textContent再返回
+
+        // textContent属性用于获取和设置文本内容，如果内容包含标签则先合并后代文本节点的文本内容再返回
 
         // 元素节点
         log(parent.textContent);
@@ -30,9 +31,9 @@
         log(classAttrNode.textContent);
 
         // 文本节点
-        log(parent.firstChild.textContent);
-        parent.firstChild.textContent = 'newTextNode';
-        log(parent.firstChild.textContent);
+        log(parent.previousSibling.textContent);
+        parent.previousSibling.textContent = 'newText';
+        log(parent.previousSibling.textContent);
 
         // 注释节点
         log(parent.nextSibling.textContent);
