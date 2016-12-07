@@ -28,4 +28,5 @@
 25. [parentElement--获取父元素节点](./DOM/Node/parentElement/parentElement.md)
 26. [parentNode--获取父节点](./DOM/Node/parentNode/parentNode.md)
 27. [removeChild()--删除子节点](./DOM/Node/removeChild()/removeChild().md)
-27. [replaceChild()--替换子节点](./DOM/Node/replaceChild()/replaceChild().md)
+28. [replaceChild()--替换子节点](./DOM/Node/replaceChild()/replaceChild().md)
+29. [textContent--获取和设置文本内容](./DOM/Node/textContent/textContent.md)
