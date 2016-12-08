@@ -4,7 +4,7 @@
 [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
 
 ## 定义和用法
-节点（Node）的previousSibling属性用于获取前一个兄弟节点，如果没有则返回null。如果只想获取前一个兄弟元素节点可以用previousElementSibling属性。
+节点（Node）的previousSibling属性用于获取上一个兄弟节点，如果没有则返回null。如果只想获取上一个兄弟元素节点可以用previousElementSibling属性。
 
 - 语法：Node.previousSibling
 - 返回值：节点对象（A Node Object） 或 null

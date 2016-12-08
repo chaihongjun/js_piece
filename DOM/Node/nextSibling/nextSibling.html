@@ -15,14 +15,14 @@
         var child1 = document.getElementById('child1');
         var child2 = document.getElementById('child2');
 
-        // 获得child1的后一个兄弟节点：\n（换行符）
+        // 获得child1的下一个兄弟节点：\n（换行符）
         log(child1.nextSibling);
         log(child1.nextSibling.nodeValue === '\n'); // true
         log(child1.nextSibling.nodeType); // 3
 
         log('1.================================================');
 
-        // 获得child1的后一个兄弟元素节点：child2
+        // 获得child1的下一个兄弟元素节点：child2
         log(child1.nextElementSibling);
         log(child1.nextElementSibling === child2);// true
 

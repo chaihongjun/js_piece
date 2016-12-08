@@ -4,7 +4,7 @@
 [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## 定义和用法
-节点（Node）的nextSibling属性用于获取后一个兄弟节点（可以是元素节点，文本节点，注释节点），如果没有则返回null。如果只想获取后一个兄弟元素节点可以用nextElementSibling属性。
+节点（Node）的nextSibling属性用于获取下一个兄弟节点（可以是元素节点，文本节点，注释节点），如果没有则返回null。如果只想获取下一个兄弟元素节点可以用nextElementSibling属性。
 
 > 语法：Node.nextSibling
 
