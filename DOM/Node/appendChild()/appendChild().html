@@ -17,33 +17,35 @@
     </style>
 </head>
 <body>
-    <button class="js_append_new">插入新节点</button>
-    <button class="js_append_other">插入other</button>
-    <div class="parent">parent</div>
-    <div class="other">other</div>
+    <button class="js-append-new">插入新节点</button>
+    <button class="js-append-other">插入other</button>
+    <div class="parent js-parent">parent</div>
+    <div class="other js-other">other</div>
 <script>
-    var parent = document.querySelector('.parent');
-    var other = document.querySelector('.other');
-    var appendNewBtn = document.querySelector('.js_append_new');
-    var appendOtherBtn = document.querySelector('.js_append_other');
+    var $ = document.querySelector.bind(document);
+
+    var parent = $('.js-parent');
+    var other = $('.js-other');
+    var appendNewBtn = $('.js-append-new');
+    var appendOtherBtn = $('.js-append-other');
 
     function appendNew() {
         //创建一个元素节点
         var newChild = document.createElement('div');
-        newChild.setAttribute('class','child');
+        newChild.setAttribute('class', 'child');
         newChild.innerHTML = 'newChild';
         //把newChild插入parent内容的末尾
         parent.appendChild(newChild);
     }
     //给appendNewBtn绑定点击事件
-    appendNewBtn.addEventListener('click',appendNew,false);
+    appendNewBtn.addEventListener('click', appendNew, false);
 
     function appendOther() {
         //把other剪切再插入parent内容的末尾
         parent.appendChild(other);
     }
     //给appendOtherBtn绑定点击事件
-    appendOtherBtn.addEventListener('click',appendOther,false);
+    appendOtherBtn.addEventListener('click', appendOther, false);
 </script>
 </body>
 </html>
