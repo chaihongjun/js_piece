@@ -9,52 +9,6 @@
 
 > 返回值：DOMString 或 null
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>baseURI</title>
-</head>
-<body>
-    <div id="div">block</div>
-<a href="/" id="link">github</a>
-    <script>
-        var div = document.querySelector('#div');
-        var nextSibling = div.nextSibling; // 文本节点：'\n'
-        var link = document.querySelector('#link');
-
-        console.log(window.location.href);
-        
-        // 下面三个打印的结果一样，都是打印出window.loaction.href
-        console.log(div.baseURI);
-        console.log(nextSibling.baseURI);
-        console.log(link.baseURI);
-        
-        console.log('1.============================================');
-
-        // <base href="https://github.com" target="_blank">
-        // 把上面这行代码插入head标签中，点击a标签，就跳转到github网站
-        var baseElement = document.createElement('base');
-        baseElement.setAttribute('href','https://github.com'); // 若未设置href，还是打印出window.loaction.href
-        baseElement.setAttribute('target','_blank');
-        document.head.appendChild(baseElement);
-        
-        console.log(window.location.href);
-        
-        // 下面三个打印的结果一样，都会打印出：https://github.com
-        console.log(div.baseURI);
-        console.log(nextSibling.baseURI);
-        console.log(link.baseURI);
-        
-        console.log('2.============================================');
-        
-        link.baseURI = 'https://stackoverflow.com';
-        console.log(link.baseURI); // 还是打印出：https://github.com
-    </script>
-</body>
-</html>
-```
 
 ## 注意事项
 1. Node.baseURI属性是只读（readonly）的，直接赋值无效
@@ -65,6 +19,3 @@
 2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 3. http://www.w3schools.com/jsref/prop_doc_baseuri.asp
 4. https://www.quora.com/What-are-the-differences-between-document-baseURI-document-documentURI-and-document-URL
-
-## 更多
-本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece)查看
