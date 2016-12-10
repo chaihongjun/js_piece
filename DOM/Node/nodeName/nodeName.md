@@ -1,7 +1,7 @@
 # Node.nodeName
 
 ## W3C 标准
-[DOM Level 3 Core: nodeName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+[WHATWG: nodeName](https://dom.spec.whatwg.org/#dom-node-nodename)
 
 ## 定义和用法
 节点（node）的nodeName属性用于获得节点的名称。
