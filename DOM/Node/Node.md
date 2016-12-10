@@ -1,18 +1,20 @@
 # Node接口
 
 ## W3C 标准
-[WHATWG: Node](https://dom.spec.whatwg.org/#interface-node)
+[WHATWG: Node](https://dom.spec.whatwg.org/#interface-node)，
+[DOM4: Node](https://www.w3.org/TR/dom/#interface-node)
 
-## 说明
-Node接口暴露在window上，即Node是window的一个方法。
+## 概述
+Node接口暴露在window上。
 
-- 父类：[EventTarget](https://dom.spec.whatwg.org/#eventtarget)
+- 父类： [EventTarget](https://dom.spec.whatwg.org/#eventtarget)
 - 子类：
-    - [Document](https://dom.spec.whatwg.org/#document)
-    - [Element](https://dom.spec.whatwg.org/#element)
-    - [CharacterData](https://dom.spec.whatwg.org/#characterdata)
-    - [DocumentFragment](https://dom.spec.whatwg.org/#documentfragment)
-    - [DocumentType](https://dom.spec.whatwg.org/#documenttype)
+        [Element](https://dom.spec.whatwg.org/#element)，
+        [Attr](https://dom.spec.whatwg.org/#attr)，
+        [CharacterData](https://dom.spec.whatwg.org/#characterdata)，
+        [Document](https://dom.spec.whatwg.org/#document)，
+        [DocumentType](https://dom.spec.whatwg.org/#documenttype)，
+        [DocumentFragment](https://dom.spec.whatwg.org/#documentfragment)，
 
 ## Node.prototype的属性
 
