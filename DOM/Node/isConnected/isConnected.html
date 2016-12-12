@@ -23,12 +23,16 @@
             });
         })('isConnected' in window.Node.prototype);
 
-        var parent = document.querySelector('.parent');
-        var child = document.querySelector('.child');
-        var shadowHost = document.querySelector('.shadowHost');
+        var log = console.log.bind(console);
+        var $ = document.querySelector.bind(document);
+        var parent = $('.parent');
+        var child = $('.child');
+        var shadowHost = $('.shadowHost');
+        var classAttrNode = parent.getAttributeNode('class');
 
-        console.log(parent.isConnected); // true
-        console.log(shadowHost.isConnected); // true
+        // 元素节点
+        log(parent.isConnected); // true
+        log(shadowHost.isConnected); // true
 
         // 创建一个ShadowRoot
         var shadow = shadowHost.createShadowRoot();
@@ -38,19 +42,36 @@
 
         // 获得ShadowRoot的子节点shadowChild
         var shadowChild = shadow.querySelector('.shadowChild');
-        console.log(shadowChild.isConnected); // true
+        log(shadowChild.isConnected); // true
 
         var unAppend = document.createElement('div');
         unAppend.setAttribute('class','unAppend');
-        console.log(unAppend);
+        log(unAppend);
         // unAppend未插入文档中，返回false
-        console.log(unAppend.isConnected); // false
-        console.log(document.contains(unAppend)); // false
+        log(unAppend.isConnected); // false
+        log(document.contains(unAppend)); // false
 
         document.body.appendChild(unAppend);
         // 把unAppend插入文档中，返回true
-        console.log(unAppend.isConnected); // true
-        console.log(document.contains(unAppend)); // true
+        log(unAppend.isConnected); // true
+        log(document.contains(unAppend)); // true
+
+
+        // 属性节点：false
+        log('属性节点：',classAttrNode.isConnected); // false
+        log(document.contains(classAttrNode)); // false
+
+        // 文档节点，文档类型节点：true
+        log('文档节点：',document.isConnected); // true
+        log('文档类型节点：',document.doctype.isConnected); // true
+
+        // 文档片段节点：false
+        var docFrag = new DocumentFragment();
+        docFrag.appendChild(document.createTextNode('nihao'));
+        log('文档片段节点（插入文档前）：',docFrag.isConnected); // false
+        document.body.appendChild(docFrag);
+        log('文档片段节点（插入文档后）：',docFrag.isConnected); // false
+        log(document.contains(docFrag)); // false
     </script>
 </body>
 </html>
