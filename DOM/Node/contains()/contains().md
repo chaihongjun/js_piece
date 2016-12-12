@@ -1,4 +1,4 @@
-# Node.contains()
+# Node.prototype.contains()
 
 ## W3C 标准
 [DOM Level 4 Core: contains](https://www.w3.org/TR/domcore/#dom-node-contains)

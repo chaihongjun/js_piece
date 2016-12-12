@@ -1,7 +1,7 @@
-# Node.ownerDocument
+# Node.prototype.ownerDocument
 
 ## B2C 标准
-[DOM Level 3 Core: ownerDocument](https://www.w3.org/TR/DOM-Level-3-Core/core.html#node-ownerDoc)
+[WHATWG: ownerDocument](https://dom.spec.whatwg.org/#dom-node-ownerdocument)
 
 ## 定义和用法
 节点（node）的ownerDocument属性用于获取最顶层的文档对象（document）。

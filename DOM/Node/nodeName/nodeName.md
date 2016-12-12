@@ -1,4 +1,4 @@
-# Node.nodeName
+# Node.prototype.nodeName
 
 ## W3C 标准
 [WHATWG: nodeName](https://dom.spec.whatwg.org/#dom-node-nodename)

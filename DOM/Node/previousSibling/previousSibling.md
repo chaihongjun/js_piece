@@ -1,4 +1,4 @@
-# Node.previousSibling
+# Node.prototype.previousSibling
 
 ## W3C 标准
 [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)

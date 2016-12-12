@@ -1,4 +1,4 @@
-# Node.firstChild
+# Node.prototype.firstChild
 
 ## W3C 标准
 [DOM Level 2 Core: firstChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)

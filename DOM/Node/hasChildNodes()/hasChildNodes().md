@@ -1,4 +1,4 @@
-# Node.hasChildNodes()
+# Node.prototype.hasChildNodes()
 
 ## W3C 标准
 [DOM Level 2 Core：hasChildNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)

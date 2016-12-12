@@ -1,4 +1,4 @@
-# Node.compareDocumentPosition()
+# Node.prototype.compareDocumentPosition()
 
 ## W3C 标准
 [DOM Level 3 Core: compareDocumentPosition](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition)

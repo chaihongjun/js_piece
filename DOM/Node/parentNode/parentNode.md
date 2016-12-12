@@ -1,4 +1,4 @@
-# Node.parentNode
+# Node.prototype.parentNode
 
 ## B2C 标准
 [DOM Level 3 Core: parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)

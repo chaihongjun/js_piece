@@ -1,10 +1,10 @@
-# Node.appendChild()
+# Node.prototype.appendChild()
 
 ## W3C 标准
 [DOM Level 3 Core： appendChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
 
 ## 定义和用法
-节点（Node）的appendChild(newChildNode)方法用于把newChildNode插入指定节点的内容末尾，如果newChildNode已经在文档中则先剪切再插入。
+节点的appendChild(newChildNode)方法用于把newChildNode插入指定节点的内容末尾，如果newChildNode已经在文档中则先剪切再插入。
 
 - 语法：Node.appendChild( newChildNode )
 - 参数：节点对象（a node object）

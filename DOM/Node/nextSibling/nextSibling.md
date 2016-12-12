@@ -1,4 +1,4 @@
-# Node.nextSibling
+# Node.prototype.nextSibling
 
 ## W3C 标准
 [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)

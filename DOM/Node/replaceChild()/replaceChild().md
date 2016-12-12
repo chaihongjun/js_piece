@@ -1,4 +1,4 @@
-# Node.replaceChild()
+# Node.prototype.replaceChild()
 
 ## W3C 标准
 [DOM Level 3 Core: replaceChild()](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307)

@@ -1,4 +1,4 @@
-# Node.cloneNode()
+# Node.prototype.cloneNode()
 
 ## W3C 标准
 [DOM Level 3 Core: cloneNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4)

@@ -1,4 +1,4 @@
-# Node.getRootNode()
+# Node.prototype.getRootNode()
 
 ## W3C 标准
 [WHATWG: getRootNode](https://dom.spec.whatwg.org/#dom-node-getrootnode)

@@ -1,4 +1,4 @@
-# Node.isEqualNode()
+# Node.prototype.isEqualNode()
 
 ## W3C 标准
 [WHATWG: isEqualNode()](https://dom.spec.whatwg.org/#dom-node-isequalnode)

@@ -1,4 +1,4 @@
-# Node.normalize()
+# Node.prototype.normalize()
 
 ## B2C标准
 [DOM Level 2 Core: normalize()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize)

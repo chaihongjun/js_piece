@@ -1,4 +1,4 @@
-# Node.nodeType
+# Node.prototype.nodeType
 
 ## W3C 标准
 [WHATWG: nodeType](https://dom.spec.whatwg.org/#dom-node-nodetype)

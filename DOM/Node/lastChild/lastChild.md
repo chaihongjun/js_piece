@@ -1,4 +1,4 @@
-# Node.lastChild
+# Node.prototype.lastChild
 
 ## W3C 标准
 [DOM Level 3 Core: lastChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-61AD09FB)

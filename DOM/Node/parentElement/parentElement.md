@@ -1,4 +1,4 @@
-# Node.parentElement
+# Node.prototype.parentElement
 
 ## B2C 标准
 [WHATWG: parentElement](https://dom.spec.whatwg.org/#parent-element)

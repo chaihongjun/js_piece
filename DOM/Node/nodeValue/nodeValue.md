@@ -1,4 +1,4 @@
-# Node.nodeValue
+# Node.prototype.nodeValue
 
 ## B2C 标准
 [DOM Level 2 Core: nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080)

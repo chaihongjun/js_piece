@@ -1,4 +1,4 @@
-# Node.isSameNode()
+# Node.prototype.isSameNode()
 
 ## W3C 标准
 [DOM Level 3 Core: isSameNode()](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isSameNode)
