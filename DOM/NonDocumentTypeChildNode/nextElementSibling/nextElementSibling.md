@@ -1,4 +1,4 @@
-# Node.nextElementSibling
+# NonDocumentTypeChildNode.prototype.nextElementSibling
 
 ## W3C 标准
 [DOM4: nextElementSibling](https://www.w3.org/TR/dom/#dom-nondocumenttypechildnode-nextelementsibling)，

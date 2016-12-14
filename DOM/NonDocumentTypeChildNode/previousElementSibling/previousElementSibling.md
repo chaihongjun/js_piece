@@ -1,4 +1,4 @@
-# Node.previousElementSibling
+# NonDocumentTypeChildNode.prototype.previousElementSibling
 
 ## W3C 标准
 [DOM4: previousElementSibling](https://www.w3.org/TR/dom/#dom-nondocumenttypechildnode-previouselementsibling)，
