@@ -20,3 +20,4 @@
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children
+2. http://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript
