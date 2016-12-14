@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>children</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+    </div>
+    <script>
+        var log = console.log;
+        var $ = document.querySelector.bind(document);
+
+        var parent = $('.parent');
+        var docFrag = new DocumentFragment();
+        docFrag.appendChild(document.createElement('div'));
+        docFrag.appendChild(document.createElement('div'));
+
+        // 只有元素节点，文档节点，文档片段节点有children属性，
+        // 用于获取子元素节点的集合，返回一个HTMLCollection（类数值对象）
+        log(parent.children); // [div.child1,div.child2]
+        log(document.children);// [html]
+        log(docFrag.children); // [div,div]
+
+        // 返回的HTMLCollection是一个实时更新的对象，子元素节点的增删都会实时同步到这个对象中
+        var childObj = parent.children;
+        log(childObj);
+        parent.appendChild(document.createElement('div'));
+        log(childObj); // 实时更新
+
+        // children属性是只读的，赋值无效
+        parent.children = null;
+        console.log(parent.children);
+    </script>
+</body>
+</html>
