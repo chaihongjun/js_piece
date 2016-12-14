@@ -35,6 +35,8 @@ var nextElementSibling = function (el) {
 }
 ```
 
+[示例代码](./nextElementSibling.html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling
 2. http://www.w3schools.com/jsref/prop_element_nextelementsibling.asp
