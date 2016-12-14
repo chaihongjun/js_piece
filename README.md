@@ -6,3 +6,4 @@
 - [Node接口](./DOM/Node/Node.md)
 - [NonElementParentNode接口](./DOM/NonElementParentNode/NonElementParentNode.md)
 - [ParentNode接口](./DOM/ParentNode/ParentNode.md)
+- [NonDocumentTypeChildNode接口](./DOM/NonDocumentTypeChildNode/NonDocumentTypeChildNode.md)
