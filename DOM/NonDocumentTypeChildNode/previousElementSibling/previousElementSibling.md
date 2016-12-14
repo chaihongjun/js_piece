@@ -1,17 +1,17 @@
 # Node.previousElementSibling
 
 ## W3C 标准
-[Element Traversal Specification: previousElementSibling](https://www.w3.org/TR/2008/REC-ElementTraversal-20081222/#attribute-previousElementSibling)
+[DOM4: previousElementSibling](https://www.w3.org/TR/dom/#dom-nondocumenttypechildnode-previouselementsibling)，
+[WHATWG: previousElementSibling](https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-previouselementsibling)
 
 ## 定义和用法
-节点（Node）的previousElementSibling属性用于获取前一个兄弟元素节点（忽略文本节点和注释节点），如果没有则返回null。
+节点（Node）的previousElementSibling属性用于获取上一个兄弟元素节点，如果没有则返回null。
 
-> 语法：Node.previousElementSibling
-
-> 返回值：元素节点对象（A Element Node Object） 或 null
+- 语法：Node.previousElementSibling
+- 返回值：元素节点对象（A Element Node Object） 或 null
 
 ## 注意事项
-1. previousElementSibling属性是**只读**（readonly）的，赋值无效
+1. previousElementSibling属性是只读的，赋值无效
 2. previousElementSibling属性的值只能是元素节点或null，忽略文本节点和注释节点
 
 ## 兼容性和polyfill
