@@ -14,5 +14,7 @@
 1. 只有元素节点，文档节点和文档片段节点有lastElementChild属性
 2. lastElementChild属性是只读的，赋值无效
 
+[示例代码](./lastElementChild.html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild
