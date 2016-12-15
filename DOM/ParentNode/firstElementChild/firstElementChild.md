@@ -1,14 +1,18 @@
-# ParentNode.firstElementChild
+# ParentNode.prototype.firstElementChild
 
 ## W3C 标准
-[ElementTraversal：firstElementChild](https://www.w3.org/TR/ElementTraversal/#attribute-firstElementChild)
+[DOM4：firstElementChild](https://www.w3.org/TR/dom/#dom-parentnode-firstelementchild)
 
 ## 定义和用法
-ParentNode的firstElementChild属性用于获取指定节点的第一个子元素节点，如果没有子元素节点则返回null。该属性是只读的。也可以用ParentNode.children[0]获得第一个子元素节点。
+节点的firstElementChild属性用于获取第一个子元素节点，如果没有子元素节点则返回null。
+也可以用node.children[0]获得第一个子元素节点。
 
-> 语法：ParentNode.firstElementChild
->
-> 返回值：节点对象 或 null
+- 语法：node.firstElementChild
+- 返回值：元素节点 或 null
+
+## 注意事项
+1. 只有元素节点，文档节点和文档片段节点有firstElementChild属性
+2. firstElementChild属性是只读的，赋值无效
 
 [示例代码](./firstElementChild.html)
 
