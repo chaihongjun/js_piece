@@ -6,6 +6,7 @@
 </head>
 <body>
     <div class="parent"></div>
+    <div class="outer">outer</div>
     <script>
         // append()方法的polyfill
         (function (arr) {
@@ -26,14 +27,17 @@
         var log = console.log;
         var $ = document.querySelector.bind(document);
         var parent = $('.parent');
+        var outer = $('.outer');
         var child1 = document.createElement('div');
         child1.id = 'child1';
         var child2 = document.createElement('div');
         child2.id = 'child2';
 
-        // append()方法用于在内容末尾插入零个或多个子节点，可以把字符串转换为文本节点再插入
+        log(child2.isConnected);
+
+        // append()方法用于在内容末尾插入零个或多个子节点，可以把字符串转换为文本节点再插入,如果要插入的节点已经在文档中则先剪切再插入。
         log(parent.childNodes.length); // 0
-        parent.append('parent', child1, child2,'parent','','parent');
+        parent.append('parent', child1, child2,'parent','','parent',outer);
         log(parent.childNodes.length); // 6
 
         // 多个字符串会转换为多个文本节点再插入，可以用normalize()合并相邻文本节点
