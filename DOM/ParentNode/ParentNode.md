@@ -18,6 +18,8 @@ ParentNode接口是一个Mixin类，目的是给父节点添加特有的属性�
 
 ## ParentNode.prototype的方法
 
+- [append()--在内容末尾插入零个或多个子节点](./append()/append().md)
+
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ParentNode
