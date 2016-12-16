@@ -14,11 +14,8 @@
                 item.append = item.append || function () {
                     var argArr = Array.prototype.slice.call(arguments);
                     argArr.forEach(function (argItem) {
-                        if(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0){
-                            this.appendChild(argItem);
-                            return;
-                        }
-                        this.appendChild(document.createTextNode(String(argItem)));
+                        var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+                        this.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
                     }.bind(this));
                 };
             });
@@ -32,8 +29,6 @@
         child1.id = 'child1';
         var child2 = document.createElement('div');
         child2.id = 'child2';
-
-        log(child2.isConnected);
 
         // append()方法用于在内容末尾插入零个或多个子节点，可以把字符串转换为文本节点再插入,如果要插入的节点已经在文档中则先剪切再插入。
         log(parent.childNodes.length); // 0

@@ -26,11 +26,8 @@
         item.append = item.append || function () {
             var argArr = Array.prototype.slice.call(arguments);
             argArr.forEach(function (argItem) {
-                if(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0){
-                    this.appendChild(argItem);
-                    return;
-                }
-                this.appendChild(document.createTextNode(String(argItem)));
+                var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+                this.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
             }.bind(this));
         };
     });
