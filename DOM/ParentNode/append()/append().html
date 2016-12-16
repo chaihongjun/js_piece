@@ -11,15 +11,19 @@
         // append()方法的polyfill
         (function (arr) {
             arr.forEach(function (item) {
-                item.append = item.append || function () {
+                item.zappend = item.zappend || function () {
                     var argArr = Array.prototype.slice.call(arguments);
+                    var docFrag = document.createDocumentFragment();
+
                     argArr.forEach(function (argItem) {
                         var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
-                        this.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-                    }.bind(this));
+                        docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+                    });
+
+                    this.appendChild(docFrag);
                 };
             });
-        })([Document.prototype, Element.prototype, DocumentFragment.prototype]);
+        })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 
         var log = console.log;
         var $ = document.querySelector.bind(document);
@@ -32,20 +36,20 @@
 
         // append()方法用于在内容末尾插入零个或多个子节点，可以把字符串转换为文本节点再插入,如果要插入的节点已经在文档中则先剪切再插入。
         log(parent.childNodes.length); // 0
-        parent.append('parent', child1, child2,'parent','','parent',outer);
-        log(parent.childNodes.length); // 6
+        parent.zappend('parent', child1, child2,'parent','','parent',outer);
+        log(parent.childNodes.length); // 7
 
         // 多个字符串会转换为多个文本节点再插入，可以用normalize()合并相邻文本节点
         parent.normalize();
-        log(parent.childNodes.length); // 4
+        log(parent.childNodes.length); // 5
 
         // append()方法可以不传参数，这样什么都没有做
-        parent.append(new Date(),null,1,true);
+        parent.zappend(new Date(),null,1,true);
 
         // 在文档节点中插入注释节点
         var commentNode1 = new Comment('document');
         var commentNode2 = new Comment('tail');
-        document.append(commentNode1, commentNode2);
+        document.zappend(commentNode1, commentNode2);
     </script>
 </body>
 </html>

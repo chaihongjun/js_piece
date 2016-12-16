@@ -25,13 +25,17 @@
     arr.forEach(function (item) {
         item.append = item.append || function () {
             var argArr = Array.prototype.slice.call(arguments);
+            var docFrag = document.createDocumentFragment();
+            
             argArr.forEach(function (argItem) {
                 var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
-                this.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-            }.bind(this));
+                docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+            });
+            
+            this.appendChild(docFrag);
         };
     });
-})([Document.prototype, Element.prototype, DocumentFragment.prototype]);
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 ```
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append#Browser_compatibility
