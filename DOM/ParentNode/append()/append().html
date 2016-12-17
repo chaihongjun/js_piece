@@ -34,7 +34,8 @@
         var child2 = document.createElement('div');
         child2.id = 'child2';
 
-        // append()方法用于在内容末尾插入零个或多个子节点，可以把字符串转换为文本节点再插入,如果要插入的节点已经在文档中则先剪切再插入。
+        // append()方法用于在内容末尾插入零个或多个子节点，它会先把字符串转换为文本节点再插入,
+        // 如果要插入的节点已经在文档中则先剪切再插入。
         // 原理：先把所有参数按顺序插入一个文档片段节点的内容末尾，再把文档片段节点插入内容末尾
         log(parent.childNodes.length); // 0
         parent.append('parent', child1, child2,'parent','','parent',outer);
