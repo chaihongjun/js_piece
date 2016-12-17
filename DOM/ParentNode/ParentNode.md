@@ -20,6 +20,8 @@ ParentNode接口是一个Mixin类，目的是给父节点添加特有的属性�
 
 - [append()--在内容末尾插入零个或多个节点](./append()/append().md)
 - [prepend()--在内容开头插入零个或多个节点](./prepend()/prepend().md)
+- [querySelector()--获取与选择器匹配的第一个后代元素节点](./querySelector()/querySelector().md)
+- [querySelectorAll()--获取与选择器匹配的后代元素节点的集合](./querySelectorAll()/querySelectorAll().md)
 
 
 ## 参考资料
