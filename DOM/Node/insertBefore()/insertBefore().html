@@ -12,14 +12,23 @@
     </div>
     <script>
         // insertAfter的polyfill
-        (function() {
-            if('insertAfter' in window.Node.prototype){
-                return;
-            }
-            window.Node.prototype.insertAfter = function(newNode, referenceNode) {
-                return referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-            }
-        })();
+        (function(ndp) {
+            ndp.insertAfter = ndp.insertAfter || function(newNode, referenceNode) {
+                if(arguments.length < 2){
+                    throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': 2 arguments required, but only '+ arguments.length +' present.'));
+                }
+                if(typeof(newNode) === 'object' && newNode !== null && newNode.nodeType > 0){
+                    if(referenceNode === null || referenceNode === undefined){
+                        return this.insertBefore(newNode, referenceNode);
+                    }
+                    if(typeof(referenceNode) === 'object' && referenceNode.nodeType > 0){
+                        return this.insertBefore(newNode, referenceNode.nextSibling);
+                    }
+                    throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': parameter 2 is not of type \'Node\'.'));
+                }
+                throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': parameter 1 is not of type \'Node\'.'));
+            };
+        })(Node.prototype);
 
         var parent1 = document.querySelector('.parent1');
         var parent2 = document.querySelector('.parent2');
