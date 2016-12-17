@@ -40,7 +40,7 @@ Node接口暴露在window上。
 - [compareDocumentPosition()--比较两个节点在文档中的位置](./compareDocumentPosition()/compareDocumentPosition().md)
 - [contains(other)--判断other是否是指定节点的后代节点](./contains()/contains().md)
 - [getRootNode()--获得根节点](./getRootNode()/getRootNode().md)
-- [hasChildNodes()--判断是否有子节点](./hasChildNodes()./hasChildNodes().md)
+- [hasChildNodes()--判断是否有子节点](./hasChildNodes()/hasChildNodes().md)
 - [insertBefore()--在指定子节点之前插入节点](./insertBefore()/insertBefore().md)
 - [isEqualNode()--判断两个节点是否相等](./isEqualNode()/isEqualNode().md)
 - [isSameNode()--判断两个节点是否为同一节点](./isSameNode()/isSameNode().md)
