@@ -1,4 +1,4 @@
-# ChildNode.prototype.replaceWith()
+# ChildNode.prototype.remove()
 
 ## W3C 标准
 [WHATWG: remove()](https://dom.spec.whatwg.org/#dom-childnode-remove)
