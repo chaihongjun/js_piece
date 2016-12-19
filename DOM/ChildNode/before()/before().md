@@ -40,5 +40,7 @@ before()方法的原理：先把所有参数按顺序插入一个文档片段节
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 ```
 
+[示例代码](./before()/html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/before

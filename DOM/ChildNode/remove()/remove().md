@@ -27,5 +27,7 @@
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 ```
 
+[示例代码](./remove()/html)
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
