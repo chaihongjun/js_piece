@@ -13,8 +13,11 @@ Document接口暴露在window上，同时它是一个构造器。
 ## Document.prototype的属性
 
 - [implementation--获取文档的DOMImplementation对象](./implementation/implementation.md)
+- [URL--获取文档的url地址](./URL/URL.md)
+- [documentURI--获取文档的url地址](./documentURI/documentURI.md)
 
 ## Document.prototype的方法
+
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Document
