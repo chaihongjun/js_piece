@@ -8,3 +8,4 @@
 - [ParentNode接口](./DOM/ParentNode/ParentNode.md)
 - [NonDocumentTypeChildNode接口](./DOM/NonDocumentTypeChildNode/NonDocumentTypeChildNode.md)
 - [ChildNode接口](./DOM/ChildNode/ChildNode.md)
+- [Document接口](./DOM/Document/Document.md)
