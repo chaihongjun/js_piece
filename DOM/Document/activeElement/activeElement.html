@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>activeElement</title>
+</head>
+<body>
+<input type="text" class="textInput" title="test">
+<script>
+    console.log(document.activeElement);
+    function focusFn(){
+        console.log(document.activeElement);
+    }
+    document.querySelector('.textInput').addEventListener('focus', focusFn, false);
+</script>
+</body>
+</html>
