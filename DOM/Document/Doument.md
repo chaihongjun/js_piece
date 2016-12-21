@@ -15,6 +15,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [implementation--获取文档的DOMImplementation对象](./implementation/implementation.md)
 - [URL--获取文档的url地址](./URL/URL.md)
 - [documentURI--获取文档的url地址](./documentURI/documentURI.md)
+- [activeElement--获取获得焦点的元素](./activeElement/activeElemnt.md)
 
 ## Document.prototype的方法
 
