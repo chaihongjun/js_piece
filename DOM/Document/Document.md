@@ -19,6 +19,8 @@ Document接口暴露在window上，同时它是一个构造器。
 
 ## Document.prototype的方法
 
+- [adoptNode--导入其他文档节点中的节点](./adoptNode/adoptNode.md)
+
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Document
