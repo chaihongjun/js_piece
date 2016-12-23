@@ -4,11 +4,15 @@
 [WHATWG: adoptNode()](https://dom.spec.whatwg.org/#dom-document-adoptnode)
 
 ## 定义和用法
-文档节点的adoptNode()方法用于导入其他文档节点中的节点。
+文档节点的adoptNode()方法用于导入其他文档中的节点，先剪切再导入。
 
 - 语法：document.adoptNode()
 - 参数：其他文档中的节点
-- 返回值：导入的节点
+- 返回值：导入后的节点
+
+## 注意事项
+1. 标准的appendChild()是不能插入其他文档中的节点的，只能用adoptNode()和importNode插入其他文档中的节点，
+    但是现在appendChild()的实现可以插入其他文档中的节点
 
 [示例代码](./adoptNode.html)
 
