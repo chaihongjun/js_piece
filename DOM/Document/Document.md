@@ -19,7 +19,8 @@ Document接口暴露在window上，同时它是一个构造器。
 
 ## Document.prototype的方法
 
-- [adoptNode()--导入其他文档节点中的节点](./adoptNode()/adoptNode().md)
+- [adoptNode()--导入外部文档中的节点](./adoptNode()/adoptNode().md)
+- [importNode()--复制外部文档中的节点](./importNode()/importNode().md)
 
 
 ## 参考资料
