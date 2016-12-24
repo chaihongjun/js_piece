@@ -1,7 +1,8 @@
 # Document接口
 
 ## W3C 标准
-[WHATWG: Document](https://dom.spec.whatwg.org/#interface-document)
+[WHATWG-DOM: Document](https://dom.spec.whatwg.org/#interface-document)
+[WHATWG-HTML: ](https://html.spec.whatwg.org/multipage/dom.html#the-document-object)
 [DOM4: Document](https://www.w3.org/TR/dom/#interface-document)
 
 ## 概述
@@ -16,6 +17,8 @@ Document接口暴露在window上，同时它是一个构造器。
 - [URL--获取文档的url地址](./URL/URL.md)
 - [documentURI--获取文档的url地址](./documentURI/documentURI.md)
 - [activeElement--获取获得焦点的元素](./activeElement/activeElement.md)
+- [body--获取和替换body元素](./body/body.md)
+- [characterSet--获取文档当前的字符编码类型](./characterSet/characterSet.md)
 
 ## Document.prototype的方法
 
