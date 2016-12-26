@@ -11,7 +11,7 @@
     - 参数：
         - type：字符串，可选，
         - replace：字符串，可选，
-    - 返回值：文档节点
+    - 返回值：文档节点对象
     
 - 打开新的窗口
     - 语法：document.open(url, name, features)
