@@ -25,6 +25,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [adoptNode()--导入外部文档中的节点](./adoptNode()/adoptNode().md)
 - [importNode()--复制外部文档中的节点](./importNode()/importNode().md)
 - [open()--打开文档或打开新的窗口](./open()/open().md)
+- [close()--关闭文档](./close()/close().md)
 
 
 ## 参考资料
