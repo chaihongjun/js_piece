@@ -1,10 +1,12 @@
 # Node.prototype.baseURI
 
 ## W3C 标准
-[DOM Level 3 Core: baseURI](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI)
+[WHATWG: baseURI](https://dom.spec.whatwg.org/#dom-node-baseuri)
 
 ## 定义和用法
-节点的baseURI属性用于获取文档的**基URL**（就是文档中相对地址的参考地址），默认值为window.location.href。在HTML文档中，如果包含base标签，则Node.baseURI的值为base标签href属性的值。作用是利于img，a等标签中的相对地址获得基URL。
+节点的baseURI属性用于获取文档的**基URL**（就是文档中相对地址的参考地址），
+默认值为window.location.href。在HTML文档中，如果包含base标签，则Node.baseURI的值为base标签href属性的值。
+作用是利于img，a等标签中的相对地址获得基URL。
 
 - 语法：node.baseURI
 - 返回值：DOMString 或 null

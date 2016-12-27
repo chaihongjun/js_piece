@@ -1,7 +1,7 @@
 # Node.prototype.appendChild()
 
 ## W3C 标准
-[DOM4: appendChild()](https://www.w3.org/TR/dom/#dom-node-appendchild)
+[WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
 ## 定义和用法
 节点的appendChild()方法用于在内容末尾插入子节点，如果要插入的节点已经在文档中则先剪切再插入。
