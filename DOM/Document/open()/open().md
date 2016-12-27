@@ -1,7 +1,7 @@
 # Document.prototype.open()
 
 ## W3C 标准
-[WHATWG:open()](https://html.spec.whatwg.org/multipage/webappapis.html#dom-document-open)
+[WHATWG:open()](https://html.spec.whatwg.org/#dom-document-open)
 
 ## 定义和用法
 文档节点的open()方法用于打开文档或打开新的窗口。
