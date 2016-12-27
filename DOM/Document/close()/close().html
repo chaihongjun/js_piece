@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>close()</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        // document.close()方法用于关闭文档，就是不能往文档里写数据了。
+
+        // inline script里直接运行close()方法，无效
+        document.close();
+        document.write('nihao');
+
+        // 文档加载完以后会自动关闭文档
+        window.onload = function () {
+            // 要写入数据要重新打开文档
+            document.open();
+            document.write('first');
+            document.write('second');
+
+            // 这里关闭文档
+            console.log(document.close());
+
+            // 这里运行document.write()方法时会先打开文档（清空文档），再写入数据
+            document.write('third');
+        };
+    </script>
+</body>
+</html>
