@@ -32,3 +32,4 @@ Document接口暴露在window上，同时它是一个构造器。
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Document
+2. https://defed.github.io/原生DOM系列-Document对象/
