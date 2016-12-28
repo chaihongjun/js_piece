@@ -20,7 +20,7 @@
 <!--运行前-->
 <head>
     <script type="text/javascript">
-        document.write('<p>test</p>')
+        document.write('<p>test</p>');
     </script>
 </head>
 <body>
@@ -30,7 +30,7 @@
 <!--运行后-->
 <head>
     <script type="text/javascript">
-        document.write('<p>test</p>')
+        document.write('<p>test</p>');
     </script>
 </head>
 <body>
@@ -42,16 +42,16 @@
 - 在body中运行document.write()，则参数写在运行的script后面
 ```html
 <!--运行前-->
-<div class="test">
+<div>
     <script type="text/javascript">
-        document.write('<p>test</p>')
+        document.write('<p>test</p>');
     </script>
 </div>
 
 <!--运行后-->
-<div class="test">
+<div>
     <script type="text/javascript">
-        document.write('<p>test</p>')
+        document.write('<p>test</p>');
     </script>
     <p>test</p>
 </div>
@@ -78,7 +78,7 @@ document.write('<p>test</p>');
 </body>
 ```
 
-- 异步引用外部js，必须先运行document.open()清空文档，然后才能运行document.write(),参数写在body内容的开头
+- 异步引用外部js，必须先运行document.open()清空文档，然后才能运行document.write()，参数写在body内容的开头
 ```javascript
 // asyncWrite.js
 document.open();
