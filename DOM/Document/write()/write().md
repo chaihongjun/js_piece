@@ -104,7 +104,7 @@ document.close();
 </body>
 ```
 
-如果document.write()在window的onload的回调函数中，则不管是在head中，body中，同步js，异步js，
+如果document.write()在DOMContentLoaded或load事件的回调函数中，则不管是在head中，body中，同步js，异步js，
 都会先清空文档，然后运行document.write()，参数写在body内容的开头
 ```html
 <!-- 运行前 -->
@@ -123,7 +123,7 @@ document.close();
 </body>
 ```
 
-document.write()也能写入含有script标签的字符串，script标签中的内容会正常运行，但是需要转义。
+document.write()也能写入含有script标签的字符串，，但是需要转义。写入的script标签中的内容会正常运行。
 ```html
 <!-- 运行前 -->
 <script>
