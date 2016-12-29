@@ -8,6 +8,7 @@
  */
 document.open();
 document.write('<p>test</p>');
+document.close();
 
 // 如果document.write()在文档加载完的回调中运行，则会先清空文档，再在body中写入内容
 // window.onload = function () {
