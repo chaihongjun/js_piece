@@ -12,7 +12,7 @@
 
 ## 注意事项
 1. 如果document.write()在DOMContentLoaded或load事件的回调函数中，当文档加载完成，
-则会先清空文档（自动调用document.open()），再把字符写入body内容的开头。
+则会先清空文档（自动调用document.open()），再把参数写入body内容的开头。
 2. 在异步引入的js和DOMContentLoaded或load事件的回调函数中运行document.write()，
 运行完后，最好手动关闭文档写入（document.close()）。
 
