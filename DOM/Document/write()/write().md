@@ -12,9 +12,9 @@
 
 ## 注意事项
 1. 如果document.write()在DOMContentLoaded或load事件的回调函数中，当文档加载完成，
-则会先清空文档（自动调用document.open()），再把字符串插入body内容中。
-2. 异步引入js和DOMContentLoaded或load事件的回调函数中运行document.write()，
-运行完后，最好关闭文档写入（document.close()）。
+则会先清空文档（自动调用document.open()），再把字符写入body内容的开头。
+2. 在异步引入的js和DOMContentLoaded或load事件的回调函数中运行document.write()，
+运行完后，最好手动关闭文档写入（document.close()）。
 
 ## 示例代码
 在head中运行document.write()，则参数写在body内容的开头。
@@ -41,7 +41,7 @@
 </body>
 ```
 
-在body中运行document.write()，则参数写在运行的script后面
+在body中运行document.write()，则参数写在运行的script标签后面
 ```html
 <!-- 运行前 -->
 <div>
@@ -61,7 +61,7 @@
 </div>
 ```
 
-同步引用外部js，参数也是写在运行的script后面
+同步引用外部js，参数也是写在运行的script标签后面
 ```javascript
 // syncWrite.js
 document.write('<p>test</p>');
@@ -84,7 +84,9 @@ document.write('<p>test</p>');
 
 异步引用外部js，必须先运行document.open()清空文档，然后才能运行document.write()，参数写在body内容的开头。
 如果不先运行document.open()，直接运行document.write()，则无效且Chrome有如下提示：
+
 ![](./img/asyncWriteTip.png)
+
 ```javascript
 // asyncWrite.js
 document.open();
@@ -104,16 +106,16 @@ document.close();
 </body>
 ```
 
-如果document.write()在DOMContentLoaded或load事件的回调函数中，则不管是在head中，body中，同步js，异步js，
-都会先清空文档，然后运行document.write()，参数写在body内容的开头
+如果document.write()在DOMContentLoaded或load事件的回调函数中，则不管是在head中，body中，同步的js中，异步的js中，
+都会先清空文档（自动调用document.open()），然后运行document.write()，参数写在body内容的开头
 ```html
 <!-- 运行前 -->
 <body>
     <script>
-        window.onload = function () {
+        window.addEventListener('load', function () {
             document.write('<p>test</p>');
             document.close();
-        };
+        }, false);
     </script>
 </body>
 
@@ -123,18 +125,19 @@ document.close();
 </body>
 ```
 
-document.write()也能写入含有script标签的字符串，，但是需要转义。写入的script标签中的内容会正常运行。
+document.write()也能写入含有script标签的字符串，但是需要转义。写入的script标签中的内容会正常运行。
 ```html
 <!-- 运行前 -->
 <script>
-    document.write('<script>console.log("test")<\/script>');
+    document.write('<script>document.write("<p>test</p>");<\/script>');
 </script>
 
 <!-- 运行后 -->
 <script>
-    document.write('<script>console.log("test")<\/script>');
+    document.write('<script>document.write("<p>test</p>");<\/script>');
 </script>
-<script>console.log("test")</script>
+<script>document.write("<p>test</p>");</script>
+<p>test</p>
 ```
 
 document.write()可以传入多个参数。
