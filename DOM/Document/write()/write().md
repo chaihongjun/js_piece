@@ -11,12 +11,15 @@
 - 返回值：undefined
 
 ## 注意事项
-1. 运行document.write()方法时，如果文档已经加载完成，则先打开文档（清空文档），再把字符串插入文档。
+1. 如果document.write()在DOMContentLoaded或load事件的回调函数中，当文档加载完成，
+则会先清空文档（自动调用document.open()），再把字符串插入body内容中。
+2. 异步引入js和DOMContentLoaded或load事件的回调函数中运行document.write()，
+运行完后，最好关闭文档写入（document.close()）。
 
 ## 示例代码
 在head中运行document.write()，则参数写在body内容的开头。
 ```html
-<!--运行前-->
+<!-- 运行前 -->
 <head>
     <script>
         document.write('<p>test</p>');
@@ -26,7 +29,7 @@
     <h2>write()</h2>
 </body>
 
-<!--运行后-->
+<!-- 运行后 -->
 <head>
     <script>
         document.write('<p>test</p>');
@@ -40,7 +43,7 @@
 
 在body中运行document.write()，则参数写在运行的script后面
 ```html
-<!--运行前-->
+<!-- 运行前 -->
 <div>
     <script>
         document.write('<p>test</p>');
@@ -48,7 +51,7 @@
     <p>content</p>
 </div>
 
-<!--运行后-->
+<!-- 运行后 -->
 <div>
     <script>
         document.write('<p>test</p>');
@@ -64,14 +67,14 @@
 document.write('<p>test</p>');
 ```
 ```html
-<!--syncWrite.html-->
-<!--运行前-->
+<!-- syncWrite.html -->
+<!-- 运行前 -->
 <body>
     <script src="syncWrite.js"></script>
     <p>content</p>
 </body>
 
-<!--运行后-->
+<!-- 运行后 -->
 <body>
     <script src="syncWrite.js"></script>
     <p>test</p>
@@ -86,15 +89,16 @@ document.write('<p>test</p>');
 // asyncWrite.js
 document.open();
 document.write('<p>test</p>');
+document.close();
 ```
 ```html
-<!--asyncWrite.html-->
-<!--运行前-->
+<!-- asyncWrite.html -->
+<!-- 运行前 -->
 <body>
     <script src="asyncWrite.js" async></script>
 </body>
 
-<!--运行后-->
+<!-- 运行后 -->
 <body>
     <p>test</p>
 </body>
@@ -103,21 +107,54 @@ document.write('<p>test</p>');
 如果document.write()在window的onload的回调函数中，则不管是在head中，body中，同步js，异步js，
 都会先清空文档，然后运行document.write()，参数写在body内容的开头
 ```html
-<!--运行前-->
+<!-- 运行前 -->
 <body>
     <script>
         window.onload = function () {
             document.write('<p>test</p>');
+            document.close();
         };
     </script>
 </body>
 
-<!--运行后-->
+<!-- 运行后 -->
 <body>
     <p>test</p>
 </body>
 ```
 
+document.write()也能写入含有script标签的字符串，script标签中的内容会正常运行，但是需要转义。
+```html
+<!-- 运行前 -->
+<script>
+    document.write('<script>console.log("test")<\/script>');
+</script>
+
+<!-- 运行后 -->
+<script>
+    document.write('<script>console.log("test")<\/script>');
+</script>
+<script>console.log("test")</script>
+```
+
+document.write()可以传入多个参数。
+```html
+<!-- 运行前 -->
+<body>
+    <script>
+        document.write('<h2>multiArgument</h2>','<p>test</p>');
+    </script>
+</body>
+
+<!-- 运行后 -->
+<body>
+    <script>
+        document.write('<h2>multiArgument</h2>','<p>test</p>');
+    </script>
+    <h2>multiArgument</h2>
+    <p>test</p>
+</body>
+```
 
 ## 参考资料
 1. https://segmentfault.com/a/1190000006197157
