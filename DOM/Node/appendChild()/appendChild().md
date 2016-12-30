@@ -4,7 +4,7 @@
 [WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
 ## 定义和用法
-节点的appendChild()方法用于在内容末尾插入子节点，如果要插入的节点已经在文档中则先剪切再插入。
+节点的appendChild()方法用于在内容末尾插入节点，如果要插入的节点已经在文档中则先剪切再插入。
 
 - 语法：node.appendChild()
 - 参数：节点对象（a node object）
@@ -14,7 +14,7 @@
 1. 如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。
 
 ## 示例代码
-在内容末尾插入子节点
+在内容末尾插入节点
 ```javascript
 // appendChild.js
 var wrap = document.querySelector('js-wrap'),
