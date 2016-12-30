@@ -64,7 +64,7 @@ wrap.appendChild(outer);
 var wrap = document.querySelector('.js-wrap'),
     newScript = document.createElement('script');
 
-newScript.innerHTML = 'wrap.append("test")';
+newScript.innerHTML = 'wrap.append("jszhou")';
 wrap.appendChild(newScript);
 ```
 ```html
