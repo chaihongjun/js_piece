@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appendScript</title>
+</head>
+<body>
+    <div class="j-wrap"></div>
+    <div class="j-other"></div>
+    <script>
+        var wrap = document.querySelector('.j-wrap');
+        var other = document.querySelector('.j-other');
+        var newScript = document.createElement('script');
+        newScript.innerHTML = 'other.textContent = "test"';
+        wrap.appendChild(newScript);
+    </script>
+
+</body>
+</html>
