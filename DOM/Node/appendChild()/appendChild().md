@@ -1,5 +1,10 @@
 # Node.prototype.appendChild()
 
+---
+写于: 2016-11-19
+更新于: 2016-12-31
+---
+
 ## W3C 标准
 [WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
@@ -81,7 +86,12 @@ wrap.appendChild(newScript);
 <script src="./appendScript.js"></script>
 ```
 
+## 更多
+本知识块的markdown和demo源文件在github上，
+[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/appendChild())查看
+
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 2. http://www.w3schools.com/jsref/met_node_appendchild.asp
 3. [element.innerHTML和appendChild有什么区别](https://segmentfault.com/q/1010000004693112)
+
