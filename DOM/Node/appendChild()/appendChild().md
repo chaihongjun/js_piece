@@ -1,9 +1,8 @@
 # Node.prototype.appendChild()
 
----
-写于: 2016-11-19
-更新于: 2016-12-31
----
+--- | ---
+写于: 2016-11-19 | 更新于: 2016-12-31
+
 
 ## W3C 标准
 [WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
