@@ -30,7 +30,7 @@ append()方法的原理：先把所有参数按顺序插入一个文档片段节
             var docFrag = document.createDocumentFragment();
             
             argArr.forEach(function (argItem) {
-                var isNode = typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0;
+                var isNode = argItem instanceof Node;
                 docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
             });
             
