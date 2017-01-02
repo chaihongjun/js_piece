@@ -30,7 +30,7 @@ replaceWith()方法的原理：先把所有参数按顺序插入一个文档片�
             var docFrag = document.createDocumentFragment();
             
             argArr.forEach(function (argItem) {
-                var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+                var isNode = typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0;
                 docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
             });
             
