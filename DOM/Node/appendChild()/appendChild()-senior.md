@@ -110,6 +110,7 @@ appendChild方法的缺点有两个：
 ```
 下面是appendChildPlus的demo：
 ```javascript
+// extend.js
 var wrap = document.querySelector('.js-wrap'),
     appendStr = '<script id="first">wrap.append("first");</script>' +
         '<script>wrap.append("second");</script>';
@@ -121,7 +122,7 @@ wrap.appendChildPlus(appendStr, '<div>nihao</div>');
 <!--运行前-->
 <div class="js-wrap"></div>
 <script src="./appendChildPlus.js"></script>
-<script src="extend.js"></script>
+<script src="./extend.js"></script>
 
 <!--运行后-->
 <div class="js-wrap">
@@ -132,10 +133,9 @@ wrap.appendChildPlus(appendStr, '<div>nihao</div>');
     second
 </div>
 <script src="./appendChildPlus.js"></script>
-<script src="extend.js"></script>
+<script src="./extend.js"></script>
 
 ```
 
 ## 更多
-本知识块的markdown和demo源文件在github上，
-[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/)查看
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/)查看

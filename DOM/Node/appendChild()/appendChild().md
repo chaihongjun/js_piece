@@ -119,8 +119,7 @@ console.log(docFragWrap.childNodes.length); // 0
 ```
 
 ## 更多
-本知识块的markdown和demo源文件在github上，
-[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/)查看
+本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/)查看
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
