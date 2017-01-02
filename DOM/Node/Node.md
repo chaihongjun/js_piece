@@ -35,7 +35,8 @@ Node接口暴露在window上。
 
 ## Node.prototype的方法
 
-- [appendChild()--在内容末尾插入节点](./appendChild()/appendChild().md)
+- [appendChild()--在内容末尾插入节点（基础篇）](./appendChild()/appendChild().md)
+- [appendChild()--在内容末尾插入节点（高级篇）](./appendChild()/appendChild()-senior.md)
 - [cloneNode()--复制节点](./cloneNode()/cloneNode().md)
 - [compareDocumentPosition()--比较两个节点在文档中的位置](./compareDocumentPosition()/compareDocumentPosition().md)
 - [contains(other)--判断other是否是指定节点的后代节点](./contains()/contains().md)
