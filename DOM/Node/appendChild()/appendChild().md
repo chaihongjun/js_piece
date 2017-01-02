@@ -14,7 +14,7 @@
 - 返回值：插入的节点对象在文档中的引用
 
 ## 注意事项
-1. 如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。
+1. 如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
 
 ## 示例代码
 在内容末尾插入节点
@@ -61,7 +61,7 @@ wrap.appendChild(outer);
 <script src="./cut.js"></script>
 ```
 
-如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。
+如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
 ```javascript
 // appendScript.js
 var wrap = document.querySelector('.js-wrap'),
@@ -83,7 +83,7 @@ wrap.appendChild(newScript);
 </div>
 <script src="./appendScript.js"></script>
 ```
-把文档片段节点插入文档中是先剪切文档片段节点的所有子节点然后再一起插入文档中。文档片段节点也可以插入文档片段节点。
+把文档片段节点插入文档中是先剪切文档片段节点的所有子节点然后再一起插入文档中。文档片段节点也可以插入文档片段节点中，过程和插入文档中是一样的。
 ```javascript
 // documentFragment.js
 var wrap = document.querySelector('.js-wrap'),
