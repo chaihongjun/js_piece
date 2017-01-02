@@ -1,8 +1,8 @@
-# Node.prototype.appendChild()
+# Node.prototype.appendChild() 基础篇
 
-> 写于: 2016-11-19 | 更新于: 2016-12-31
+> 写于: 2016-11-19 | 更新于: 2017-1-2
 
-
+你也可以阅读[高级篇](./appendChild()-senior.md)
 ## W3C 标准
 [WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
@@ -82,6 +82,40 @@ wrap.appendChild(newScript);
     jszhou
 </div>
 <script src="./appendScript.js"></script>
+```
+把文档片段节点插入文档中是先剪切文档片段节点的所有子节点然后再一起插入文档中。文档片段节点也可以插入文档片段节点。
+```javascript
+// documentFragment.js
+var wrap = document.querySelector('.js-wrap'),
+    docFragWrap = document.createDocumentFragment(),
+    docFrag = document.createDocumentFragment(),
+    h2 = document.createElement('h2'),
+    p = document.createElement('p');
+
+h2.textContent = 'head';
+docFragWrap.appendChild(h2);
+
+p.textContent = 'content';
+docFrag.appendChild(p);
+
+docFragWrap.appendChild(docFrag);
+console.log(docFrag.childNodes.length); // 0
+
+wrap.appendChild(docFragWrap);
+console.log(docFragWrap.childNodes.length); // 0
+```
+```html
+<!--documentFragment.html-->
+<!--运行前-->
+<div class="js-wrap"></div>
+<script src="./documentFragment.js"></script>
+
+<!--运行后-->
+<div class="js-wrap">
+    <h2>head</h2>
+    <p>content</p>
+</div>
+<script src="./documentFragment.js"></script>
 ```
 
 ## 更多
