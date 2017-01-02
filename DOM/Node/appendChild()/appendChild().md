@@ -1,4 +1,4 @@
-# Node.prototype.appendChild() 基础篇
+# Node.prototype.appendChild()（基础篇）
 
 > 写于: 2016-11-19 | 更新于: 2017-1-2
 

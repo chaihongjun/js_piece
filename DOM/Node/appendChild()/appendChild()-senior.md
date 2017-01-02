@@ -1,4 +1,4 @@
-# Node.prototype.appendChild() 高级篇
+# Node.prototype.appendChild() （高级篇）
 > 写于: 2017/1/2
 
 你也可以阅读[基础篇](./appendChild().md)
