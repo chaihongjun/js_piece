@@ -1,20 +1,31 @@
-# Node.prototype.appendChild()（基础篇）
+# Node.prototype.appendChild
 
-> 写于: 2016-11-19 | 更新于: 2017-1-2
+> 写于: 2016-11-19 | 更新于: 2017-1-3
 
-你也可以阅读[高级篇](./appendChild()-senior.md)
 ## W3C 标准
-[WHATWG: appendChild()](https://dom.spec.whatwg.org/#dom-node-appendchild)
+[WHATWG: appendChild](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
 ## 定义和用法
-节点的appendChild()方法用于在内容末尾插入节点，如果要插入的节点已经在文档中则先剪切再插入。
+节点的appendChild方法用于在内容末尾插入节点，如果要插入的节点已经在文档中则先剪切再插入。
 
 - 语法：node.appendChild()
 - 参数：节点对象（a node object）
 - 返回值：插入的节点对象在文档中的引用
 
+## 属性描述
+appendChild方法可枚举可重写可配置。
+```javascript
+// Object.getOwnPropertyDescriptor(Node.prototype, 'appendChild') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: Node.prototype.appendChild
+}
+```
+
 ## 注意事项
-1. 如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
+1. 如果appendChild的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
 
 ## 示例代码
 在内容末尾插入节点
@@ -38,6 +49,7 @@ wrap.appendChild(newP);
 </div>
 <script src="./appendChild.js"></script>
 ```
+
 如果要插入的节点已经在文档中则先剪切再插入。
 ```javascript
 // cut.js
@@ -61,7 +73,7 @@ wrap.appendChild(outer);
 <script src="./cut.js"></script>
 ```
 
-如果appendChild()的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
+如果appendChild的参数是一个script节点对象，则插入的script标签的内容会正常运行。但只有第一次插入才会运行。
 ```javascript
 // appendScript.js
 var wrap = document.querySelector('.js-wrap'),
@@ -83,6 +95,7 @@ wrap.appendChild(newScript);
 </div>
 <script src="./appendScript.js"></script>
 ```
+
 把文档片段节点插入文档中是先剪切文档片段节点的所有子节点然后再一起插入文档中。文档片段节点也可以插入文档片段节点中，过程和插入文档中是一样的。
 ```javascript
 // documentFragment.js
