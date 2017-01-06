@@ -10,6 +10,18 @@
 - 参数：字符串，可以传多个字符串参数
 - 返回值：undefined
 
+## 属性描述
+write方法可枚举可重写可配置。
+```javascript
+// Object.getOwnPropertyDescriptor(Document.prototype, 'write') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: Document.prototype.write
+}
+```
+
 ## 注意事项
 1. 如果document.write()在DOMContentLoaded或load事件的回调函数中，当文档加载完成，
 则会先清空文档（自动调用document.open()），再把参数写入body内容的开头。
