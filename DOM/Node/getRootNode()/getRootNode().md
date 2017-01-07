@@ -16,6 +16,18 @@
 - 参数：optional为一个对象，只包含composed属性。composed为一个布尔值，true表示不返回ShadowRoot对象，false表示返回ShadowRoot对象，默认为false
 - 返回值：document节点对象 或 相应的ShadowRoot节点对象
 
+## 属性描述
+getRootNode方法可枚举可重写可配置。
+```javascript
+// Object.getOwnPropertyDescriptor(Node.prototype, 'getRootNode') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: Node.prototype.getRootNode
+}
+```
+
 [示例代码](./getRootNode().html)
 
 ## 兼容性
