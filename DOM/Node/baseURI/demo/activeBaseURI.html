@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        // 打印结果为：true
+        console.log(document.baseURI === window.location.href);
+
+        var base = document.createElement('base');
+        base.href = 'https://github.com/';
+        document.head.appendChild(base);
+
+        // 打印结果为：false
+        console.log(document.baseURI === window.location.href);
+        // 打印结果为：https://github.com/
+        console.log(document.baseURI);
+    </script>
+</body>
+</html>
