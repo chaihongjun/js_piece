@@ -29,7 +29,7 @@ var result = {
 ## 示例代码
 childNodes属性获得的是一个动态的子节点集合
 ```html
-<body><
+<body>
     <div class="js-wrap">wrap<div class="child"></div><!-- comment --></div>
     <script>
         var wrap = document.querySelector('.js-wrap'),
@@ -43,7 +43,7 @@ childNodes属性获得的是一个动态的子节点集合
         // 打印结果：4
         console.log(wrapChilds.length); // 4
     </script>
-/body>
+</body>
 ```
 
 ## 参考资料
