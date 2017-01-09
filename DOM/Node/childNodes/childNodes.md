@@ -1,7 +1,6 @@
 # Node.prototype.childNodes
 
 ## W3C 标准
-[DOM4: childNodes](https://www.w3.org/TR/dom/#dom-node-childnodes)，
 [WHATWG: childNodes](https://dom.spec.whatwg.org/#dom-node-childnodes)
 
 ## 定义和用法
@@ -10,10 +9,42 @@
 - 用法：Node.childNodes
 - 返回值：NodeList（类数值对象）
 
+## 属性描述
+childNodes属性可配置，可枚举，可取值，不可赋值。
+```javascript
+// Object.getOwnPropertyDescriptor(Node.prototype, 'childNodes') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    get: function () { /*[native code]*/ },
+    set: undefined
+}
+```
+
 ## 注意事项
 1. childNodes属性是只读的，赋值无效
 2. 获得的是一个动态的子节点集合（a live collection of child nodes）
 3. 子节点集合可以包括元素节点，文本节点，注释节点和文档类型节点
+
+## 示例代码
+childNodes属性获得的是一个动态的子节点集合
+```html
+<body><
+    <div class="js-wrap">wrap<div class="child"></div><!-- comment --></div>
+    <script>
+        var wrap = document.querySelector('.js-wrap'),
+            wrapChilds = wrap.childNodes;
+            
+        // 打印结果：3
+        console.log(wrapChilds.length); // 3
+    
+        wrap.appendChild(document.createElement('p'));
+    
+        // 打印结果：4
+        console.log(wrapChilds.length); // 4
+    </script>
+/body>
+```
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes

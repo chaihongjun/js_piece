@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liveCollection</title>
+</head>
+<body>
+    <div class="js-wrap">wrap<div class="child"></div><!-- comment --></div>
+    <script>
+        var wrap = document.querySelector('.js-wrap'),
+            wrapChilds = wrap.childNodes;
+
+        // 打印结果：3
+        console.log(wrapChilds.length); // 3
+
+        wrap.appendChild(document.createElement('p'));
+
+        // 打印结果：4
+        console.log(wrapChilds.length); // 4
+    </script>
+</body>
+</html>
