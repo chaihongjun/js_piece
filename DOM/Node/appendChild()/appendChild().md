@@ -1,7 +1,5 @@
 # Node.prototype.appendChild
 
-> 写于: 2016-11-19 | 更新于: 2017-1-3
-
 ## W3C 标准
 [WHATWG: appendChild](https://dom.spec.whatwg.org/#dom-node-appendchild)
 
@@ -13,7 +11,7 @@
 - 返回值：插入的节点对象在文档中的引用
 
 ## 属性描述
-appendChild方法可枚举可重写可配置。
+appendChild方法可配置，可枚举，可重写。
 ```javascript
 // Object.getOwnPropertyDescriptor(Node.prototype, 'appendChild') 的结果如下：
 var result = {
@@ -130,9 +128,6 @@ console.log(docFragWrap.childNodes.length); // 0
 </div>
 <script src="./documentFragment.js"></script>
 ```
-
-## 更多
-本知识块的markdown和demo源文件在github上，[点击这里](https://github.com/jserz/js_piece/tree/master/DOM/Node/)查看
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
