@@ -11,7 +11,7 @@
 - 返回值：复制的节点对象
 
 ## 属性描述
-cloneNode属性可配置，可枚举，可重写。
+cloneNode方法可配置，可枚举，可重写。
 ```javascript
 // Object.getOwnPropertyDescriptor(Node.prototype, 'cloneNode') 的结果如下：
 var result = {
