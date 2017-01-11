@@ -5,11 +5,10 @@
 
 ## 定义和用法
 节点（Node）的compareDocumentPosition(node)方法用于比较两个节点在文档中的位置。
-> 用法：n1.compareDocumentPosition(n2)
->
-> 参数：节点对象
->
-> 返回值：整数
+
+- 用法：n1.compareDocumentPosition(n2)
+- 参数：节点对象
+- 返回值：整数
 
 返回值 | 对应常量 | 意义
 --- | --- | ---
@@ -20,6 +19,18 @@
 8 | Node.DOCUMENT_POSITION_CONTAINS | n2包含n1
 16 | Node.DOCUMENT_POSITION_CONTAINED_BY | n2包含于n1
 32 | Node.DOCUMENT_POSITIOIN_IMPLIMENTATION_SPECIFIC  | 没有位置关系，或n2和n1是同一元素的属性节点
+
+## 属性描述
+compareDocumentPosition方法可配置，可枚举，可重写。
+```javascript
+// Object.getOwnPropertyDescriptor(Node.prototype, 'compareDocumentPosition') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: Node.prototype.compareDocumentPosition
+}
+```
 
 
 ## 注意事项
