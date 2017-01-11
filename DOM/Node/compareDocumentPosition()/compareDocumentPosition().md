@@ -1,7 +1,7 @@
 # Node.prototype.compareDocumentPosition()
 
 ## W3C 标准
-[DOM Level 3 Core: compareDocumentPosition](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition)
+[WHATWG: compareDocumentPosition](https://dom.spec.whatwg.org/#dom-node-comparedocumentposition)
 
 ## 定义和用法
 节点（Node）的compareDocumentPosition(node)方法用于比较两个节点在文档中的位置。
@@ -37,7 +37,7 @@ var result = {
 1. 返回值可能会组合以上几种情况并返回它们的和。比如n2是n1的父元素，包括两种情况：n2包含n1（8）和n2在n1的前面（2），结果返回10
 2. 如果n2和n1是同一节点，则返回0
 
-[示例代码](./compareDocumentPosition.html)
+[示例代码](./demo/compareDocumentPosition.html)
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
