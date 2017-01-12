@@ -26,8 +26,8 @@ prepend()方法的原理：先把所有参数按顺序插入一个文档片段�
 (function (arr) {
     arr.forEach(function (item) {
         item.prepend = item.prepend || function () {
-            var argArr = Array.prototype.slice.call(arguments);
-            var docFrag = document.createDocumentFragment();
+            var argArr = Array.prototype.slice.call(arguments),
+                docFrag = document.createDocumentFragment();
             
             argArr.forEach(function (argItem) {
                 var isNode = argItem instanceof Node;
