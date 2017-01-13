@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attrNode</title>
+</head>
+<body>
+    <div class="js-wrap">wrap</div>
+    <div class="js-other">other</div>
+    <script>
+        var wrap = document.querySelector('.js-wrap'),
+            other = document.querySelector('.js-other'),
+            attrNode = wrap.getAttributeNode('class'),
+            newP = document.createElement('p'),
+            newDiv = document.createElement('div');
+
+
+        console.log(wrap.compareDocumentPosition(attrNode));
+        console.log(other.compareDocumentPosition(attrNode));
+        console.log(newP.compareDocumentPosition(other));
+        console.log(newP.compareDocumentPosition(newDiv));
+    </script>
+</body>
+</html>

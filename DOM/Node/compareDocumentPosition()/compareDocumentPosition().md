@@ -37,7 +37,17 @@ var result = {
 1. 返回值可能会组合以上几种情况并返回它们的和。比如n2是n1的父元素，包括两种情况：n2包含n1（8）和n2在n1的前面（2），结果返回10
 2. 如果n2和n1是同一节点，则返回0
 
-[示例代码](./demo/compareDocumentPosition.html)
+## 示例代码
+同一节点返回值为0。
+```html
+<div class="js-wrap"></div>
+<script>
+    var wrap = document.querySelector('.js-wrap');
+
+    // 打印结果：0
+    console.log(wrap.compareDocumentPosition(wrap)); // 0
+</script>
+```
 
 ## 参考资料
 1. https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition
