@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>getRootNode()</title>
+    <title>getRootNode</title>
 </head>
 <body>
-<div class="parent">
-    <div class="child"></div>
+<div class="js-parent">
+    <div class="js-child"></div>
 </div>
-<div class="shadowHost"></div>
+<div class="js-shadowHost"></div>
 <script>
     // work on Chrome 54+，Opera41+
 
-    var parent = document.querySelector('.parent'),
-        child = document.querySelector('.child'),
-        shadowHost = document.querySelector('.shadowHost');
+    var parent = document.querySelector('.js-parent'),
+        child = document.querySelector('.js-child'),
+        shadowHost = document.querySelector('.js-shadowHost');
 
     console.log(parent.getRootNode().nodeName); // #document
     console.log(child.getRootNode().nodeName); // #document
 
-    // create a shadowRoot
+    // create a ShadowRoot
     var shadowRoot = shadowHost.attachShadow({mode:'open'});
     shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-        + '<div class="shadowChild">content</div>';
-    var shadowChild = shadowRoot.querySelector('.shadowChild');
+        + '<div class="js-shadowChild">content</div>';
+    var shadowChild = shadowRoot.querySelector('.js-shadowChild');
 
     // The default value of composed is false
     console.log(shadowChild.getRootNode() === shadowRoot); // true
