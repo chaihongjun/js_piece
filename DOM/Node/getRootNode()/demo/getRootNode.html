@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getRootNode()</title>
+</head>
+<body>
+<div class="parent">
+    <div class="child"></div>
+</div>
+<div class="shadowHost"></div>
+<script>
+    // work on Chrome 54+，Opera41+
+
+    var parent = document.querySelector('.parent'),
+        child = document.querySelector('.child'),
+        shadowHost = document.querySelector('.shadowHost');
+
+    console.log(parent.getRootNode().nodeName); // #document
+    console.log(child.getRootNode().nodeName); // #document
+
+    // create a shadowRoot
+    var shadowRoot = shadowHost.attachShadow({mode:'open'});
+    shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+        + '<div class="shadowChild">content</div>';
+    var shadowChild = shadowRoot.querySelector('.shadowChild');
+
+    // The default value of composed is false
+    console.log(shadowChild.getRootNode() === shadowRoot); // true
+    console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
+    console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
+</script>
+</body>
+</html>

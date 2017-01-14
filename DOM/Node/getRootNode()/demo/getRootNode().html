@@ -10,10 +10,10 @@
     </div>
     <div class="shadowHost"></div>
     <script>
-        // 以下代码只在chrome 54 下面有效
-        var parent = document.querySelector('.parent');
-        var child = document.querySelector('.child');
-        var shadowHost = document.querySelector('.shadowHost');
+        // 以下代码只在chrome 54+，Opera41+ 下面有效
+        var parent = document.querySelector('.parent'),
+            child = document.querySelector('.child'),
+            shadowHost = document.querySelector('.shadowHost');
 
         // 下面两个都会打印出#document，
         // 说明平常元素的getRootNode方法返回document对象（即整个文档的根节点对象）
@@ -21,9 +21,9 @@
         console.log(child.getRootNode().nodeName); // #document
 
         //  创建一个Shadow DOM
-        var shadowRoot = shadowHost.createShadowRoot();
+        // var shadowRoot = shadowHost.createShadowRoot();
         // 下面一行代码和上面效果一样
-        // var shadowRoot = shadowHost.attachShadow({mode:'open'});
+         var shadowRoot = shadowHost.attachShadow({mode:'open'});
         shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
                 + '<div class="shadowChild">content</div>';
 
