@@ -4,7 +4,7 @@
 [WHATWG: cloneNode](https://dom.spec.whatwg.org/#dom-node-clonenode)
 
 ## 定义和用法
-节点（Node）的cloneNode(deep)方法用于复制节点。
+节点的cloneNode(deep)方法用于复制节点。
 
 - 语法：Node.cloneNode( deep )
 - 参数：deep:boolean，true表示复制后代节点，false不复制后代节点，默认为false

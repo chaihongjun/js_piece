@@ -4,7 +4,7 @@
 [WHATWG: contains](https://dom.spec.whatwg.org/#dom-node-contains)
 
 ## 定义和用法
-节点（Node）的contains(other)方法用于判断other是否是指定节点的后代节点，是返回true，不是返回false。
+节点的contains(other)方法用于判断other是否是指定节点的后代节点，是返回true，不是返回false。
 
 - 语法：node.contains(other)
 - 参数：节点对象，null 或 undefined

@@ -4,7 +4,7 @@
 [WHATWG: compareDocumentPosition](https://dom.spec.whatwg.org/#dom-node-comparedocumentposition)
 
 ## 定义和用法
-节点（Node）的compareDocumentPosition(node)方法用于比较两个节点在文档中的位置。
+节点的compareDocumentPosition(node)方法用于比较两个节点在文档中的位置。
 
 - 用法：n1.compareDocumentPosition(n2)
 - 参数：节点对象
