@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contains()</title>
+</head>
+<body>
+<div class="parent">
+    <div class="child">
+        <div class="grandchild"></div><!-- 注释 comment -->
+    </div>
+</div>
+<script>
+    var log = console.log.bind(console),
+        $ = document.querySelector.bind(document),
+        parent = $('.parent'),
+        child = $('.child'),
+        grandchild = $('.grandchild');
+
+    log(parent.contains(parent)); // true
+    log(parent.contains(child)); // true
+    log(parent.contains(grandchild)); // true
+
+    log(parent.contains(null));// false
+    log(parent.contains(undefined)); // false
+    log(child.contains(parent)); // false
+
+    log(child.nextSibling); // 文本节点
+    log(parent.contains(child.nextSibling)); // true
+
+    log(grandchild.nextSibling); // 注释节点
+    log(parent.contains(grandchild.nextSibling)); // true
+
+    log(child.getAttributeNode('class')); // 属性节点
+    log(parent.contains(child.getAttributeNode('class'))); // false
+</script>
+</body>
+</html>
