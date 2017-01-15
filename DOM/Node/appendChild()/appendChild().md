@@ -15,10 +15,10 @@ appendChild方法可配置，可枚举，可重写。
 ```javascript
 // Object.getOwnPropertyDescriptor(Node.prototype, 'appendChild') 的结果如下：
 var result = {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    value: Node.prototype.appendChild
+  configurable: true,
+  enumerable: true,
+  writable: true,
+  value: Node.prototype.appendChild
 }
 ```
 
@@ -43,7 +43,7 @@ wrap.appendChild(newP);
 
 <!-- 运行后 -->
 <div class="js-wrap">wrap
-    <p>jszhou</p>
+  <p>jszhou</p>
 </div>
 <script src="./appendChild.js"></script>
 ```
@@ -52,8 +52,8 @@ wrap.appendChild(newP);
 ```javascript
 // cut.js
 var $ = document.querySelector.bind(document),
-    outer = $('.js-outer'),
-    wrap = $('.js-wrap');
+  outer = $('.js-outer'),
+  wrap = $('.js-wrap');
 
 wrap.appendChild(outer);
 ```
@@ -66,7 +66,7 @@ wrap.appendChild(outer);
 
 <!-- 运行后 -->
 <div class="js-wrap">wrap
-    <div class="js-outer">outer</div>
+  <div class="js-outer">outer</div>
 </div>
 <script src="./cut.js"></script>
 ```
@@ -75,7 +75,7 @@ wrap.appendChild(outer);
 ```javascript
 // appendScript.js
 var wrap = document.querySelector('.js-wrap'),
-    newScript = document.createElement('script');
+  newScript = document.createElement('script');
 
 newScript.innerHTML = 'wrap.append("jszhou")';
 wrap.appendChild(newScript);
@@ -88,8 +88,8 @@ wrap.appendChild(newScript);
 
 <!-- 运行后 -->
 <div class="js-wrap">wrap
-    <script>wrap.append("jszhou")</script>
-    jszhou
+  <script>wrap.append("jszhou")</script>
+  jszhou
 </div>
 <script src="./appendScript.js"></script>
 ```
@@ -123,8 +123,8 @@ console.log(docFragWrap.childNodes.length); // 0
 
 <!--运行后-->
 <div class="js-wrap">
-    <h2>head</h2>
-    <p>content</p>
+  <h2>head</h2>
+  <p>content</p>
 </div>
 <script src="./documentFragment.js"></script>
 ```
