@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cut</title>
+</head>
+<body>
+    <div class="js-wrap">
+        <div class="js-child">child</div>
+    </div>
+    <div class="js-zhou">zhou</div>
+    <script>
+        var $ = document.querySelector.bind(document),
+            wrap = $('.js-wrap'),
+            child = $('.js-child'),
+            zhou = $('.js-zhou');
+
+        wrap.insertBefore(zhou, child);
+    </script>
+</body>
+</html>
