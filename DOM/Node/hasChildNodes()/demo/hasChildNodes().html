@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hasChildNodes()</title>
+</head>
+<body>
+    <div class="js-textWrap"> </div>
+    <div class="js-commentWrap"><!--注释 comment--></div>
+    <div class="js-elementWrap"><div class="js-child"></div></div>
+    <script>
+        var log = console.log.bind(console),
+            $ = document.querySelector.bind(document),
+            textWrap = $('.js-textWrap'),
+            commentWrap = $('.js-commentWrap'),
+            elementWrap = $('.js-elementWrap'),
+            child = $('.js-child');
+
+        // textWrap 包括一个空格（文本节点），所以为true
+        log(textWrap.hasChildNodes()); // true
+        // commentWrap 包括一个注释节点，所以为true
+        log(commentWrap.hasChildNodes()); // true
+        // elementWrap 包括child，所以为true
+        log(elementWrap.hasChildNodes()); // true
+        // child 不包括子节点，所以为false
+        log(child.hasChildNodes()); // false
+
+        //判断是否有子节点的方法总结
+        log(textWrap.hasChildNodes()); // true
+        log(textWrap.firstChild !== null); // true
+        log(textWrap.childNodes.length > 0 ); // true
+    </script>
+</body>
+</html>
