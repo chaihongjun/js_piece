@@ -22,6 +22,9 @@ var result = {
 }
 ```
 
+## 注意事项
+1. compatMode属性是只读的，赋值无效。
+
 ## 示例代码
 文档节点的compatMode属性由文档类型声明决定。推荐声明：`<!DOCTYPE html>`。
 ```html
