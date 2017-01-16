@@ -23,7 +23,7 @@ var result = {
 ```
 
 ## 示例代码
-文档节点的compatMode属性由文档类型声明决定。推荐声明：<!DOCTYPE html>。
+文档节点的compatMode属性由文档类型声明决定。推荐声明：`<!DOCTYPE html>`。
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +55,6 @@ var result = {
 
 ## 参考链接
 1. [w3help: DOCTYPE 与浏览器模式分析](http://w3help.org/zh-cn/casestudies/002)
-1. [MDN: compatMode](https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode)
-1. [MDN: Quirks Mode and Standards Mode](https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode)
-1. [https://hsivonen.fi/doctype/](https://hsivonen.fi/doctype/)
+2. [MDN: compatMode](https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode)
+3. [MDN: Quirks Mode and Standards Mode](https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode)
+4. [https://hsivonen.fi/doctype/](https://hsivonen.fi/doctype/)
