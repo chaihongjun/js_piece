@@ -4,6 +4,10 @@
 [WHATWG: compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)
 
 ## 定义和用法
+文档节点的compatMode属性用于获取文档的渲染模式。返回值为'BackCompat' 或 'CSS1Compat'，'BackCompat'表示怪异模式，'CSS1Compat'表示标准模式或接近标准模式。
+
+- 语法：document.compatMode
+- 返回值：'BackCompat' 或 'CSS1Compat'
 
 ## 属性描述
 compatMode属性可配置，可枚举，可取值，不可赋值。
@@ -16,6 +20,37 @@ var result = {
     get: function () { /*[native code]*/ },
     set: undefined
 }
+```
+
+## 示例代码
+文档节点的compatMode属性由文档类型声明决定。推荐声明：<!DOCTYPE html>。
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>standardMode</title>
+</head>
+<body>
+    <script>
+        console.log(document.compatMode); // => CSS1Compat
+    </script>
+</body>
+</html>
+```
+在没有文档类型声明时，会开启怪异模式。
+```html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quirkMode</title>
+</head>
+<body>
+    <script>
+        console.log(document.compatMode); // => BackCompat
+    </script>
+</body>
+</html>
 ```
 
 ## 参考链接
