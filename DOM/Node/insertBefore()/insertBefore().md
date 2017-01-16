@@ -94,24 +94,27 @@ referenceNode参数是必填的，如果其值为null或undefined，则newNode�
 ```javascript
 // source: https://github.com/jserz/domPlus/blob/master/src/insertAfter()/insertAfter.js
 Node.prototype.insertAfter = Node.prototype.insertAfter || function (newNode, referenceNode) {
-    function isNode(node) {
-        return node instanceof Node;
+  function isNode(node) {
+    return node instanceof Node;
+  }
+  
+  if(arguments.length < 2){
+    throw(new TypeError("Failed to execute 'insertAfter' on 'Node': 2 arguments required, but only "+ arguments.length +" present."));
+  }
+  
+  if(isNode(newNode)){
+    if(referenceNode === null || referenceNode === undefined){
+      return this.insertBefore(newNode, referenceNode);
     }
     
-    if(arguments.length < 2){
-        throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': 2 arguments required, but only '+ arguments.length +' present.'));
+    if(isNode(referenceNode)){
+      return this.insertBefore(newNode, referenceNode.nextSibling);
     }
     
-    if(isNode(newNode)){
-        if(referenceNode === null || referenceNode === undefined){
-            return this.insertBefore(newNode, referenceNode);
-        }
-        if(isNode(referenceNode)){
-            return this.insertBefore(newNode, referenceNode.nextSibling);
-        }
-        throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': parameter 2 is not of type \'Node\'.'));
-    }
-    throw(new TypeError('Failed to execute \'insertAfter\' on \'Node\': parameter 1 is not of type \'Node\'.'));
+    throw(new TypeError("Failed to execute 'insertAfter' on 'Node': parameter 2 is not of type 'Node'."));
+  }
+  
+  throw(new TypeError("Failed to execute 'insertAfter' on 'Node': parameter 1 is not of type 'Node'."));
 };
 ```
 
