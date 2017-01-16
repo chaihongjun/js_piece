@@ -19,6 +19,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [activeElement--获取获得焦点的元素](./activeElement/activeElement.md)
 - [body--获取和替换body元素](./body/body.md)
 - [characterSet--获取文档当前的字符编码类型](./characterSet/characterSet.md)
+- [compatMode--获取文档的渲染模式](./compatMode/compatMode.md)
 
 ## Document.prototype的方法
 
