@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS document.contentType === 'text/css'</title>
+</head>
+<body>
+<script>
+    var iframe = document.createElement('iframe');
+    iframe.addEventListener('load', function () {
+        console.log(iframe.contentDocument.contentType); // => text/css
+    }, false);
+    iframe.src = "./resources/style.css";
+    document.body.appendChild(iframe);
+</script>
+</body>
