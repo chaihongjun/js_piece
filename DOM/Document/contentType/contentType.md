@@ -4,7 +4,7 @@
 [WHATWG: contentType](https://dom.spec.whatwg.org/#dom-document-contenttype)
 
 ## 定义和用法
-文档节点的contentType属性用于获取文档的文件类型。
+文档节点的contentType属性用于获取文档的文件类型，返回值由文件类型决定。
 
 - 语法：document.contentType
 - 返回值：文件类型(DOMString)
@@ -22,7 +22,7 @@
 。。。 | 。。。
 
 ## 属性描述
-contentType 属性可配置，可枚举，可取值，不可赋值，返回值由文件类型决定。
+contentType 属性可配置，可枚举，可取值，不可赋值。
 
 ```javascript
 // Object.getOwnPropertyDescriptor(Document.prototype, 'contentType') 的结果如下：
