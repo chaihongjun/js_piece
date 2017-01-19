@@ -28,3 +28,5 @@ var result = {
 ## 参考资料
 1. A. Barth. IETF,[HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265)
 2. [MDN: cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
+3. [ruoyiqing: 聊一聊 cookie](https://segmentfault.com/a/1190000004556040)
+4. [ripple07: 常用的本地存储——cookie篇](https://segmentfault.com/a/1190000004743454)
