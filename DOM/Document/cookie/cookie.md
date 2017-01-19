@@ -4,6 +4,7 @@
 [WHATWG: cookie](https://html.spec.whatwg.org/#dom-document-cookie)
 
 ## 定义和用法
+文档节点的cookie属性用于获取和设置cookie。
 
 
 ## 属性描述
