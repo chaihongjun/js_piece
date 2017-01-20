@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createComment</title>
+</head>
+<body>
+    <div class="js-wrap"></div>
+    <script>
+        var wrap = document.querySelector('.js-wrap'),
+            newCommentNode = document.createComment('wrap');
+
+        wrap.appendChild(newCommentNode);
+    </script>
+</body>
+</html>
