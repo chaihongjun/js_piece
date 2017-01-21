@@ -21,6 +21,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [characterSet--获取文档当前的字符编码类型](./characterSet/characterSet.md)
 - [compatMode--获取文档的渲染模式](./compatMode/compatMode.md)
 - [contentType--获取文档的文件类型](./contentType/contentType.md)
+- [cookie--获取和设置cookie](./cookie/cookie.md)
 
 ## Document.prototype的方法
 
