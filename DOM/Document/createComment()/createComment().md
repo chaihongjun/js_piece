@@ -22,26 +22,38 @@ var result = {
 }
 ```
 
+## 注意事项
+1. createComment方法的参数必须是字符串，如果不是字符串，会自动转换成字符串。
+
 ## 示例代码
 createComment方法用于创建注释节点。
 ```html
 <!--运行前-->
 <div class="js-wrap"></div>
 <script>
-    var wrap = document.querySelector('.js-wrap'),
-        newCommentNode = document.createComment('wrap');
-
-    wrap.appendChild(newCommentNode);
+  var wrap = document.querySelector('.js-wrap'),
+    newCommentNode = document.createComment('wrap');
+    
+  wrap.appendChild(newCommentNode);
 </script>
 
 <!--运行后-->
 <div class="js-wrap"><!--wrap--></div>
 <script>
-    var wrap = document.querySelector('.js-wrap'),
-        newCommentNode = document.createComment('wrap');
+  var wrap = document.querySelector('.js-wrap'),
+      newCommentNode = document.createComment('wrap');
 
-    wrap.appendChild(newCommentNode);
+  wrap.appendChild(newCommentNode);
 </script>
+```
+createComment方法的参数必须是字符串，如果不是字符串，会自动转换成字符串
+```javascript
+var newCommentNode = document.createComment({
+  name: 'jszhou'
+});
+// 对象转换为字符串的结果为：'[object Object]'
+console.log(newCommentNode.data); // => [object Object]
+
 ```
 
 ## 参考资料
