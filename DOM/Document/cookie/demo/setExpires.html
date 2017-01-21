@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setExpires</title>
+</head>
+<body>
+  <script>
+    document.cookie = 'now=' + new Date().toISOString();
+    document.cookie = 'name=jszhou; expires=' + new Date('2017-02-18').toUTCString();
+
+    var weekSecord = 7*24*60*60;
+    document.cookie = 'time=week; max-age='+ weekSecord
+  </script>
+</body>
+</html>

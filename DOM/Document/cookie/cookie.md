@@ -15,7 +15,19 @@
   - 语法：document.cookie = 'key=value[; expires=GMTDate][; domain=domain][; path=path][; secure]'
 
 ## 设置cookie的选项
-- expires：用于设置cookie的到期时间
+- expires/max-age：用于设置cookie的到期时间。expires和max-age都可以设置到期时间，expires的值是一个GMT格式的时间点，max-age的值是距离现在的秒数。如果都没有设置，则默认为Session，即关闭窗口就过期。
+  ```javascript
+  document.cookie = 'now=' + new Date().toISOString();
+  document.cookie = 'name=jszhou; expires=' + new Date('2017-02-18').toUTCString();
+
+  var weekSecord = 7*24*60*60;
+  document.cookie = 'time=week; max-age='+ weekSecord
+  ```
+  运行结果如下：
+  
+  ![setExpires](./img/setExpires.png)
+  
+- domain：
 
 ## 属性描述
 cookie 属性可配置，可枚举，可取值，可赋值。
