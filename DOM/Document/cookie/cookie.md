@@ -4,7 +4,7 @@
 [WHATWG: cookie](https://html.spec.whatwg.org/#dom-document-cookie)
 
 ## 定义和用法
-文档节点的cookie属性用于获取和设置cookie（全称为：HTTP cookie）。cookie是一小块字符串数据，它的存在是为了解决HTTP不能保存状态的问题。cookie既可以在客户端设置也可以在服务器端设置。客服端的HTTP请求每次都会带上对应的cookie，以方便服务器端进行验证。
+文档节点的cookie属性用于获取和设置cookie（全称为：HTTP cookie）。cookie是一小块字符串数据，它的存在是为了解决HTTP不能保存状态的问题。cookie既可以在客户端设置也可以在服务器端设置。客服端的HTTP请求每次都会在请求头中带上对应的cookie，以方便服务器端进行验证。
 
 - 获取cookie
   - 语法：document.cookie
@@ -38,7 +38,7 @@
 
 - path：设置请求时带上cookie的路径，默认为当前文档所在路径。path的值必须为绝对路径，即以'/'开头。比如设置为'/dom'，则它的子路径（比如：'/dom/document','/dom/node'）都会带上cookie
 
-- secure：
+- secure：设置cookie只在安全的请求才带上，只有在https安全协议下才能在客户端设置secure选项
 
 ## 属性描述
 cookie 属性可配置，可枚举，可取值，可赋值。
