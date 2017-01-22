@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>max-age-first</title>
+</head>
+<body>
+  <script>
+    var weekSecord = 7*24*60*60;
+
+    // 如果前后设置，则expires和max-age可以相互替换
+    document.cookie = 'time=week; expires=' + new Date('2017-02-18').toUTCString();
+    document.cookie = 'otherTime=week; max-age='+ weekSecord;
+    setTimeout(function () {
+      document.cookie = 'time=week; max-age='+ weekSecord;
+      document.cookie = 'otherTime=week; expires=' + new Date('2017-02-18').toUTCString();
+    }, 3000);
+
+  </script>
+</body>
+</html>

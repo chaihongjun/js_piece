@@ -7,10 +7,17 @@
 <body>
   <script>
     document.cookie = 'now=' + new Date().toISOString();
+
+    // expires的值是一个GMT格式的时间点
     document.cookie = 'name=jszhou; expires=' + new Date('2017-02-18').toUTCString();
 
+    // max-age表示距离现在的秒数
     var weekSecord = 7*24*60*60;
-    document.cookie = 'time=week; max-age='+ weekSecord
+    document.cookie = 'time=week; max-age='+ weekSecord;
+
+    // 如果expires和max-age都设置了，则max-age优先
+    document.cookie = 'newTime=week; max-age='+ weekSecord + '; expires=' + new Date('2017-02-18').toUTCString();
+    document.cookie = 'otherTime=week; expires=' + new Date('2017-02-18').toUTCString() + '; max-age='+ weekSecord;
   </script>
 </body>
 </html>
