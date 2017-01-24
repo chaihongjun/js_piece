@@ -33,6 +33,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [writeln()--写入文档内容并在最后一个参数末尾加一个换行符](./writeln()/writeln().md)
 - [createAttribute()--创建属性节点](./createAttribute()/createAttribute().md)
 - [createComment()--创建注释节点](./createComment()/createComment().md)
+- [createDocumentFragment()--创建文档片段节点](./createDocumentFragment()/createDocumentFragment().md)
 
 
 ## 参考资料
