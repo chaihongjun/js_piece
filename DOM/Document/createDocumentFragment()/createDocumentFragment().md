@@ -10,6 +10,18 @@
 - 参数：无
 - 返回值：文档片段节点
 
+## 属性描述
+createDocumentFragment 方法可配置，可枚举，可重写。
+```javascript
+// Object.getOwnPropertyDescriptor(Document.prototype, 'createDocumentFragment') 的结果如下：
+var result = {
+  configurable: true,
+  enumerable: true,
+  writable: true,
+  value: Document.prototype.createDocumentFragment
+}
+```
+
 ## 实例代码
 文档片段节点插入文档以后，文档片段节点会被清空。
 ```javascript
@@ -25,5 +37,4 @@ console.log(docFrag.childNodes.length); // => 0
 ```
 ## 参考资料
 1. [MDN: createDocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment)
-2. []()
 
