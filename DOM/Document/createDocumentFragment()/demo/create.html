@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>createDocumentFragment</title>
+</head>
+<body>
+  <div class="wrap"></div>
+  <script>
+    var docFrag = document.createDocumentFragment();
+    console.log(docFrag.childNodes.length); // => 0
+
+    docFrag.appendChild(document.createElement('p'));
+    console.log(docFrag.childNodes.length); // => 1
+
+    // 文档片段节点插入文档以后，文档片段节点会被清空。
+    document.querySelector('.wrap').appendChild(docFrag);
+    console.log(docFrag.childNodes.length); // => 0
+  </script>
+</body>
+</html>
