@@ -34,6 +34,7 @@ Document接口暴露在window上，同时它是一个构造器。
 - [createAttribute()--创建属性节点](./createAttribute()/createAttribute().md)
 - [createComment()--创建注释节点](./createComment()/createComment().md)
 - [createDocumentFragment()--创建文档片段节点](./createDocumentFragment()/createDocumentFragment().md)
+- [createElement()--创建元素节点](./createElement()/createElement.md)
 
 
 ## 参考资料
