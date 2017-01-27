@@ -12,6 +12,18 @@
     - referenceNode，参照子节点，必填。其值可以是子节点，null或undefined
 - 返回值：newNode
 
+## 属性描述
+insertBefore 方法可配置，可枚举，可重写。
+```javascript
+// Object.getOwnPropertyDescriptor(Node.prototype, 'insertBefore') 的结果如下：
+var result = {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    value: Node.prototype.insertBefore
+}
+```
+
 ## 注意事项
 1. referenceNode参数是必填的，如果其值为null或undefined，则newNode插入指定节点的内容末尾。
 
