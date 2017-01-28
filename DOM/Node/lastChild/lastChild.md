@@ -22,8 +22,8 @@ var result = {
 ```
 
 ## 注意事项
-1. lastChild属性是只读的，赋值无效
-2. 返回的子节点可以是元素节点，文本节点,注释节点和文档类型节点
+1. lastChild 属性是只读的，赋值无效
+2. 返回的子节点可以是元素节点，文本节点,注释节点或文档类型节点
 
 ## 参考资料
 1. [MDN: lastChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/lastChild)
