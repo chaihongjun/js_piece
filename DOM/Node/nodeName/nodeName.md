@@ -1,6 +1,6 @@
 # Node.prototype.nodeName
 
-## W3C 标准
+## 标准
 [WHATWG: nodeName](https://dom.spec.whatwg.org/#dom-node-nodename)
 
 ## 定义和用法
