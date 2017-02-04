@@ -17,7 +17,7 @@ Node 接口暴露在 window 上。
 
 ## Node.prototype 的属性
 
-- [baseURI--获取节点的基URI](./baseURI/baseURI.md)
+- [baseURI--获取节点的基础URI](./baseURI/baseURI.md)
 - [childNodes--获取子节点的集合](./childNodes/childNodes.md)
 - [firstChild--获取第一个子节点](./firstChild/firstChild.md)
 - [isConnected--判断节点是否在文档中](./isConnected/isConnected.md)
