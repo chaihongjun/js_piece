@@ -1,22 +1,21 @@
-# Node接口
+# Node 接口
 
-## W3C 标准
+## 标准
 [WHATWG: Node](https://dom.spec.whatwg.org/#interface-node)，
 [DOM4: Node](https://www.w3.org/TR/dom/#interface-node)
 
 ## 概述
-Node接口暴露在window上。
+Node 接口暴露在 window 上。
 
 - 父类： [EventTarget](https://dom.spec.whatwg.org/#eventtarget)
-- 子类：
-        [Element](https://dom.spec.whatwg.org/#element)，
+- 子类： [Element](https://dom.spec.whatwg.org/#element)，
         [Attr](https://dom.spec.whatwg.org/#attr)，
         [CharacterData](https://dom.spec.whatwg.org/#characterdata)，
         [Document](https://dom.spec.whatwg.org/#document)，
         [DocumentType](https://dom.spec.whatwg.org/#documenttype)，
         [DocumentFragment](https://dom.spec.whatwg.org/#documentfragment)，
 
-## Node.prototype的属性
+## Node.prototype 的属性
 
 - [baseURI--获取节点的基URI](./baseURI/baseURI.md)
 - [childNodes--获取子节点的集合](./childNodes/childNodes.md)
@@ -33,7 +32,7 @@ Node接口暴露在window上。
 - [previousSibling--获取上一个兄弟节点](./previousSibling/previousSibling.md)
 - [textContent--获取和设置文本内容](./textContent/textContent.md)
 
-## Node.prototype的方法
+## Node.prototype 的方法
 
 - [appendChild()--在内容末尾插入节点](./appendChild()/appendChild().md)
 - [cloneNode()--复制节点](./cloneNode()/cloneNode().md)
@@ -49,4 +48,4 @@ Node接口暴露在window上。
 - [replaceChild()--替换子节点](./replaceChild()/replaceChild().md)
 
 ## 参考资料
-1. https://developer.mozilla.org/en-US/docs/Web/API/Node
+1. [MDN: Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)
