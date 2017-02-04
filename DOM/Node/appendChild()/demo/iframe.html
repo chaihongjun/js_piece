@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iframe</title>
+</head>
+<body>
+  <iframe src=about:blank frameborder="0"></iframe>
+  <script>
+    var iframeDoc = frames[0].document;
+    console.log(iframeDoc);
+
+    // error: Uncaught DOMException: Failed to execute 'appendChild' on 'Node': Nodes of type '#document' may not be inserted inside nodes of type '#document'.
+    document.appendChild(iframeDoc);
+  </script>
+</body>
+</html>
