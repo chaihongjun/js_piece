@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>sameNodeAttr</title>
+  <meta charset="UTF-8">
+  <title>sameNodeAttr</title>
 </head>
 <body>
-    <div class="js-wrap" id="js-wrap">wrap</div>
-    <script>
-        var wrap = document.querySelector('.js-wrap'),
-            classAttr = wrap.getAttributeNode('class'),
-            idAttr = wrap.getAttributeNode('id');
-        console.log(classAttr.compareDocumentPosition(idAttr));
-    </script>
+<div class="js-wrap" id="js-wrap">wrap</div>
+<script>
+  var wrap = document.querySelector('.js-wrap'),
+    classAttr = wrap.getAttributeNode('class'),
+    idAttr = wrap.getAttributeNode('id');
+  console.log(classAttr.compareDocumentPosition(idAttr));
+</script>
 </body>
 </html>

@@ -5,14 +5,14 @@
   <title>createAttribute</title>
 </head>
 <body>
-  <div class="js-wrap">wrap</div>
-  <script>
-    var wrap = document.querySelector('.js-wrap'),
-      newAttrNode = document.createAttribute('abc');
+<div class="js-wrap">wrap</div>
+<script>
+  var wrap = document.querySelector('.js-wrap'),
+    newAttrNode = document.createAttribute('abc');
 
-    newAttrNode.nodeValue = 1;
-    wrap.setAttributeNode(newAttrNode);
-    console.log(wrap.getAttribute('abc')); // => 1
-  </script>
+  newAttrNode.nodeValue = 1;
+  wrap.setAttributeNode(newAttrNode);
+  console.log(wrap.getAttribute('abc')); // => 1
+</script>
 </body>
 </html>

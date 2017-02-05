@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>cloneNode</title>
+  <meta charset="UTF-8">
+  <title>cloneNode</title>
 </head>
 <body>
-    <div class="js-wrap">wrap</div>
-    <script>
-        var wrap = document.querySelector('.js-wrap'),
-            wrapClone = wrap.cloneNode(),
-            wrapDeepClone = wrap.cloneNode(true),
-            body = document.body;
+<div class="js-wrap">wrap</div>
+<script>
+  var wrap = document.querySelector('.js-wrap'),
+    wrapClone = wrap.cloneNode(),
+    wrapDeepClone = wrap.cloneNode(true),
+    body = document.body;
 
-        body.appendChild(wrapClone);
-        body.appendChild(wrapDeepClone);
-    </script>
+  body.appendChild(wrapClone);
+  body.appendChild(wrapDeepClone);
+</script>
 </body>
 </html>

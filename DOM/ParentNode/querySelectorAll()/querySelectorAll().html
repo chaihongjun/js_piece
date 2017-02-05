@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>querySelectorAll()</title>
+  <meta charset="UTF-8">
+  <title>querySelectorAll()</title>
 </head>
 <body>
-    <div class="wrap">wrap1
-        <div class="content">content1</div>
-    </div>
-    <div class="wrap">wrap2
-        <div class="content">content2</div>
-    </div>
-    <div class="wrap content">wrap and content</div>
-    <script>
-        var log = console.log;
-        var docFrag = new DocumentFragment();
-        docFrag.append(document.createElement('div'), document.createElement('h3'));
+<div class="wrap">wrap1
+  <div class="content">content1</div>
+</div>
+<div class="wrap">wrap2
+  <div class="content">content2</div>
+</div>
+<div class="wrap content">wrap and content</div>
+<script>
+  var log = console.log;
+  var docFrag = new DocumentFragment();
+  docFrag.append(document.createElement('div'), document.createElement('h3'));
 
-        // 只有元素节点，文档节点和文档片段节点有querySelectorAll()方法
-        // querySelectorAll()方法用于获取与选择器匹配的后代元素节点的集合，
-        // 如果没有匹配的元素节点则返回空集合
+  // 只有元素节点，文档节点和文档片段节点有querySelectorAll()方法
+  // querySelectorAll()方法用于获取与选择器匹配的后代元素节点的集合，
+  // 如果没有匹配的元素节点则返回空集合
 
-        // 元素节点
-        log(document.querySelector('.wrap').querySelectorAll('.content'));
+  // 元素节点
+  log(document.querySelector('.wrap').querySelectorAll('.content'));
 
-        // 文档节点
-        log(document.querySelectorAll('.wrap'));
-        log(document.querySelectorAll('.wrap.content'));
-        log(document.querySelectorAll('.wrap .content'));
-        log(document.querySelectorAll('.wrap,.content'));
-        log(document.querySelectorAll('*'));
+  // 文档节点
+  log(document.querySelectorAll('.wrap'));
+  log(document.querySelectorAll('.wrap.content'));
+  log(document.querySelectorAll('.wrap .content'));
+  log(document.querySelectorAll('.wrap,.content'));
+  log(document.querySelectorAll('*'));
 
-        // 文档片段节点
-        var all = docFrag.querySelectorAll('*');
-        log(all);
+  // 文档片段节点
+  var all = docFrag.querySelectorAll('*');
+  log(all);
 
-        // querySelectorAll()方法返回的是一个静态的NodeList对象
-        docFrag.prepend(document.createElement('p'));
-        log(all);
-        log(docFrag.querySelectorAll('*'));
-    </script>
+  // querySelectorAll()方法返回的是一个静态的NodeList对象
+  docFrag.prepend(document.createElement('p'));
+  log(all);
+  log(docFrag.querySelectorAll('*'));
+</script>
 </body>
 </html>

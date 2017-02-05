@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>parentElement</title>
+  <meta charset="UTF-8">
+  <title>parentElement</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="child"><!--comment--></div>
-    </div>
-    <script>
-        var log = console.log;
-        var parent = document.querySelector('.parent');
-        var child = document.querySelector('.child');
-        var classAttrNode = parent.getAttributeNode('class');
-        var docFrag = document.createDocumentFragment();
-        docFrag.appendChild(document.createElement('div'));
+<div class="parent">
+  <div class="child"><!--comment--></div>
+</div>
+<script>
+  var log = console.log;
+  var parent = document.querySelector('.parent');
+  var child = document.querySelector('.child');
+  var classAttrNode = parent.getAttributeNode('class');
+  var docFrag = document.createDocumentFragment();
+  docFrag.appendChild(document.createElement('div'));
 
-        // 节点的parentElement属性用于获取父元素节点
-        log(parent.parentElement); // body节点
-        log(child.previousSibling.parentElement); // parent节点
-        log(child.firstChild.parentElement); // child节点
+  // 节点的parentElement属性用于获取父元素节点
+  log(parent.parentElement); // body节点
+  log(child.previousSibling.parentElement); // parent节点
+  log(child.firstChild.parentElement); // child节点
 
-        //属性节点，文档节点，文档类型节点，文档片段节点的parentElement属性值都为null
-        log(classAttrNode.parentElement); // null
-        log(document.parentElement); // null
-        log(document.doctype.parentElement); // null
-        log(docFrag.parentElement); // null
-        log(docFrag.firstChild.parentElement); // null
+  //属性节点，文档节点，文档类型节点，文档片段节点的parentElement属性值都为null
+  log(classAttrNode.parentElement); // null
+  log(document.parentElement); // null
+  log(document.doctype.parentElement); // null
+  log(docFrag.parentElement); // null
+  log(docFrag.firstChild.parentElement); // null
 
-        // 节点的parentElement属性是只读的，赋值无效
-        parent.parentElement = 'parent';
-        log(parent.parentElement); // body节点
+  // 节点的parentElement属性是只读的，赋值无效
+  parent.parentElement = 'parent';
+  log(parent.parentElement); // body节点
 
-        // 未插入文档中的节点的parentElement属性值为：null
-        log(document.createElement('div').parentElement); // null
-    </script>
+  // 未插入文档中的节点的parentElement属性值为：null
+  log(document.createElement('div').parentElement); // null
+</script>
 </body>
 </html>

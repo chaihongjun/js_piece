@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>isConnected</title>
+  <meta charset="UTF-8">
+  <title>isConnected</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="child"></div>
-    </div>
-    <div class="shadowHost"></div>
-    <script>
-        // 在Chrome 52+ 和Opera 39+ firefox 50+支持Node.isConnected
-        // 下面是polyfill
-        (function(supported) {
-            if(supported){
-                return;
-            }
-            Object.defineProperty(window.Node.prototype, 'isConnected', {
-                get: function() {
-                    return document.contains(this);
-                }
-            });
-        })('isConnected' in window.Node.prototype);
+<div class="parent">
+  <div class="child"></div>
+</div>
+<div class="shadowHost"></div>
+<script>
+  // 在Chrome 52+ 和Opera 39+ firefox 50+支持Node.isConnected
+  // 下面是polyfill
+  (function (supported) {
+    if (supported) {
+      return;
+    }
+    Object.defineProperty(window.Node.prototype, 'isConnected', {
+      get: function () {
+        return document.contains(this);
+      }
+    });
+  })('isConnected' in window.Node.prototype);
 
-        var log = console.log.bind(console);
-        var $ = document.querySelector.bind(document);
-        var parent = $('.parent');
-        var child = $('.child');
-        var shadowHost = $('.shadowHost');
-        var classAttrNode = parent.getAttributeNode('class');
+  var log = console.log.bind(console);
+  var $ = document.querySelector.bind(document);
+  var parent = $('.parent');
+  var child = $('.child');
+  var shadowHost = $('.shadowHost');
+  var classAttrNode = parent.getAttributeNode('class');
 
-        // 元素节点
-        log(parent.isConnected); // true
-        log(shadowHost.isConnected); // true
+  // 元素节点
+  log(parent.isConnected); // true
+  log(shadowHost.isConnected); // true
 
-        // 创建一个ShadowRoot
-        var shadow = shadowHost.createShadowRoot();
-        // 给ShadowRoot插入内容
-        shadow.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-                + '<div class="shadowChild">content</div>';
+  // 创建一个ShadowRoot
+  var shadow = shadowHost.createShadowRoot();
+  // 给ShadowRoot插入内容
+  shadow.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+    + '<div class="shadowChild">content</div>';
 
-        // 获得ShadowRoot的子节点shadowChild
-        var shadowChild = shadow.querySelector('.shadowChild');
-        log(shadowChild.isConnected); // true
+  // 获得ShadowRoot的子节点shadowChild
+  var shadowChild = shadow.querySelector('.shadowChild');
+  log(shadowChild.isConnected); // true
 
-        var unAppend = document.createElement('div');
-        unAppend.setAttribute('class','unAppend');
-        log(unAppend);
-        // unAppend未插入文档中，返回false
-        log(unAppend.isConnected); // false
-        log(document.contains(unAppend)); // false
+  var unAppend = document.createElement('div');
+  unAppend.setAttribute('class', 'unAppend');
+  log(unAppend);
+  // unAppend未插入文档中，返回false
+  log(unAppend.isConnected); // false
+  log(document.contains(unAppend)); // false
 
-        document.body.appendChild(unAppend);
-        // 把unAppend插入文档中，返回true
-        log(unAppend.isConnected); // true
-        log(document.contains(unAppend)); // true
+  document.body.appendChild(unAppend);
+  // 把unAppend插入文档中，返回true
+  log(unAppend.isConnected); // true
+  log(document.contains(unAppend)); // true
 
 
-        // 属性节点：false
-        log('属性节点：',classAttrNode.isConnected); // false
-        log(document.contains(classAttrNode)); // false
+  // 属性节点：false
+  log('属性节点：', classAttrNode.isConnected); // false
+  log(document.contains(classAttrNode)); // false
 
-        // 文档节点，文档类型节点：true
-        log('文档节点：',document.isConnected); // true
-        log('文档类型节点：',document.doctype.isConnected); // true
+  // 文档节点，文档类型节点：true
+  log('文档节点：', document.isConnected); // true
+  log('文档类型节点：', document.doctype.isConnected); // true
 
-        // 文档片段节点：false
-        var docFrag = new DocumentFragment();
-        docFrag.appendChild(document.createTextNode('nihao'));
-        log('文档片段节点（插入文档前）：',docFrag.isConnected); // false
-        document.body.appendChild(docFrag);
-        log('文档片段节点（插入文档后）：',docFrag.isConnected); // false
-        log(document.contains(docFrag)); // false
-    </script>
+  // 文档片段节点：false
+  var docFrag = new DocumentFragment();
+  docFrag.appendChild(document.createTextNode('nihao'));
+  log('文档片段节点（插入文档前）：', docFrag.isConnected); // false
+  document.body.appendChild(docFrag);
+  log('文档片段节点（插入文档后）：', docFrag.isConnected); // false
+  log(document.contains(docFrag)); // false
+</script>
 </body>
 </html>

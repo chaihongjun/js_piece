@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>getElementById()</title>
+  <meta charset="UTF-8">
+  <title>getElementById()</title>
 </head>
 <body>
-    <div id="parent">
-        <div id="child"></div>
-    </div>
-    <script>
-        var log = console.log;
-        var docFrag = new DocumentFragment();
-        var div = document.createElement('div');
-        div.id = 'docChild';
-        docFrag.appendChild(div);
+<div id="parent">
+  <div id="child"></div>
+</div>
+<script>
+  var log = console.log;
+  var docFrag = new DocumentFragment();
+  var div = document.createElement('div');
+  div.id = 'docChild';
+  docFrag.appendChild(div);
 
-        // 只有文档节点和文档片段节点可以调用getElementById()方法，返回与id匹配的第一个元素节点
-        log(document.getElementById('parent')); // div#parent
-        log(docFrag.getElementById('docChild'));// div#docChild
+  // 只有文档节点和文档片段节点可以调用getElementById()方法，返回与id匹配的第一个元素节点
+  log(document.getElementById('parent')); // div#parent
+  log(docFrag.getElementById('docChild'));// div#docChild
 
-        // 没有匹配，则返回null
-        log(document.getElementById('wrap')); // null
-        log(docFrag.getElementById('wrap')); // null
-    </script>
+  // 没有匹配，则返回null
+  log(document.getElementById('wrap')); // null
+  log(docFrag.getElementById('wrap')); // null
+</script>
 </body>
 </html>

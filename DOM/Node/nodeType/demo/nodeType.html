@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>nodeType</title>
+  <meta charset="UTF-8">
+  <title>nodeType</title>
 </head>
 <body>
-    <div class="wrap"><!--注释 comment--></div>
-    <script>
-        var wrap = document.querySelector('.wrap');
-        var classNode = wrap.getAttributeNode('class');
-        var docFrag = document.createDocumentFragment();
+<div class="wrap"><!--注释 comment--></div>
+<script>
+  var wrap = document.querySelector('.wrap');
+  var classNode = wrap.getAttributeNode('class');
+  var docFrag = document.createDocumentFragment();
 
-        // 元素节点的nodeType：1
-        console.log(wrap.nodeType); // 1
-        console.log(wrap.nodeType === Node.ELEMENT_NODE); // true
+  // 元素节点的nodeType：1
+  console.log(wrap.nodeType); // 1
+  console.log(wrap.nodeType === Node.ELEMENT_NODE); // true
 
-        // 属性节点的nodeType：2
-        console.log(classNode.nodeType); // 2
-        console.log(classNode.nodeType === Node.ATTRIBUTE_NODE); // true
+  // 属性节点的nodeType：2
+  console.log(classNode.nodeType); // 2
+  console.log(classNode.nodeType === Node.ATTRIBUTE_NODE); // true
 
-        // 文本节点的nodeType：3
-        console.log(wrap.nextSibling.nodeType); // 3
-        console.log(wrap.nextSibling.nodeType === Node.TEXT_NODE); // true
+  // 文本节点的nodeType：3
+  console.log(wrap.nextSibling.nodeType); // 3
+  console.log(wrap.nextSibling.nodeType === Node.TEXT_NODE); // true
 
-        // 注释节点的nodeType：8
-        console.log(wrap.firstChild.nodeType); // 8
-        console.log(wrap.firstChild.nodeType === Node.COMMENT_NODE); // true
+  // 注释节点的nodeType：8
+  console.log(wrap.firstChild.nodeType); // 8
+  console.log(wrap.firstChild.nodeType === Node.COMMENT_NODE); // true
 
-        // 文档节点的nodeType: 9
-        console.log(document.nodeType); // 9
-        console.log(document.nodeType === Node.DOCUMENT_NODE); // true
+  // 文档节点的nodeType: 9
+  console.log(document.nodeType); // 9
+  console.log(document.nodeType === Node.DOCUMENT_NODE); // true
 
-        // 文档类型节点的nodeType：10
-        console.log(document.doctype.nodeType); // 10
-        console.log(document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE); // true
+  // 文档类型节点的nodeType：10
+  console.log(document.doctype.nodeType); // 10
+  console.log(document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE); // true
 
-        // 文档片段节点的nodeType：11
-        console.log(docFrag.nodeType); // 11
-        console.log(docFrag.nodeType === Node.DOCUMENT_FRAGMENT_NODE); // true
-    </script>
+  // 文档片段节点的nodeType：11
+  console.log(docFrag.nodeType); // 11
+  console.log(docFrag.nodeType === Node.DOCUMENT_FRAGMENT_NODE); // true
+</script>
 </body>
 </html>

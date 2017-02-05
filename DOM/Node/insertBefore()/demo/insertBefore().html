@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>insertBefore()</title>
+  <meta charset="UTF-8">
+  <title>insertBefore()</title>
 </head>
 <body>
-    <div class="parent1">parent1</div>
-    <div class="parent2">parent2
-        <div class="child1">child1</div>
-        <div class="child2">child2</div>
-    </div>
-    <script>
-        var parent1 = document.querySelector('.parent1');
-        var parent2 = document.querySelector('.parent2');
-        var child1 = document.querySelector('.child1');
-        var child2 = document.querySelector('.child2');
-        var newChild = document.createElement('div');
-        newChild.appendChild(document.createTextNode('newChild'));
+<div class="parent1">parent1</div>
+<div class="parent2">parent2
+  <div class="child1">child1</div>
+  <div class="child2">child2</div>
+</div>
+<script>
+  var parent1 = document.querySelector('.parent1');
+  var parent2 = document.querySelector('.parent2');
+  var child1 = document.querySelector('.child1');
+  var child2 = document.querySelector('.child2');
+  var newChild = document.createElement('div');
+  newChild.appendChild(document.createTextNode('newChild'));
 
-        // 可以打开单个注释看效果
+  // 可以打开单个注释看效果
 
-        // 把newChild插入parent1的内容末尾，返回newChild
-        // console.log(parent1.insertBefore(newChild,null));
+  // 把newChild插入parent1的内容末尾，返回newChild
+  // console.log(parent1.insertBefore(newChild,null));
 
-        // 把newChild插入parent2的内容末尾，返回newChild
-        // parent2.insertBefore(newChild,undefined);
+  // 把newChild插入parent2的内容末尾，返回newChild
+  // parent2.insertBefore(newChild,undefined);
 
-        // 把newChild插入child1之前，返回newChild
-        // parent2.insertBefore(newChild,child1);
+  // 把newChild插入child1之前，返回newChild
+  // parent2.insertBefore(newChild,child1);
 
-        // 把newChild插入child1之后，返回newChild
-        // parent2.insertBefore(newChild,child1.nextSibling);
+  // 把newChild插入child1之后，返回newChild
+  // parent2.insertBefore(newChild,child1.nextSibling);
 
-        // 把child2插入child1之前，先剪切再插入，返回child2
-        // console.log(parent2.insertBefore(child2,child1));
+  // 把child2插入child1之前，先剪切再插入，返回child2
+  // console.log(parent2.insertBefore(child2,child1));
 
-        // 把parent1插入child1之后，先剪切再插入，返回parent1
-        // console.log(parent2.insertAfter(parent1,child1));
-    </script>
+  // 把parent1插入child1之后，先剪切再插入，返回parent1
+  // console.log(parent2.insertAfter(parent1,child1));
+</script>
 </body>
 </html>

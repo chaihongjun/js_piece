@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>addEventListener()</title>
+  <meta charset="UTF-8">
+  <title>addEventListener()</title>
 </head>
 <body>
-    <div class="parent">parent<div class="child">child</div></div>
-    <script>
-        var log = console.log;
-        var $ = document.querySelector.bind(document);
+<div class="parent">parent
+  <div class="child">child</div>
+</div>
+<script>
+  var log = console.log;
+  var $ = document.querySelector.bind(document);
 
-        var parent = $('.parent');
-        var child = $('.child');
-        function logTextTrue(e){
-            //e.stopImmediatePropagation();
-            log(true,e.currentTarget.firstChild.textContent);
-        }
-        function logTextFalse(e){
-            log(false, e.currentTarget.firstChild.textContent);
-        }
-        parent.addEventListener('click', logTextTrue, true);
-        parent.addEventListener('click', logTextFalse, false);
-        parent.addEventListener('click', null, false);
-        child.addEventListener('click',logTextTrue, true);
-        child.addEventListener('click',logTextFalse, false);
-    </script>
+  var parent = $('.parent');
+  var child = $('.child');
+  function logTextTrue(e) {
+    //e.stopImmediatePropagation();
+    log(true, e.currentTarget.firstChild.textContent);
+  }
+  function logTextFalse(e) {
+    log(false, e.currentTarget.firstChild.textContent);
+  }
+  parent.addEventListener('click', logTextTrue, true);
+  parent.addEventListener('click', logTextFalse, false);
+  parent.addEventListener('click', null, false);
+  child.addEventListener('click', logTextTrue, true);
+  child.addEventListener('click', logTextFalse, false);
+</script>
 </body>
 </html>

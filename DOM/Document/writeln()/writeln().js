@@ -9,8 +9,8 @@ document.writeln('jszhou');
 
 
 window.onload = function () {
-    // 如果文档已经加载完成，则先打开文档（清空文档），再把字符串+换行符插入文档
-    document.writeln('<script>console.log("abc")</script>','123','nihao');
-    console.log(document.writeln('abc')); // undefined
-    document.write('abc\n');
+  // 如果文档已经加载完成，则先打开文档（清空文档），再把字符串+换行符插入文档
+  document.writeln('<script>console.log("abc")</script>', '123', 'nihao');
+  console.log(document.writeln('abc')); // undefined
+  document.write('abc\n');
 };

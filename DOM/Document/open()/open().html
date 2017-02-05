@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>open()</title>
+  <meta charset="UTF-8">
+  <title>open()</title>
 </head>
 <body>
-    <input type="text" title="text">
-    <script>
-        // document.open()用于打开文档或打开新的窗口
+<input type="text" title="text">
+<script>
+  // document.open()用于打开文档或打开新的窗口
 
-        // 不传参数，传一个参数，传两个参数，这三种情况是打开文档
-            // 如果文档在loading中，则文档已经打开，所以document.open()没有效果
-            document.open();
+  // 不传参数，传一个参数，传两个参数，这三种情况是打开文档
+  // 如果文档在loading中，则文档已经打开，所以document.open()没有效果
+  document.open();
 
-            // 如果文档已经loaded，运行document.open()会清空文档
-            window.onload = function () {
-                console.log(document.open());
-            };
+  // 如果文档已经loaded，运行document.open()会清空文档
+  window.onload = function () {
+    console.log(document.open());
+  };
 
-        // 传三个参数，这种情况是打开新的窗口
-        console.log(document.open("http://www.baidu.com","",""));
-    </script>
+  // 传三个参数，这种情况是打开新的窗口
+  console.log(document.open("http://www.baidu.com", "", ""));
+</script>
 </body>
 </html>

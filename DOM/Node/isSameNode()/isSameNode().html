@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>isSameNode()</title>
+  <meta charset="UTF-8">
+  <title>isSameNode()</title>
 </head>
 <body>
-    <div class="wrap">wrap</div>
-    <div class="wrap">wrap</div>
-    <script>
-        var wraps = document.querySelectorAll('.wrap');
-        var wrapLists = document.getElementsByClassName('wrap');
+<div class="wrap">wrap</div>
+<div class="wrap">wrap</div>
+<script>
+  var wraps = document.querySelectorAll('.wrap');
+  var wrapLists = document.getElementsByClassName('wrap');
 
-        // isSameNode()判断两个节点是否为同一个节点
-        console.log(wraps[0].isSameNode(wrapLists[0])); // true
-        console.log(wraps[0].isSameNode(wrapLists[1])); // false
+  // isSameNode()判断两个节点是否为同一个节点
+  console.log(wraps[0].isSameNode(wrapLists[0])); // true
+  console.log(wraps[0].isSameNode(wrapLists[1])); // false
 
-        // 可以用===代替isSameNode()方法
-        console.log(wraps[0] === wrapLists[0]); // true
-        console.log(wraps[0] === wrapLists[1]); // false
+  // 可以用===代替isSameNode()方法
+  console.log(wraps[0] === wrapLists[0]); // true
+  console.log(wraps[0] === wrapLists[1]); // false
 
-        // isEqualNode()判断两个节点是否相等
-        console.log(wraps[0].isEqualNode(wrapLists[0])); // true
-        console.log(wraps[0].isEqualNode(wrapLists[1])); // true
-    </script>
+  // isEqualNode()判断两个节点是否相等
+  console.log(wraps[0].isEqualNode(wrapLists[0])); // true
+  console.log(wraps[0].isEqualNode(wrapLists[1])); // true
+</script>
 </body>
 </html>

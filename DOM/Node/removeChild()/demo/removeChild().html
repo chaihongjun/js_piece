@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>removeChild()</title>
+  <meta charset="UTF-8">
+  <title>removeChild()</title>
 </head>
 <body>
-    <div class="parent"><div class="child">child</div></div>
-    <div class="wrap">wrap
-        <div class="wraped">wrap</div>
-    </div>
-    <script>
-        // empty()的polyfill
-        (function() {
-            if('empty' in window.Node.prototype){
-                return;
-            }
-            window.Node.prototype.empty = function() {
-                while(this.firstChild) {
-                    this.removeChild(this.firstChild);
-                }
-                return this;
-            }
-        })();
+<div class="parent">
+  <div class="child">child</div>
+</div>
+<div class="wrap">wrap
+  <div class="wraped">wrap</div>
+</div>
+<script>
+  // empty()的polyfill
+  (function () {
+    if ('empty' in window.Node.prototype) {
+      return;
+    }
+    window.Node.prototype.empty = function () {
+      while (this.firstChild) {
+        this.removeChild(this.firstChild);
+      }
+      return this;
+    }
+  })();
 
-        var log = console.log;
-        var $ = document.querySelector.bind(document);
-        var parent = $('.parent');
-        var child = $('.child');
-        var docFrag = document.createDocumentFragment();
-        docFrag.appendChild(document.createElement('div'));
+  var log = console.log;
+  var $ = document.querySelector.bind(document);
+  var parent = $('.parent');
+  var child = $('.child');
+  var docFrag = document.createDocumentFragment();
+  docFrag.appendChild(document.createElement('div'));
 
-        // removeChild用于删除子节点并返回删除的子节点在内存的引用
-        log(parent.removeChild(child));
+  // removeChild用于删除子节点并返回删除的子节点在内存的引用
+  log(parent.removeChild(child));
 
-        // 删除document的第一个子节点，在本文档为文档类型节点
-        log(document.removeChild(document.firstChild));
+  // 删除document的第一个子节点，在本文档为文档类型节点
+  log(document.removeChild(document.firstChild));
 
-        // 删除文档片段节点的第一个子节点
-        log(docFrag.removeChild(docFrag.firstChild));
+  // 删除文档片段节点的第一个子节点
+  log(docFrag.removeChild(docFrag.firstChild));
 
-        // 清空子节点
-        var wrap = $('.wrap');
-        log(wrap.empty());
-    </script>
+  // 清空子节点
+  var wrap = $('.wrap');
+  log(wrap.empty());
+</script>
 </body>
 </html>

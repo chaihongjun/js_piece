@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>nodeType</title>
+  <meta charset="UTF-8">
+  <title>nodeType</title>
 </head>
 <body>
-    <div class="lowerdiv"><!--注释 comment--></div>
-    <script>
-        var lowerdiv = document.querySelector('.lowerdiv');
-        var classAttrNode = lowerdiv.getAttributeNode('class');
-        var docFragment = document.createDocumentFragment();
+<div class="lowerdiv"><!--注释 comment--></div>
+<script>
+  var lowerdiv = document.querySelector('.lowerdiv');
+  var classAttrNode = lowerdiv.getAttributeNode('class');
+  var docFragment = document.createDocumentFragment();
 
-        // nodeName属性：元素节点返回Element.tagName，文本节点返回#text，
-        // 注释节点返回#comment，文档节点返回#document，属性节点返回属性名
-        // 文档片段节点返回#document-fragment，文档类型节点返回html
-        console.log(lowerdiv.nodeName); // DIV
-        console.log(lowerdiv.nextSibling.nodeName); // #text
-        console.log(lowerdiv.firstChild.nodeName); // #comment
-        console.log(document.nodeName); // #document
-        console.log(classAttrNode.nodeName); // class
-        console.log(docFragment.nodeName); // #document-fragment
-        console.log(document.doctype.nodeName); // html
+  // nodeName属性：元素节点返回Element.tagName，文本节点返回#text，
+  // 注释节点返回#comment，文档节点返回#document，属性节点返回属性名
+  // 文档片段节点返回#document-fragment，文档类型节点返回html
+  console.log(lowerdiv.nodeName); // DIV
+  console.log(lowerdiv.nextSibling.nodeName); // #text
+  console.log(lowerdiv.firstChild.nodeName); // #comment
+  console.log(document.nodeName); // #document
+  console.log(classAttrNode.nodeName); // class
+  console.log(docFragment.nodeName); // #document-fragment
+  console.log(document.doctype.nodeName); // html
 
-        // tagName属性：元素节点返回大写标签名，其他返回undefined
-        console.log(lowerdiv.tagName); // DIV
-        console.log(lowerdiv.nextSibling.tagName); // undefined
-        console.log(lowerdiv.firstChild.tagName); // undefined
-        console.log(document.tagName); // undefined
-        console.log(classAttrNode.tagName); // undefined
-        console.log(docFragment.tagName); // undefined
-        console.log(document.doctype.tagName); // undefined
-    </script>
+  // tagName属性：元素节点返回大写标签名，其他返回undefined
+  console.log(lowerdiv.tagName); // DIV
+  console.log(lowerdiv.nextSibling.tagName); // undefined
+  console.log(lowerdiv.firstChild.tagName); // undefined
+  console.log(document.tagName); // undefined
+  console.log(classAttrNode.tagName); // undefined
+  console.log(docFragment.tagName); // undefined
+  console.log(document.doctype.tagName); // undefined
+</script>
 </body>
 </html>

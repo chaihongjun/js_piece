@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>HTM document.contentType === 'text/html'</title>
+  <meta charset="utf-8">
+  <title>HTM document.contentType === 'text/html'</title>
 </head>
 <body>
 <script>
-    var iframe = document.createElement('iframe');
-    iframe.addEventListener('load', function() {
-        console.log(iframe.contentDocument.contentType); // => text/html
-    }, false);
-    iframe.src = "./resources/blob.htm";
-    document.body.appendChild(iframe);
+  var iframe = document.createElement('iframe');
+  iframe.addEventListener('load', function () {
+    console.log(iframe.contentDocument.contentType); // => text/html
+  }, false);
+  iframe.src = "./resources/blob.htm";
+  document.body.appendChild(iframe);
 </script>
 </body>
 </html>

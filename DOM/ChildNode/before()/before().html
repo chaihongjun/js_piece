@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>before()</title>
+  <meta charset="UTF-8">
+  <title>before()</title>
 </head>
 <body>
 <div class="wrap">wrap
-    <div class="child">child</div>
+  <div class="child">child</div>
 </div>
 <script>
-    // before()的polyfill
-    (function (arr) {
-        arr.forEach(function (item) {
-            item.before = item.before || function () {
-                var argArr = Array.prototype.slice.call(arguments);
-                var docFrag = document.createDocumentFragment();
+  // before()的polyfill
+  (function (arr) {
+    arr.forEach(function (item) {
+      item.before = item.before || function () {
+          var argArr = Array.prototype.slice.call(arguments);
+          var docFrag = document.createDocumentFragment();
 
-                argArr.forEach(function (argItem) {
-                    var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
-                    docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-                });
+          argArr.forEach(function (argItem) {
+            var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+            docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+          });
 
-                this.parentNode.insertBefore(docFrag, this);
-            };
-        });
-    })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+          this.parentNode.insertBefore(docFrag, this);
+        };
+    });
+  })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 
 
-    var $ = document.querySelector.bind(document);
+  var $ = document.querySelector.bind(document);
 
-    var wrap = $('.wrap');
-    var child = $('.child');
+  var wrap = $('.wrap');
+  var child = $('.child');
 
-    // 元素节点
-    // 如果要插入的节点已经在文档中则先剪切再插入。
-    wrap.before('nextSibling', document.createElement('p'),child);
+  // 元素节点
+  // 如果要插入的节点已经在文档中则先剪切再插入。
+  wrap.before('nextSibling', document.createElement('p'), child);
 
-    // 文本节点
-    wrap.nextSibling.before(document.createElement('h1'));
+  // 文本节点
+  wrap.nextSibling.before(document.createElement('h1'));
 
-    // 文档类型节点
-    document.doctype.before(document.createComment('before'));
+  // 文档类型节点
+  document.doctype.before(document.createComment('before'));
 </script>
 </body>
 </html>

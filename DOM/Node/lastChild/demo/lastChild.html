@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>lastChild</title>
+  <meta charset="UTF-8">
+  <title>lastChild</title>
 </head>
 <body>
 <div class="parent">
-    <div class="child"><!--注释 comment--></div>
+  <div class="child"><!--注释 comment--></div>
 </div>
-<div class="wrap"><div class="wraped">wraped</div></div>
+<div class="wrap">
+  <div class="wraped">wraped</div>
+</div>
 <script>
-    var parent = document.querySelector('.parent');
-    var child = document.querySelector('.child');
-    var wrap = document.querySelector('.wrap');
-    var wraped = document.querySelector('.wraped');
+  var parent = document.querySelector('.parent');
+  var child = document.querySelector('.child');
+  var wrap = document.querySelector('.wrap');
+  var wraped = document.querySelector('.wraped');
 
 
-    // 文本节点
-    console.log(parent.lastChild.nodeType); // 3
-    console.log(parent.lastChild.nodeValue === '\n'); // true
-    console.log(parent.lastChild.lastChild); // null
+  // 文本节点
+  console.log(parent.lastChild.nodeType); // 3
+  console.log(parent.lastChild.nodeValue === '\n'); // true
+  console.log(parent.lastChild.lastChild); // null
 
-    // 注释节点
-    console.log(child.lastChild.nodeType); // 8
-    console.log(child.lastChild.nodeValue); // 注释 comment
-    console.log(child.lastChild.lastChild); // null
+  // 注释节点
+  console.log(child.lastChild.nodeType); // 8
+  console.log(child.lastChild.nodeValue); // 注释 comment
+  console.log(child.lastChild.lastChild); // null
 
-    // 元素节点
-    console.log(wrap.lastChild.nodeType); // 1
-    console.log(wrap.lastChild === wraped); // true
-    console.log(wrap.lastChild.lastChild.nodeValue); // wraped
+  // 元素节点
+  console.log(wrap.lastChild.nodeType); // 1
+  console.log(wrap.lastChild === wraped); // true
+  console.log(wrap.lastChild.lastChild.nodeValue); // wraped
 
-    // 如果想获得最后一个元素子节点用lastElementChild
-    console.log(parent.lastElementChild === child); // true
+  // 如果想获得最后一个元素子节点用lastElementChild
+  console.log(parent.lastElementChild === child); // true
 </script>
 </body>
 </html>

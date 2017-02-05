@@ -7,7 +7,7 @@
 document.write('<script>console.log(123)</script>');
 
 window.onload = function () {
-    // 如果文档已经加载完成，则先打开文档（清空文档），再把字符串插入文档
-    document.write('<script>console.log("abc")</script>','nihao');
-    console.log(document.write('abc')); // undefined
+  // 如果文档已经加载完成，则先打开文档（清空文档），再把字符串插入文档
+  document.write('<script>console.log("abc")</script>', 'nihao');
+  console.log(document.write('abc')); // undefined
 };

@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>remove()</title>
+  <meta charset="UTF-8">
+  <title>remove()</title>
 </head>
 <body>
 <div class="wrap">wrap
-    <div class="child">child</div>
+  <div class="child">child</div>
 </div>
 <script>
-    // remove()的polyfill
-    (function (arr) {
-        arr.forEach(function (item) {
-            item.remove = item.remove || function () {
-                this.parentNode.removeChild(this);
-            };
-        });
-    })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+  // remove()的polyfill
+  (function (arr) {
+    arr.forEach(function (item) {
+      item.remove = item.remove || function () {
+          this.parentNode.removeChild(this);
+        };
+    });
+  })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 
 
-    var $ = document.querySelector.bind(document);
+  var $ = document.querySelector.bind(document);
 
-    var wrap = $('.wrap');
-    var child = $('.child');
+  var wrap = $('.wrap');
+  var child = $('.child');
 
-    // 元素节点
-    child.remove();
+  // 元素节点
+  child.remove();
 
-    // 文本节点
-    wrap.previousSibling.remove();
+  // 文本节点
+  wrap.previousSibling.remove();
 
-    // 文档类型节点
-    document.doctype.remove();
+  // 文档类型节点
+  document.doctype.remove();
 </script>
 </body>
 </html>

@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>querySelector()</title>
+  <meta charset="UTF-8">
+  <title>querySelector()</title>
 </head>
 <body>
-    <h2 class="head">head</h2>
-    <div class="wrap">wrap
-        <div class="content">content</div>
-    </div>
-    <div class="foo\bar">foo\bar</div>
-    <script>
-        var log = console.log;
-        var wrap = document.querySelector('.wrap');
-        var docFrag = new DocumentFragment();
-        docFrag.append(document.createElement('div'), document.createElement('h3'));
+<h2 class="head">head</h2>
+<div class="wrap">wrap
+  <div class="content">content</div>
+</div>
+<div class="foo\bar">foo\bar</div>
+<script>
+  var log = console.log;
+  var wrap = document.querySelector('.wrap');
+  var docFrag = new DocumentFragment();
+  docFrag.append(document.createElement('div'), document.createElement('h3'));
 
-        // 只有元素节点，文档节点和文档片段节点有querySelector()方法
-        // querySelector()方法用于获取第一个与选择器匹配的后代元素节点，如果没有匹配的元素节点则返回null。
-        log(wrap.querySelector('.content'));
-        log(document.querySelector('.wrap>div'));
-        log(document.querySelector('h2'));
-        log(docFrag.querySelector('h3'));
-        log(document.querySelector('p')); // null
+  // 只有元素节点，文档节点和文档片段节点有querySelector()方法
+  // querySelector()方法用于获取第一个与选择器匹配的后代元素节点，如果没有匹配的元素节点则返回null。
+  log(wrap.querySelector('.content'));
+  log(document.querySelector('.wrap>div'));
+  log(document.querySelector('h2'));
+  log(docFrag.querySelector('h3'));
+  log(document.querySelector('p')); // null
 
-        // 这个我也没想明白，为什么要转义两次
-        log(document.querySelector('.foo\\\\bar'));
+  // 这个我也没想明白，为什么要转义两次
+  log(document.querySelector('.foo\\\\bar'));
 
-    </script>
+</script>
 </body>
 </html>

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>firstChild</title>
+  <meta charset="UTF-8">
+  <title>firstChild</title>
 </head>
 <body>
 <div class="parent">
-<div class="child"></div>
+  <div class="child"></div>
 </div>
 <script>
-    var parent = document.querySelector('.parent');
-    var child = document.querySelector('.child');
+  var parent = document.querySelector('.parent');
+  var child = document.querySelector('.child');
 
-    // parent的第一个子节点是换行符
-    console.log(parent.firstChild.nodeName); // #text
-    console.log(parent.firstChild.textContent === '\n'); // true
+  // parent的第一个子节点是换行符
+  console.log(parent.firstChild.nodeName); // #text
+  console.log(parent.firstChild.textContent === '\n'); // true
 
-    // parent的第一个子元素节点才是child
-    console.log(parent.firstElementChild.nodeName); // DIV
-    console.log(parent.firstElementChild === child); // true
+  // parent的第一个子元素节点才是child
+  console.log(parent.firstElementChild.nodeName); // DIV
+  console.log(parent.firstElementChild === child); // true
 
-    // parent.childNodes[0]也能获得第一个子节点
-    console.log(parent.childNodes[0] === parent.firstChild); // true
+  // parent.childNodes[0]也能获得第一个子节点
+  console.log(parent.childNodes[0] === parent.firstChild); // true
 
-    // child 没有子节点，则返回null
-    console.log(child.firstChild); // null
+  // child 没有子节点，则返回null
+  console.log(child.firstChild); // null
 
-    // 一般来说，文档节点的第一个子节点为：文档类型节点
-    console.log(document.firstChild); // 文档类型节点
-    console.log(document.firstChild === document.doctype); // true
+  // 一般来说，文档节点的第一个子节点为：文档类型节点
+  console.log(document.firstChild); // 文档类型节点
+  console.log(document.firstChild === document.doctype); // true
 </script>
 </body>
 </html>

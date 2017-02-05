@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>append()</title>
+  <meta charset="UTF-8">
+  <title>append()</title>
 </head>
 <body>
-    <div class="parent"></div>
-    <div class="outer">outer</div>
-    <script>
-        // append()方法的polyfill
-        (function (arr) {
-            arr.forEach(function (item) {
-                item.append = item.append || function () {
-                    var argArr = Array.prototype.slice.call(arguments);
-                    var docFrag = document.createDocumentFragment();
+<div class="parent"></div>
+<div class="outer">outer</div>
+<script>
+  // append()方法的polyfill
+  (function (arr) {
+    arr.forEach(function (item) {
+      item.append = item.append || function () {
+          var argArr = Array.prototype.slice.call(arguments);
+          var docFrag = document.createDocumentFragment();
 
-                    argArr.forEach(function (argItem) {
-                        var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
-                        docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-                    });
+          argArr.forEach(function (argItem) {
+            var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+            docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+          });
 
-                    this.appendChild(docFrag);
-                };
-            });
-        })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+          this.appendChild(docFrag);
+        };
+    });
+  })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 
-        var log = console.log;
-        var $ = document.querySelector.bind(document);
-        var parent = $('.parent');
-        var outer = $('.outer');
-        var child1 = document.createElement('div');
-        child1.id = 'child1';
-        var child2 = document.createElement('div');
-        child2.id = 'child2';
+  var log = console.log;
+  var $ = document.querySelector.bind(document);
+  var parent = $('.parent');
+  var outer = $('.outer');
+  var child1 = document.createElement('div');
+  child1.id = 'child1';
+  var child2 = document.createElement('div');
+  child2.id = 'child2';
 
-        // append()方法用于在内容末尾插入零个或多个子节点，它会先把字符串转换为文本节点再插入,
-        // 如果要插入的节点已经在文档中则先剪切再插入。
-        // 原理：先把所有参数按顺序插入一个文档片段节点的内容末尾，再把文档片段节点插入内容末尾
-        log(parent.childNodes.length); // 0
-        parent.append('parent', child1, child2,'parent','','parent',outer);
-        log(parent.childNodes.length); // 7
+  // append()方法用于在内容末尾插入零个或多个子节点，它会先把字符串转换为文本节点再插入,
+  // 如果要插入的节点已经在文档中则先剪切再插入。
+  // 原理：先把所有参数按顺序插入一个文档片段节点的内容末尾，再把文档片段节点插入内容末尾
+  log(parent.childNodes.length); // 0
+  parent.append('parent', child1, child2, 'parent', '', 'parent', outer);
+  log(parent.childNodes.length); // 7
 
-        // 多个字符串会转换为多个文本节点再插入，可以用normalize()合并相邻文本节点
-        parent.normalize();
-        log(parent.childNodes.length); // 5
+  // 多个字符串会转换为多个文本节点再插入，可以用normalize()合并相邻文本节点
+  parent.normalize();
+  log(parent.childNodes.length); // 5
 
-        // append()方法可以不传参数，这样什么都没有做
-        parent.append(new Date(),null,1,true);
+  // append()方法可以不传参数，这样什么都没有做
+  parent.append(new Date(), null, 1, true);
 
-        // 在文档节点中插入注释节点
-        var commentNode1 = new Comment('document');
-        var commentNode2 = new Comment('tail');
-        document.append(commentNode1, commentNode2);
-    </script>
+  // 在文档节点中插入注释节点
+  var commentNode1 = new Comment('document');
+  var commentNode2 = new Comment('tail');
+  document.append(commentNode1, commentNode2);
+</script>
 </body>
 </html>

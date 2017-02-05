@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>BMP document.contentType === 'image/bmp'</title>
+  <meta charset="utf-8">
+  <title>BMP document.contentType === 'image/bmp'</title>
 </head>
 <body>
-    <script>
-        var iframe = document.createElement('iframe');
-        iframe.addEventListener('load', function () {
-            console.log(iframe.contentDocument.contentType); // => image/bmp
-        }, false);
-        iframe.src = "./resources/t.bmp";
-        document.body.appendChild(iframe);
-    </script>
+<script>
+  var iframe = document.createElement('iframe');
+  iframe.addEventListener('load', function () {
+    console.log(iframe.contentDocument.contentType); // => image/bmp
+  }, false);
+  iframe.src = "./resources/t.bmp";
+  document.body.appendChild(iframe);
+</script>
 </body>
 </html>
 

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>body</title>
+  <meta charset="UTF-8">
+  <title>body</title>
 </head>
 <body>
-    <div class="wrap">wrap</div>
-    <script>
-        // 获取
-        console.log(document.body);
+<div class="wrap">wrap</div>
+<script>
+  // 获取
+  console.log(document.body);
 
-        // 设置
-        document.body = document.createElement('body');
-        console.log(document.body);
+  // 设置
+  document.body = document.createElement('body');
+  console.log(document.body);
 
-        // 没有body元素时，返回null
-        document.documentElement.removeChild(document.body);
-        console.log(document.body); // null
-    </script>
+  // 没有body元素时，返回null
+  document.documentElement.removeChild(document.body);
+  console.log(document.body); // null
+</script>
 </body>
 </html>

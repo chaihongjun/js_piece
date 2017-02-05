@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>firstElementChild</title>
+  <meta charset="UTF-8">
+  <title>firstElementChild</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="child"></div>
-    </div>
-    <script>
-        var log = console.log;
-        var $ = document.querySelector.bind(document);
-        var parent = $('.parent');
-        var child = $('.child');
+<div class="parent">
+  <div class="child"></div>
+</div>
+<script>
+  var log = console.log;
+  var $ = document.querySelector.bind(document);
+  var parent = $('.parent');
+  var child = $('.child');
 
-        // 只有元素节点，文档节点和文档片段节点有firstElementChild属性
+  // 只有元素节点，文档节点和文档片段节点有firstElementChild属性
 
-        // firstElementChild获取第一个子元素节点
-        log(parent.firstElementChild === child); // true
+  // firstElementChild获取第一个子元素节点
+  log(parent.firstElementChild === child); // true
 
-        // 也可以用children[0]获取第一个子元素节点
-        log(parent.children[0] === child); // true
+  // 也可以用children[0]获取第一个子元素节点
+  log(parent.children[0] === child); // true
 
-        // 文档节点的firstElementChild属性为：html
-        log(document.firstElementChild.nodeName); // HTML
+  // 文档节点的firstElementChild属性为：html
+  log(document.firstElementChild.nodeName); // HTML
 
-        // firstElementChild属性是只读的，赋值无效
-        parent.firstElementChild = 'parent';
-        log(parent.firstElementChild === child); // true
-    </script>
+  // firstElementChild属性是只读的，赋值无效
+  parent.firstElementChild = 'parent';
+  log(parent.firstElementChild === child); // true
+</script>
 </body>
 </html>

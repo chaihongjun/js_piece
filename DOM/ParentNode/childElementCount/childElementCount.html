@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>childElementCount</title>
+  <meta charset="UTF-8">
+  <title>childElementCount</title>
 </head>
 <body>
-    <div class="parent">
-        <div class="child1">child1</div>
-        <div class="child2">child2</div>
-    </div>
-    <script>
-        var log = console.log;
-        var $ = document.querySelector.bind(document);
+<div class="parent">
+  <div class="child1">child1</div>
+  <div class="child2">child2</div>
+</div>
+<script>
+  var log = console.log;
+  var $ = document.querySelector.bind(document);
 
-        var parent = $('.parent');
-        var child1 = $('.child1');
+  var parent = $('.parent');
+  var child1 = $('.child1');
 
-        // 只有元素节点，文档节点和文档片段节点有childElementCount属性
+  // 只有元素节点，文档节点和文档片段节点有childElementCount属性
 
-        // childElementCount获取子元素节点的数量
-        log(parent.childElementCount); // 2
-        log(child1.childElementCount); // 0
+  // childElementCount获取子元素节点的数量
+  log(parent.childElementCount); // 2
+  log(child1.childElementCount); // 0
 
-        // 也可以用children.length获取子元素节点的数量
-        log(parent.children.length); // 2
+  // 也可以用children.length获取子元素节点的数量
+  log(parent.children.length); // 2
 
-        // 文档节点的childElementCount属性为：1
-        log(document.childElementCount); // 1
+  // 文档节点的childElementCount属性为：1
+  log(document.childElementCount); // 1
 
-        // childElementCount属性是只读的，赋值无效
-        parent.childElementCount = 3;
-        log(parent.childElementCount); // 2
-    </script>
+  // childElementCount属性是只读的，赋值无效
+  parent.childElementCount = 3;
+  log(parent.childElementCount); // 2
+</script>
 </body>
 </html>

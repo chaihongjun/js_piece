@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>cloneScript</title>
+  <meta charset="UTF-8">
+  <title>cloneScript</title>
 </head>
 <body>
-    <script id="js-script">
-        console.log(123);
-    </script>
-    <script>
-        var script = document.querySelector('#js-script'),
-            newScript = script.cloneNode(true);
+<script id="js-script">
+  console.log(123);
+</script>
+<script>
+  var script = document.querySelector('#js-script'),
+    newScript = script.cloneNode(true);
 
-        document.body.appendChild(newScript);
-    </script>
+  document.body.appendChild(newScript);
+</script>
 </body>
 </html>

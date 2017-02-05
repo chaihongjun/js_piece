@@ -2,52 +2,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>previousSibling</title>
+  <meta charset="UTF-8">
+  <title>previousSibling</title>
 </head>
 <body><!--注释 comment-->
-    <div class="parent"></div><div class="wrap" id="wrap"></div>
-    <script>
-        var parent = document.querySelector('.parent');
-        var wrap = document.getElementById('wrap');
-        var idAttrNode = wrap.getAttributeNode('id');
-        var docFrag = document.createDocumentFragment();
+<div class="parent"></div>
+<div class="wrap" id="wrap"></div>
+<script>
+  var parent = document.querySelector('.parent');
+  var wrap = document.getElementById('wrap');
+  var idAttrNode = wrap.getAttributeNode('id');
+  var docFrag = document.createDocumentFragment();
 
 
-        // 元素节点的previousSibling的值为：元素节点，文本节点，注释节点，文档类型节点 或 null
-        // 文本节点的previousSibling的值为：元素节点，文本节点，注释节点 或 null
-        // 注释节点的previousSibling的值为：元素节点，文本节点，注释节点，文档类型节点 或 null
-        console.log(wrap.previousSibling.nodeType); // 1
-        console.log(parent.previousSibling.nodeType); // 3
-        console.log(parent.previousSibling.previousSibling.nodeType); // 8
-        console.log(parent.previousSibling.previousSibling.previousSibling); // null
-        // html元素节点的previousSibling的值为：文档类型节点，注释节点 或 null
-        console.log(document.querySelector('html'));
-        console.log(document.querySelector('html') === document.documentElement); // true
-        console.log(document.querySelector('html').previousSibling.nodeType); // 10
+  // 元素节点的previousSibling的值为：元素节点，文本节点，注释节点，文档类型节点 或 null
+  // 文本节点的previousSibling的值为：元素节点，文本节点，注释节点 或 null
+  // 注释节点的previousSibling的值为：元素节点，文本节点，注释节点，文档类型节点 或 null
+  console.log(wrap.previousSibling.nodeType); // 1
+  console.log(parent.previousSibling.nodeType); // 3
+  console.log(parent.previousSibling.previousSibling.nodeType); // 8
+  console.log(parent.previousSibling.previousSibling.previousSibling); // null
+  // html元素节点的previousSibling的值为：文档类型节点，注释节点 或 null
+  console.log(document.querySelector('html'));
+  console.log(document.querySelector('html') === document.documentElement); // true
+  console.log(document.querySelector('html').previousSibling.nodeType); // 10
 
-        // 属性节点的previousSibling的值为：null
-        console.log(idAttrNode.previousSibling); // null
+  // 属性节点的previousSibling的值为：null
+  console.log(idAttrNode.previousSibling); // null
 
-        // 文档节点的previousSibling的值为：null
-        console.log(document.previousSibling); // null
+  // 文档节点的previousSibling的值为：null
+  console.log(document.previousSibling); // null
 
-        // 文档类型节点的previousSibling的值为：null 或 注释节点
-        console.log(document.doctype.previousSibling);
+  // 文档类型节点的previousSibling的值为：null 或 注释节点
+  console.log(document.doctype.previousSibling);
 
-         // 文档片段节点的previousSibling的值为：null
-        var browserList = ["Internet Explorer", "Firefox", "Safari", "Chrome", "Opera"];
-        browserList.forEach(function(e) {
-            var li = document.createElement("li");
-            li.textContent = e;
-            docFrag.appendChild(li);
-        });
-        // 文档片段节点在插入文档之前previousSibling的值为null
-        console.log(docFrag.previousSibling); // null
-        // 注意：文档片段节点插入文档之后其会清空子节点
-        wrap.appendChild(docFrag);
-        // 文档片段节点在插入文档之后previousSibling的值也为null
-        console.log(docFrag.previousSibling); // null
-    </script>
+  // 文档片段节点的previousSibling的值为：null
+  var browserList = ["Internet Explorer", "Firefox", "Safari", "Chrome", "Opera"];
+  browserList.forEach(function (e) {
+    var li = document.createElement("li");
+    li.textContent = e;
+    docFrag.appendChild(li);
+  });
+  // 文档片段节点在插入文档之前previousSibling的值为null
+  console.log(docFrag.previousSibling); // null
+  // 注意：文档片段节点插入文档之后其会清空子节点
+  wrap.appendChild(docFrag);
+  // 文档片段节点在插入文档之后previousSibling的值也为null
+  console.log(docFrag.previousSibling); // null
+</script>
 </body>
 </html>
