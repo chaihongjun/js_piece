@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ElGetElements</title>
+</head>
+<body>
+  <div class="js-wrap">
+    <div class="js-child">child</div>
+  </div>
+  <script>
+    var child = document.querySelector('.js-child'),
+      wrap = document.querySelector('.js-wrap');
+    console.log(wrap.getElementsByClassName('js-child')[0] === child); // => true
+  </script>
+</body>
+</html>
