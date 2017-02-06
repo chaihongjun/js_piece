@@ -1,29 +1,30 @@
 # Document接口
 
 ## W3C 标准
-[WHATWG-DOM: Document](https://dom.spec.whatwg.org/#interface-document)
-[WHATWG-HTML: ](https://html.spec.whatwg.org/multipage/dom.html#the-document-object)
-[DOM4: Document](https://www.w3.org/TR/dom/#interface-document)
+- [WHATWG-DOM: Document](https://dom.spec.whatwg.org/#interface-document)
+- [WHATWG-HTML: document](https://html.spec.whatwg.org/multipage/dom.html#the-document-object)
+- [DOM4: Document](https://www.w3.org/TR/dom/#interface-document)
 
 ## 概述
-Document接口暴露在window上，同时它是一个构造器。
+Document 接口暴露在 window 上，同时它是一个构造器。
 
 - 父类：[Node](../Node/Node.md)
 - 子类：HTMLDocument
 
-## Document.prototype的属性
+## Document.prototype 的属性
 
-- [implementation--获取文档的DOMImplementation对象](./implementation/implementation.md)
-- [URL--获取文档的url地址](./URL/URL.md)
-- [documentURI--获取文档的url地址](./documentURI/documentURI.md)
+- [implementation--获取文档的 DOMImplementation 对象](./implementation/implementation.md)
+- [URL--获取文档的 url 地址](./URL/URL.md)
+- [documentURI--获取文档的 url 地址](./documentURI/documentURI.md)
 - [activeElement--获取获得焦点的元素](./activeElement/activeElement.md)
-- [body--获取和替换body元素](./body/body.md)
+- [body--获取和替换 body 元素](./body/body.md)
 - [characterSet--获取文档当前的字符编码类型](./characterSet/characterSet.md)
 - [compatMode--获取文档的渲染模式](./compatMode/compatMode.md)
 - [contentType--获取文档的文件类型](./contentType/contentType.md)
-- [cookie--获取和设置cookie](./cookie/cookie.md)
+- [cookie--获取和设置 cookie](./cookie/cookie.md)
+- [documentElement--获取文档的根元素节点](./documentElement/documentElement.md)
 
-## Document.prototype的方法
+## Document.prototype 的方法
 
 - [adoptNode()--导入外部文档中的节点](./adoptNode()/adoptNode().md)
 - [importNode()--复制外部文档中的节点](./importNode()/importNode().md)
@@ -38,5 +39,5 @@ Document接口暴露在window上，同时它是一个构造器。
 
 
 ## 参考资料
-1. https://developer.mozilla.org/en-US/docs/Web/API/Document
-2. https://defed.github.io/原生DOM系列-Document对象/
+1. [MDN: Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+2. [defed: Document对象](https://defed.github.io/原生DOM系列-Document对象/)
