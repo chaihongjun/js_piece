@@ -8,7 +8,7 @@
 
 - 语法：document.getElementsByTagName(tagName)
 - 参数：标签名（DOMString）
-- 返回值：HTMLCollection 对象
+- 返回值：HTMLCollection 对象（类数组对象）
 
 
 ## 属性描述
@@ -24,7 +24,8 @@ var result = {
 ```
 ## 注意事项
 1. `document.getElementsByTagName('*')` 返回文档中所有元素节点的集合。
-2. tagName 不区分大小写。
+2. getElementsByTagName 的参数不区分大小写。
+3. 元素节点也有 getElementsByTagName 方法。
 
 ## 示例代码
 getElementsByTagName 返回的元素集合是动态更新的。
@@ -38,6 +39,17 @@ getElementsByTagName 返回的元素集合是动态更新的。
     console.log(divs.length); // => 2
   </script>
 </body>
+```
+元素节点也有 getElementsByTagName 方法。
+```html
+<div class="js-wrap">
+  <div class="js-child">child</div>
+</div>
+<script>
+  var child = document.querySelector('.js-child'),
+    wrap = document.querySelector('.js-wrap');
+  console.log(wrap.getElementsByTagName('div')[0] === child); // => true
+</script>
 ```
 
 ## 参考资料
