@@ -7,7 +7,7 @@
 文档节点的 createTextNode 方法用于创建文本节点。
 
 - 语法：document.createTextNode(data)
-- 参数：文本内容（DOMString）
+- 参数：文本内容（DOMString），必填
 - 返回值：文本节点
 
 ## 属性描述
