@@ -22,7 +22,7 @@ var result = {
 }
 ```
 ## 注意事项
-1. data 含有的元素标签不会被解析，会直接显示，所以用 createTextNode 可以增加安全性。
+1. createTextNode 方法的参数含有的元素标签不会被解析，会直接显示，所以用它可以增加安全性。
 
 ## 示例代码
 createTextNode 方法用于创建文本节点。
