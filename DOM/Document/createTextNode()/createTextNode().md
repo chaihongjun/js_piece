@@ -44,3 +44,4 @@ createTextNode 方法用于创建文本节点。
 
 ## 参考资料
 1. [MDN: createTextNode](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
+2. [stackoverflow: what is a text node its uses document createtextnode](http://stackoverflow.com/questions/17195868/what-is-a-text-node-its-uses-document-createtextnode)
