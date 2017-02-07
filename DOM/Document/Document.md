@@ -37,6 +37,7 @@ Document 接口暴露在 window 上，同时它是一个构造器。
 - [createComment()--创建注释节点](./createComment()/createComment().md)
 - [createDocumentFragment()--创建文档片段节点](./createDocumentFragment()/createDocumentFragment().md)
 - [createElement()--创建元素节点](./createElement()/createElement.md)
+- [createTextNode()--创建文本节点](./createTextNode()/createTextNode().md)
 - [getElementsByClassName()--获取给定类名的元素集合](./getElementsByClassName()/getElementsByClassName().md)
 - [getElementsByTagName()--获取给定标签名的元素集合](./getElementsByTagName()/getElementsByTagName().md)
 
