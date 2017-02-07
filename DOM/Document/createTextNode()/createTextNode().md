@@ -29,8 +29,8 @@ createTextNode 方法用于创建文本节点。
 ```javascript
 var newTextNode = document.createTextNode('jszhou');
 
-  console.log(newTextNode.nodeType); // => 3
-  console.log(newTextNode.nodeValue); // => jszhou
+console.log(newTextNode.nodeType); // => 3
+console.log(newTextNode.nodeValue); // => jszhou
 ```
 
 ## 参考资料
