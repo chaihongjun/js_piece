@@ -5,10 +5,11 @@
   <title>createTextNode</title>
 </head>
 <body>
-  <div class="js-wrap"></div>
   <script>
     var newTextNode = document.createTextNode('jszhou');
-    document.querySelector('.js-wrap').appendChild(newTextNode);
+
+    console.log(newTextNode.nodeType); // => 3
+    console.log(newTextNode.nodeValue); // => jszhou
   </script>
 </body>
 </html>

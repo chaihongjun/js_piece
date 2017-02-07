@@ -26,20 +26,11 @@ var result = {
 
 ## 示例代码
 createTextNode 方法用于创建文本节点。
-```html
-<!--运行前-->
-<div class="js-wrap"></div>
-<script>
-  var newTextNode = document.createTextNode('jszhou');
-  document.querySelector('.js-wrap').appendChild(newTextNode);
-</script>
+```javascript
+var newTextNode = document.createTextNode('jszhou');
 
-<!--运行后-->
-<div class="js-wrap">jszhou</div>
-<script>
-  var newTextNode = document.createTextNode('jszhou');
-  document.querySelector('.js-wrap').appendChild(newTextNode);
-</script>
+  console.log(newTextNode.nodeType); // => 3
+  console.log(newTextNode.nodeValue); // => jszhou
 ```
 
 ## 参考资料
