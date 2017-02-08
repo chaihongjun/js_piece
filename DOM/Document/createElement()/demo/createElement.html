@@ -5,12 +5,12 @@
   <title>createElement</title>
 </head>
 <body>
-<div class="js-wrap"></div>
 <script>
   var newP = document.createElement('p');
-  newP.textContent = 'newP';
+  newP.textContent = 'jszhou';
 
-  document.querySelector('.js-wrap').appendChild(newP);
+  console.log(newP.nodeType); // => 1
+  console.log(newP.outerHTML); // => <p>jszhou</p>
 </script>
 </body>
 </html>

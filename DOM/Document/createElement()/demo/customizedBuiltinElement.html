@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>customized built-in element</title>
+</head>
+<body>
+  <script>
+//    class bagImg extends HTMLImageElement {
+//      constructor() {
+//        super();
+//        this.src = './img/boulevar.png';
+//      }
+//    }
+    function BigImg(width, height) {
+      this.width = width * 10;
+      this.height = height * 10;
+    }
+    BigImg.prototype = Object.create(HTMLImageElement.prototype);
+    BigImg.prototype.constructor = BigImg;
+
+
+    window.customElements.define('big-img', BigImg, {extends: 'img'});
+
+    var bigImg = customElements.get('big-img'),
+      img = new bigImg(20, 10);
+    img.src = './img/boulevar.png';
+    document.body.appendChild(img);
+  </script>
+</body>
+</html>
