@@ -6,25 +6,22 @@
 </head>
 <body>
   <script>
-//    class bagImg extends HTMLImageElement {
-//      constructor() {
-//        super();
-//        this.src = './img/boulevar.png';
-//      }
-//    }
-    function BigImg(width, height) {
-      this.width = width * 10;
-      this.height = height * 10;
+    class BigImg extends Image {
+      // Give img default size if users don't specify.
+      constructor(width=50, height=40) {
+        super();
+        this.height = height * 10;
+        this.width = width * 10;
+        this.src = './img/boulevar.png';
+        this.addEventListener('click', function () {
+          console.log('click');
+        }, false);
+      }
     }
-    BigImg.prototype = Object.create(HTMLImageElement.prototype);
-    BigImg.prototype.constructor = BigImg;
-
 
     window.customElements.define('big-img', BigImg, {extends: 'img'});
 
-    var bigImg = customElements.get('big-img'),
-      img = new bigImg(20, 10);
-    img.src = './img/boulevar.png';
+    var img = new BigImg();
     document.body.appendChild(img);
   </script>
 </body>
