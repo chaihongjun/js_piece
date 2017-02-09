@@ -9,7 +9,7 @@
 - 语法：document.createElement(tagName[,options])
 - 参数：
   - {DOMString} tagName 元素名称
-  - {DOMString} options.is 自定义元素名称
+  - {DOMString} options.is 扩展内置元素的自定义元素的名称
 - 返回值：元素节点
 
 ## 属性描述

@@ -7,11 +7,8 @@
 <body>
   <script>
     class BigImg extends Image {
-      // Give img default size if users don't specify.
-      constructor(width=50, height=40) {
-        super();
-        this.height = height * 10;
-        this.width = width * 10;
+      constructor(width=30, height=20) {
+        super(width * 10, height * 10);
         this.src = './img/boulevar.png';
         this.addEventListener('click', function () {
           console.log('click');
@@ -19,9 +16,10 @@
       }
     }
 
-    window.customElements.define('big-img', BigImg, {extends: 'img'});
+//    window.customElements.define('big-img', BigImg, {extends: 'img'});
 
-    var img = new BigImg();
+    let img = new BigImg();
+//    let img = document.createElement('img', {is: 'big-img'});
     document.body.appendChild(img);
   </script>
 </body>
