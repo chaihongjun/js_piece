@@ -16,11 +16,14 @@
       }
     }
 
-//    window.customElements.define('big-img', BigImg, {extends: 'img'});
+    window.customElements.define('big-img', BigImg, {extends: 'img'});
 
     let img = new BigImg();
 //    let img = document.createElement('img', {is: 'big-img'});
     document.body.appendChild(img);
+
+    console.log(img.localName);
+    console.log(img.getAttribute('is'));
   </script>
 </body>
 </html>
