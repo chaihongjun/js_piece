@@ -14,7 +14,7 @@
   - 语法：document.body = 新的 body 元素节点
 
 ## 属性描述
-body 属性可配置，可枚举，可取值，不可赋值。
+body 属性可配置，可枚举，可取值，可赋值。
 ```javascript
 // Object.getOwnPropertyDescriptor(Document.prototype, 'body') 的结果如下：
 var result = {
