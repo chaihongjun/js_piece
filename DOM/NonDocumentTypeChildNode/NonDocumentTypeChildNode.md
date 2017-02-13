@@ -4,9 +4,9 @@
 [WHATWG: NonDocumentTypeChildNode 接口](https://dom.spec.whatwg.org/#interface-nondocumenttypechildnode)
 
 ## 概述
-NonDocumentTypeChildNode 的字面意思是非文档类型的子节点。NonDocumentTypeChildNode 接口是一个Mixin类，用于解决兼容性问题。
+NonDocumentTypeChildNode 的字面意思是非文档类型的子节点。NonDocumentTypeChildNode 接口是一个 Mixin 类，用于解决兼容性问题。
 
-- 实现的接口：**Element 接口**和**CharacterData 接口**
+- 实现的接口：**Element 接口** 和 **CharacterData 接口**
 
 ## NonDocumentTypeChildNode.prototype 的属性
 
