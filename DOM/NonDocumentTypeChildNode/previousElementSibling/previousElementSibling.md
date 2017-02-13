@@ -24,6 +24,7 @@ var result = {
 ## 注意事项
 1. previousElementSibling 属性是只读的，赋值无效。
 2. previousElementSibling 属性的值只能是元素节点或 null，忽略文本节点和注释节点。
+3. 只有 Element 接口和 CharacterData 接口实现了 previousElementSibling 属性。
 
 ## 兼容性和polyfill
 
