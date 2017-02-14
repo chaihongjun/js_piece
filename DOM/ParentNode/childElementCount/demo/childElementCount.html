@@ -10,6 +10,31 @@
   <div class="child2">child2</div>
 </div>
 <script>
+  (function (arr) {
+    arr.forEach(function (item) {
+//      if (item.hasOwnProperty('childElementCount')) {
+//        return;
+//      }
+      Object.defineProperty(item, 'childElementCount', {
+        configurable: true,
+        enumerable: true,
+        get: function () {
+          var el = this.firstChild,
+            count = 0;
+
+          while (el) {
+            if (el.nodeType === 1) {
+              ++count;
+            }
+            el = el.nextSibling
+          }
+
+          return count;
+        },
+        set: undefined
+      });
+    });
+  })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
   var log = console.log;
   var $ = document.querySelector.bind(document);
 
