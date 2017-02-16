@@ -12,17 +12,25 @@
   // replaceWith()的polyfill
   (function (arr) {
     arr.forEach(function (item) {
-      item.replaceWith = item.replaceWith || function () {
-          var argArr = Array.prototype.slice.call(arguments);
-          var docFrag = document.createDocumentFragment();
+//      if (item.hasOwnProperty('replaceWith')) {
+//        return;
+//      }
+      Object.defineProperty(item, 'replaceWith', {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        value: function replaceWith() {
+          var argArr = Array.prototype.slice.call(arguments),
+            docFrag = document.createDocumentFragment();
 
           argArr.forEach(function (argItem) {
-            var isNode = Boolean(typeof(argItem) === 'object' && argItem !== null && argItem.nodeType > 0);
+            var isNode = argItem instanceof Node;
             docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
           });
 
           this.parentNode.replaceChild(docFrag, this);
-        };
+        }
+      });
     });
   })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
 
@@ -41,6 +49,9 @@
 
   // 文档类型节点
   document.doctype.replaceWith(document.createComment('before'));
+
+  // replaceWith 如果不传参数，这时会删除指定节点。
+  child.replaceWith();
 </script>
 </body>
 </html>
