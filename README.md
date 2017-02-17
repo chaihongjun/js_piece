@@ -9,3 +9,9 @@
 - [NonDocumentTypeChildNode 接口](./DOM/NonDocumentTypeChildNode/NonDocumentTypeChildNode.md)
 - [ChildNode 接口](./DOM/ChildNode/ChildNode.md)
 - [Document 接口](./DOM/Document/Document.md)
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2016-present, jszhou
