@@ -1,4 +1,4 @@
-#　ParentNode.prototype.querySelectorAll
+# ParentNode.prototype.querySelectorAll
 
 ## 标准
 [WHATWG: querySelectorAll](https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall)

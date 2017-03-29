@@ -4,13 +4,14 @@
 [WHATWG: isConnected](https://dom.spec.whatwg.org/#dom-node-isconnected)
 
 ## 定义和用法
-节点（node）的isConnected属性用于判断指定节点是否在文档中，在则返回true，不在则返回false。指定节点可以是DOM的节点或ShadowDOM的节点。
+节点的 isConnected 属性用于判断指定节点是否在文档中，在则返回 true，不在则返回 false。指定节点可以是 DOM 的节点或 ShadowDOM 的节点。
 
 - 语法：node.isConnected
 - 返回值：true 或 false
 
 ```javascript
     var unAppend = document.createElement('div');
+
     // unAppend未插入文档中，返回false
     console.log(unAppend.isConnected); // false
 ```
@@ -37,7 +38,7 @@ var result = {
 ## 兼容性和polyfill
 > 兼容性：Chrome 52+ ，Opera 39+，Firefox 50+
 
-- polyfill地址在[这里][1]
+- polyfill 地址在[这里][1]
 
 ```javascript
 (function(isSupport) {
