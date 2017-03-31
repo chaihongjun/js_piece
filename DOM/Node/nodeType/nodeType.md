@@ -32,7 +32,7 @@ var result = {
 ```
 
 ## 注意事项
-1. nodeType属性是只读的，赋值无效
+1. nodeType 属性是只读的，赋值无效
 
 ## 参考资料
 1. [MDN: nodeType](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType)
