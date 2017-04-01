@@ -23,7 +23,7 @@
     - 语法：node.textContent = 文本内容
     
 ## 属性描述
-textContent 属性可配置，可枚举，可取值，不可赋值。
+textContent 属性可配置，可枚举，可取值，可赋值。
 ```javascript
 // Object.getOwnPropertyDescriptor(Node.prototype, 'textContent') 的结果如下：
 var result = {
